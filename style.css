@@ -61,6 +61,7 @@ body{
     border-bottom: 0.1rem solid var(--main-color);
     padding-bottom: 0.5rem;
 }
+
 .nav_btn {
     display: inline-block;
     background-color: black;
