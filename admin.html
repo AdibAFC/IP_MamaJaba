@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="admin_style.css">
+</head>
+
+<body>
+    <nav>
+        <i class="fa-solid fa-bars"></i>
+        <a href="#" class="logo">
+            <img src="images/MamaJaba_logo.png">
+        </a>
+        <div class="logout">
+            <a href="index.html">
+                <button>Logout</button>
+            </a>
+        </div>
+        
+    </nav>
+    <div class="hero">
+        <div class="wrapper">
+            <div class="container">
+                <img src="images/rickshaw_icon.png">
+                <span class="num" dat-val="37">000</span>
+                <span class="text">Licensed Rickshaws</span>
+            </div>
+
+            <div class="container">
+                <i class="fa-solid fa-person-circle-check"></i>
+                <span class="num" dat-val="40">000</span>
+                <span class="text">Recruited Drivers</span>
+            </div>
+
+            <div class="container">
+                <i class="fa-solid fa-chart-simple"></i>
+                <span class="num" dat-val="800">000</span>
+                <span class="text">No of Riders</span>
+            </div>
+            <div class="container">
+                <i class="fa-solid fa-user"></i>
+                <span class="num" dat-val="3">000</span>
+                <span class="text">Admins</span>
+            </div>
+        </div>
+    </div>
+    <div class="review">
+        <div class="title">
+            <h2>Customer Reviews</h2>
+        </div>
+        <div class="slide-container active">
+            <div class="slide">
+                <div class="icon">
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <div class="user">
+                    <img src="images/peep1.jpg">
+                    <div class="user-info">
+                        <h3>Joe Biden</h3>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur veritatis
+                    explicabo ab, excepturi sed illum alias perspiciatis similique consequuntur deserunt. Quaerat
+                    sapiente fugit veritatis ad! Laudantium illo aliquam molestias voluptatibus!</p>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <div class="icon">
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <div class="user">
+                    <img src="images/peep2.jpg">
+                    <div class="user-info">
+                        <h3>Ella Bella</h3>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi amet facere
+                    repudiandae quidem ratione accusamus!</p>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <div class="icon">
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <div class="user"><img src="images/peep3.jpg">
+                    <div class="user-info">
+                        <h3>Sofia Delgado</h3>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ipsam sunt cumque rem
+                    nihil quaerat quis! Recusandae repellat inventore quasi.</p>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <div class="icon">
+                    <i class="fa-solid fa-quote-right"></i>
+                </div>
+                <div class="user">
+                    <img src="images/peep4.jpg">
+                    <div class="user-info">
+                        <h3>Alex Dunphy</h3>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, praesentium
+                    exercitationem. Molestiae cupiditate beatae necessitatibus natus itaque, optio, expedita excepturi
+                    atque ipsum adipisci possimus illum ut dolorum maxime iure voluptates autem eum non! Distinctio,
+                    natus.</p>
+            </div>
+        </div>
+        <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
+        <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
+    </div>
+    <script>
+        let valueDisplays = document.querySelectorAll(".num");
+        let interval = 4000;
+
+        valueDisplays.forEach((valueDisplay) => {
+            let startValue = 0;
+            let endValue = parseInt(valueDisplay.getAttribute("dat-val"));
+            let duration = Math.floor(interval / endValue);
+            let counter = setInterval(function () {
+                startValue += 1;
+                valueDisplay.textContent = startValue;
+                if (startValue == endValue) {
+                    clearInterval(counter);
+                }
+            }, duration);
+        });
+
+        let slides = document.querySelectorAll('.slide-container');
+        let index = 0;
+
+        function next() {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+        function prev() {
+            slides[index].classList.remove('active');
+            index = (index - 1 + slides.length) % slides.length;
+            slides[index].classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
