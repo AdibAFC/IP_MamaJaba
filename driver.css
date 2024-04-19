@@ -164,7 +164,6 @@ nav ul li a {
 .sub-menu-link:hover p {
     font-weight: 600;
 }
-
 .ridereq {
     display: flex;
     flex-direction: column; /* Stack items vertically */
