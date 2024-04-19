@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MamaJaba-Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="images/MamaJaba_logo.png">
+        </a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#Ride">Ride</a>
+            <a href="#Drive">Drive</a>
+            <a href="#Review">Review</a>
+            <a href="#About">About</a>
+            <a href="#Help">Help</a>
+        </nav>
+        <div class="nav_btn">
+            <a href="login.html" class="button login-button">Login</a>
+            <a href="#" class="button signup-button" id="popupsignup">SignUp</a>
+            <div class="popup" id="popup">
+                <div class="popup-content">
+                    <!-- <h2>SignUp as?</h2> -->
+                    <div class="options">
+                        <button>
+                            <a href="driver_signup.html" id="driverBtn">SignUp to Drive</a>
+                        </button>
+                        <button>
+                            <a href="rider_signup.html" id="riderBtn">Create a Rider account</a>
+                        </button>
+                    </div>
+                    <button id="closePopup">Close</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="home" id="home">
+        <div class="content">
+            <h3 class="highlight-text">Go anywhere with <span class="comic-sans">MamaJaba</span></h3>
+        </div>
+    </section>
+    <!-- ride -->
+    <section class="Ride" id="Ride">
+        <div class="grid-container">
+            <div class="content">
+                <h3 class="highlight-text1">Exploring every corner, serving one neighborhood at a time.</h3>
+                <p>Request a ride,hop in and goo!!</p>
+                <div class="text-boxes">
+                    <input type="text" placeholder="Enter your location">
+                    <input type="text" placeholder="Enter your destination">
+                </div>
+                <a href="#" class="ride_btn">Request a Ride</a>
+            </div>
+            <div class="image">
+                <img src="images/ride.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- drive -->
+    <section class="Drive" id="Drive">
+        <div class="grid-container">
+            <div class="image">
+                <img src="images/drive.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3 class="highlight-text1">Drive when you want, make what you need</h3>
+                <p>Make money on your schedule with deliveries or rides—or both. You can use your own car or choose a
+                    rental through Uber.</p>
+                <a href="#" class="drive_btn">Get Started</a>
+                <a href="#" class="drive_btn">Already Have an account? Sign in</a>
+            </div>
+        </div>
+    </section>
+    <!-- Reviews -->
+    <section class="Review" id="Review">
+        <h1>Reviews</h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="images/quote.png" alt="" class="quote">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tenetur ea repellendus quaerat!
+                    Repellat nesciunt ab qui, inventore porro ipsam consequatur, delectus, voluptatem at expedita ex
+                    aperiam ipsum et hic!</p>
+                <img src="images/person1.png" alt="" class="user">
+                <h3>john</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/quote.png" alt="" class="quote">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tenetur ea repellendus quaerat!
+                    Repellat nesciunt ab qui, inventore porro ipsam consequatur, delectus, voluptatem at expedita ex
+                    aperiam ipsum et hic!</p>
+                <img src="images/person2.png" alt="" class="user">
+                <h3>john</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="images/quote.png" alt="" class="quote">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium tenetur ea repellendus quaerat!
+                    Repellat nesciunt ab qui, inventore porro ipsam consequatur, delectus, voluptatem at expedita ex
+                    aperiam ipsum et hic!</p>
+                <img src="images/person3.png" alt="" class="user">
+                <h3>john</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <section class="footer" id="footer">
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+        </div>
+        <div class="link">
+            <a href="#">Home</a>
+            <a href="#">Ride</a>
+            <a href="#">Drive</a>
+            <a href="#">Review</a>
+            <a href="#">About</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="credit">credited by <span>aps</span> | all right reserved</div>
+    </section>
+
+    <script>
+
+        const openPopupBtn = document.getElementById("popupsignup");
+        const closePopupBtn = document.getElementById("closePopup");
+        const popup = document.getElementById("popup");
+        const riderBtn = document.getElementById("riderBtn");
+        const driverBtn = document.getElementById("driverBtn");
+
+        openPopupBtn.addEventListener("click", () => {
+            popup.style.display = "block";
+        });
+
+        closePopupBtn.addEventListener("click", () => {
+            popup.style.display = "none";
+        });
+
+
+
+    </script>
+</body>
+
+</html>

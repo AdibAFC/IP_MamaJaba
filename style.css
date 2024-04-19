@@ -1,0 +1,390 @@
+:root {
+    --main-color: #d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+
+*{
+    font-family: 'Roboto',sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+body{
+    background: white;
+}
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom:var(--border);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    width: 100%;
+}
+.header .logo img{
+    height: 4rem;
+}
+
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+.header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+}
+.nav_btn {
+    display: inline-block;
+    background-color: black;
+    border: none;
+    font-size: 1.6rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    justify-content: end;
+}
+.login-button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3rem;
+}
+
+.signup-button {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 3rem;
+}
+.login-button:hover{
+    background-color: #262627;
+}
+.signup-button:hover{
+    background-color: #848485;
+}
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../MamaJaba-/images/home_bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.highlight-text {
+    font-size: 50px; /* Adjust size as needed */
+    font-weight: 800;
+    line-height: 52px;
+    color: #ffffffee; /* Set text color */
+    margin-left: 130%; /* Adjust margin to position the text */
+}
+
+section{
+    padding: 2rem 7%;
+}
+.comic-sans {
+    font-family: 'Comic Sans MS', cursive; /* Use Comic Sans MS font */
+    color: #97e9cb;
+}
+.highlight-text1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 52px;
+    color: #000000ee;
+}
+.Ride .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+    gap: 130px;
+    margin-left: 50px;
+    margin-top: 60px;
+    height: 500px;
+}
+
+.Ride .image img {
+    max-width: 100%; /* Ensure image doesn't exceed its container width */
+    max-height: 80%;
+}
+.Ride .grid-container .content a,p{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.ride_btn {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #1d155d; /* Background color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px; /* Adjust font size as needed */
+    text-decoration: none;
+}
+
+.ride_btn:hover {
+    background-color: #443d92; /* Change background color on hover */
+}
+.Drive .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+    gap: 130px;
+    margin-left: 50px;
+    margin-top: 60px;
+    height: 500px;
+}
+
+.Drive .image img {
+    max-width: 150%; /* Ensure image doesn't exceed its container width */
+    max-height: 70%;
+}
+.Drive .grid-container .content a,p{
+    font-size: 20px;
+    margin-top: 30px;
+}
+.drive_btn {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: var(--main-color); /* Background color */
+    color: #fff; /* Text color */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px; /* Adjust font size as needed */
+    text-decoration: none;
+}
+
+.drive_btn:hover {
+    background-color: #a18f67; /* Change background color on hover */
+}
+.text-boxes input[type="text"] {
+    width: 80%; /* Set the width to 100% of the parent container */
+    padding: 10px; /* Add padding to the text boxes for better appearance */
+    margin-bottom: 10px; /* Add some space between the text boxes */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    border: 1px solid #ccc; /* Add a border for better visibility */
+}
+.Review .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+.Review .box-container .box{
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+.Review .box-container .box p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #5c5252;
+    padding: 2rem 0;
+}
+.Review .box-container .user {
+    width: 7rem; /* Set the width of the image to 100% of its container */
+    height: 7rem; /* Maintain aspect ratio */
+    border-radius: 50%;
+    object-fit: cover; 
+}
+.Review .box-container h3{
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: #333334;
+}
+.Review .box-container .box .stars i{
+    font-size: 1.5rem;
+}
+.Review h1 {
+    text-align: center; /* Center align the heading */
+    font-size: 3rem; /* Increase the font size */
+    margin-bottom: 2rem; /* Add some bottom margin for spacing */
+    color: #9d883ce7;
+}
+.footer{
+    background: var(--black);
+    text-align: center;
+}
+.footer .share{
+    padding: 1rem 0;
+}
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: var(--border);
+    margin: .3rem;
+    border-radius: 50%;
+}
+.footer .share a:hover{
+    background-color: var(--main-color);
+}
+.footer .link{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap: 1rem;
+}
+.footer .link a{
+    padding: .7rem 2rem;
+    color: #fff;
+    border: var(--border);
+    font-size: 2rem;
+}
+.footer .link a:hover{
+    color: var(--main-color);
+}
+.profile-picture {
+    border-radius: 50%;
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    background-color: #ccc; /* Placeholder color */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_btnride {
+    display: flex; /* Use flexbox for better alignment */
+    justify-content: flex-end; /* Align items to the end */
+    border: none;
+    font-size: 1.6rem;
+    margin-left: 10px; /* Adjust overall margin */
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Adjust margin between elements */
+.nav_btnride > * {
+    margin-right: 20px; /* Adjust spacing */
+}
+.RRide .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-left: 20px;
+    margin-top: 160px; /* Increase top margin to avoid overlap with the fixed header */
+    height: calc(100vh - 160px); /* Adjust height to fit remaining viewport space */
+    overflow-y: auto; /* Add vertical scrollbar if needed */
+}
+
+.RRide .drivers {
+    text-align: center;
+    overflow-y: auto; /* Add vertical scrollbar if needed */
+}
+
+.friend-request-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Adjust the margin as needed */
+    padding: 10px; /* Add padding for better spacing */
+    height: 180px;
+}
+
+.profilereq {
+    width: 80px;
+    height: 80px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-size: cover; /* Ensure the background image covers the entire div */
+    background-position: center; /* Center the background image */
+}
+
+.profilereq-info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.profilereq-info h4 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profilereq-info button {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 45, 61, 0.5);
+}
+
+.popup-content {
+    background-color: #ffffff;
+    width: 300px;
+    margin: 20% auto;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.options {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.options a{
+    color: #fff;
+}
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+}
+
+#closePopup {
+    margin-top: 20px;
+    background-color: #ea2020;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #555353;
+}
+.riderBtn{
+    margin-bottom: 500px;
+}
