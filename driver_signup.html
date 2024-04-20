@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp for drivers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+
+        .heading {
+            display: flex;
+            flex-direction: column;
+            padding-top: 35px;
+
+            letter-spacing: 0.5px;
+            padding-bottom: 65px;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 45px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+
+        }
+
+        h4 {
+
+            text-align: center;
+            font-size: larger;
+
+        }
+
+        h4 a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: rgb(57, 17, 216);
+        }
+
+        .left {
+
+            /* background-color: rgb(245, 246, 249) ; */
+            max-width: 60%;
+            padding-top: 3%;
+            padding-left: 45px;
+        }
+
+        .right {
+            max-width: 30%;
+            padding-left: 0px;
+            padding-right: 40px;
+        }
+
+        .split-screen {
+            display: flex;
+            flex-direction: row;
+        }
+
+
+        .left,
+        .right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 400px;
+  width: 500px; */
+
+        }
+
+
+        .form p {
+            margin: 1.5rem 0;
+            font-size: 2.875rem;
+        }
+
+        .right form {
+            width: 216px;
+            padding-left: 4%;
+            margin-left: 0%;
+            padding-bottom: 4%;
+            padding-top: 12%;
+
+        }
+
+        form input[type="text"],
+        form input[type="password"],
+        select,
+        form input[type="tel"] {
+
+            display: block;
+            width: 180%;
+            box-sizing: border-box;
+            border-radius: 8px;
+            border: 1.5px solid black;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: 100;
+
+
+        }
+
+
+        label {
+            color: rgb(1, 15, 26);
+            display: block;
+            margin-bottom: 4px;
+            font-size: 17px;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            padding-left: 1px;
+        }
+
+
+        .split-screen .right {
+            float: right;
+        }
+
+        .split-screen .right .img {
+            width: 50%;
+            align-content: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            margin-bottom: -5px;
+
+
+        }
+
+        .img {
+
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            margin-left: 55%;
+            padding-left: 0 0 0 0;
+            /* margin-right: 85%; */
+            padding-bottom: -5%;
+            border-radius: 50%;
+
+
+        }
+
+
+        input {
+            display: none;
+        }
+
+
+        .t {
+            padding-top: 3%;
+            margin-top: 0%;
+            border: 1px solid rgb(129, 124, 124);
+            border-radius: 8%;
+
+        }
+
+        .signup_btn {
+
+            display: block;
+            width: 250px;
+            background: rgb(53, 68, 119);
+            color: rgb(226, 221, 221);
+            font-weight: 500;
+            border: none;
+            padding: 1rem;
+            border-radius: 50px;
+            font-size: 1.45rem;
+            letter-spacing: 0.6px;
+            text-align: center;
+            align-content: center;
+            padding: 0.45%;
+            margin: auto;
+            margin-bottom: 0.6%;
+
+        }
+
+
+        @media screen and (min-width: 900px) {
+            .split-screen {
+                flex-direction: row;
+                height: 50vh;
+
+            }
+
+            .left,
+            .right {
+
+                display: flex;
+                width: 50%;
+                height: auto;
+            }
+
+        }
+
+        nav {
+            background: #1a1a1a;
+            width: 100%;
+            padding: 10px 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: relative;
+        }
+
+        nav ul {
+            width: 100%;
+            text-align: right;
+        }
+
+        nav ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 10px 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo {
+            font-size: 25px;
+            color: #a26a7f;
+            /* text-decoration: dashed; */
+            font-weight: 700;
+            /* margin-right: auto; */
+            /* filter: drop-shadow(0 0 5px #4a0341); */
+        }
+
+
+        button {
+            /* padding: 10px 10px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            margin: 0px 35px;
+            width: 120px;
+            outline: none;
+            border-radius: 50px;
+            border-color: #f8f4f4;
+            border-bottom-width: 3px;
+            color: black;
+            font-size: 16px;
+            font-weight: 600;
+            /* border-radius: 5px; */
+            letter-spacing: 1px;
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgba(0, 136, 169, 0.8);
+            color: #fff;
+        }
+
+        .sub-menu-wrap {
+            position: absolute;
+            top: 100%;
+            right: 10%;
+            width: 320px;
+            max-height: 0px;
+            overflow: hidden;
+            left: 75%;
+            transition: max-height 0.5s;
+        }
+
+        .sub-menu-wrap.open-menu {
+            max-height: 400px;
+
+        }
+
+        .sub-menu {
+            background: #f4f1f1;
+            border-radius: 5px;
+            box-shadow: 0 0 8px #525252;
+            padding: 20px;
+            margin: 10px;
+
+        }
+
+        .sub-menu hr {
+            border: 0;
+            height: 1px;
+            width: 100%;
+            background: #ccc;
+            margin: 15px 0 10px;
+        }
+
+        .sub-menu-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #525252;
+            margin: 12px 0;
+        }
+
+        .sub-menu-link p {
+            width: 100%;
+            margin-left: 10px;
+        }
+
+        .sub-menu-link img {
+            width: 40px;
+            background: #e5e5e5;
+            border-radius: 50%;
+            padding: 10px;
+            margin-right: 15px;
+        }
+
+        .sub-menu-link:hover span {
+            transform: translateX(5px);
+        }
+
+        .sub-menu-link:hover p {
+            font-weight: 600;
+        }
+
+        .card label {
+            display: block;
+            width: 150px;
+            background: rgb(218, 68, 68);
+            color: #1c1414;
+            padding: 4px;
+            margin: 4.5px auto;
+            padding-left: 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 40%;
+        }
+
+        .img {
+            display: flex;
+            margin-left: 55%;
+            padding-left: 0;
+            margin-top: -80px;
+        }
+
+        .input_container_email {
+            margin-top: 20px;
+
+        }
+
+        .right .input_container_email {
+            margin-top: 60px;
+        }
+
+        .input_container_password {
+            margin-top: 20px;
+        }
+
+
+        .logo {
+            font-size: 25px;
+            color: #a26a7f;
+            font-weight: 700;
+
+        }
+
+        button {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            margin: 0px 35px;
+            width: 120px;
+            outline: none;
+            border-radius: 50px;
+            border-color: #f8f4f4;
+            border-bottom-width: 3px;
+            color: black;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgba(0, 136, 169, 0.8);
+            color: #fff;
+        }
+
+
+
+
+
+        .logo {
+            font-family: 'Comic Sans MS', cursive;
+            color: #97e9cb;
+
+        }
+
+        .right {
+
+            position: relative;
+        }
+
+
+        .card label {
+
+            position: absolute;
+            top: 75px;
+            left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- <nav class="navbar">
+    <div class="navdiv">
+      <div class="logo"><a href="#">MAMAJABA?</a></div>
+    </div>
+  </nav> -->
+    <nav>
+        <div class="logo">MAMAJABA? </div>
+        <ul>
+            <li><a href="#">SERVICES</a></li>
+            <!-- <li><a href="#">ABOUT</a></li> -->
+            <li><a href="#">CONTACTS</a></li>
+        </ul>
+        <button onclick="toggleMenu()">Help<i class="fa-solid fa-caret-down"></i></button>
+
+        </div>
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+
+                <a href="#" class="sub-menu-link">
+                    <i class="fa-solid fa-comments"></i>
+                    <p>Chat with support</p>
+                </a>
+                <hr>
+                <a href="#" class="sub-menu-link">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <p>Get help with your account</p>
+
+                </a>
+                <hr>
+                <a href="#" class="sub-menu-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <p>Sign Out</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="heading">
+        <div class="title">
+            <h1>Create new Account</h1>
+
+        </div>
+    </div>
+
+
+
+    <div class="split-screen">
+        <div class="left">
+            <form>
+
+                <section class="copy1">
+
+
+                    <div class="input_container_name">
+                        <label for="fname">Name</label>
+                        <input id="fname" name="fname" type="text" placeholder="Nurul Absar" required>
+                    </div>
+
+
+                    <div class="input_container_pno">
+                        <label for="phone">Contact </label>
+                        <input id="phone" name="phone" placeholder="+880123456789" type="tel" maxlength="11" required>
+                    </div>
+
+
+
+                    <div class="input_container_email">
+                        <label for="text">Licence Plate</label>
+                        <input type="text" placeholder="AB1234CD" required>
+                    </div>
+
+                    <div class="input_container_email">
+                        <label for="experi">Years of Experience</label>
+                        <input id="experi" name="experi" type="text" placeholder="1 year" required>
+                    </div>
+
+
+
+
+                </section>
+
+                </section>
+            </form>
+        </div>
+        <div class="t"></div>
+
+        <div class="right">
+            <form>
+                <section class="copy">
+
+                    <div class="card">
+
+                        <img src="images/user1.png" alt="Unknown person" class="img" id="profile-pic"><br>
+                        <label for="input-file"> Update image</label>
+                        <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file" required>
+
+                    </div>
+
+
+
+                    <div class="input_container_email">
+                        <label for="dropdown">Rickshaw Model</label>
+                        <select id="dropdown" type="dropdown" required>
+                            <option value="select" selected>Select</option>
+                            <option value="opt1">Bangla Rickshaw</option>
+                            <option value="opt2">Motor Rickshaw</option>
+
+                        </select>
+                    </div>
+
+
+
+
+                    <div class="input_container_password">
+                        <label for="password">Password</label>
+                        <input id="password" name="password" placeholder="12345" type="password" minlength="6" required>
+                        <!-- <i class="far fa-eye-slash"></i> -->
+                    </div>
+
+                    <div class="input_container_password">
+                        <label for="password">Confirm Password</label>
+                        <input id="password" name="password" type="password" placeholder="12345" minlength="6" required>
+                        <!-- <i class="far fa-eye-slash"></i> -->
+                    </div>
+
+
+                </section>
+            </form>
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <button class="signup_btn" type="submit">Sign Up</button>
+
+    <h4>Already Registered ? <a href="#"> Login </a></h4>
+
+
+
+
+    <script>
+
+        let profilePicc = document.getElementById("profile-pic");
+
+        let InputFile = document.getElementById("input-file");
+
+        InputFile.onchange = function () {
+            profilePicc.src = URL.createObjectURL(InputFile.files[0])
+        }
+
+        let profilePic = document.getElementById("profile-pic");
+        let inputFile = document.getElementById("input-file");
+
+        inputFile.onchange = function () {
+            profilePic.src = URL.createObjectURL(inputFile.files[0]);
+        }
+        let subMenu = document.getElementById("subMenu");
+
+        function toggleMenu() {
+            subMenu.classList.toggle("open-menu");
+        }
+    </script>
+
+
+
+</body>
+
+</html>
