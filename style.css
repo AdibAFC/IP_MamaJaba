@@ -50,7 +50,6 @@ body{
     height: 4rem;
 }
 
-
 .header .navbar a{
     margin: 0 1rem;
     font-size: 1.6rem;
@@ -61,7 +60,6 @@ body{
     border-bottom: 0.1rem solid var(--main-color);
     padding-bottom: 0.5rem;
 }
-
 .nav_btn {
     display: inline-block;
     background-color: black;
@@ -173,24 +171,24 @@ section{
 }
 .drive_btn {
     display: inline-block;
-    padding: 10px 20px; /* Adjust padding as needed */
-    background-color: var(--main-color); /* Background color */
-    color: #fff; /* Text color */
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: #fff;
     border: none;
     border-radius: 5px;
-    font-size: 16px; /* Adjust font size as needed */
+    font-size: 16px;
     text-decoration: none;
 }
 
 .drive_btn:hover {
-    background-color: #a18f67; /* Change background color on hover */
+    background-color: #a18f67;
 }
 .text-boxes input[type="text"] {
-    width: 80%; /* Set the width to 100% of the parent container */
-    padding: 10px; /* Add padding to the text boxes for better appearance */
-    margin-bottom: 10px; /* Add some space between the text boxes */
-    border-radius: 5px; /* Add border radius for rounded corners */
-    border: 1px solid #ccc; /* Add a border for better visibility */
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 .Review .box-container{
     display: grid;
@@ -209,10 +207,10 @@ section{
     padding: 2rem 0;
 }
 .Review .box-container .user {
-    width: 7rem; /* Set the width of the image to 100% of its container */
-    height: 7rem; /* Maintain aspect ratio */
+    width: 7rem;
+    height: 7rem;
     border-radius: 50%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 .Review .box-container h3{
     padding: 1rem 0;
@@ -223,14 +221,66 @@ section{
     font-size: 1.5rem;
 }
 .Review h1 {
-    text-align: center; /* Center align the heading */
-    font-size: 3rem; /* Increase the font size */
-    margin-bottom: 2rem; /* Add some bottom margin for spacing */
+    text-align: center; 
+    font-size: 3rem; 
+    margin-bottom: 2rem; 
     color: #9d883ce7;
 }
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 45, 61, 0.5);
+}
+
+.popup-content {
+    background-color: #ffffff;
+    width: 300px;
+    margin: 20% auto;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.options {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.options a{
+    color: #fff;
+}
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+}
+
+#closePopup {
+    margin-top: 20px;
+    background-color: #ea2020;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #555353;
+}
+.riderBtn{
+    margin-bottom: 500px;
+}
+
+
 footer{
     width: 100%;
-    position: absolute;
     bottom: 0;
     background: linear-gradient(to right, #000000, #2d0b00);
     color: #fff;
@@ -251,6 +301,8 @@ footer .col{
     flex-basis: 25%;
     padding: 10px;
 }
+
+
 footer .col:nth-child(2), .col:nth-child(3)
 {
     flex-basis: 15%;
@@ -382,135 +434,8 @@ footer .underline span{
         flex-basis: 100%;
         
     }
-    footer /.col:nth-child(2), .col:nth-child(3)
+    footer .col:nth-child(2), .col:nth-child(3)
     {
         flex-basis: 100%;
     }
-}
-
-
-.profile-picture {
-    border-radius: 50%;
-    width: 30px; /* Adjust as needed */
-    height: 30px; /* Adjust as needed */
-    background-color: #ccc; /* Placeholder color */
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav_btnride {
-    display: flex; /* Use flexbox for better alignment */
-    justify-content: flex-end; /* Align items to the end */
-    border: none;
-    font-size: 1.6rem;
-    margin-left: 10px; /* Adjust overall margin */
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Adjust margin between elements */
-.nav_btnride > * {
-    margin-right: 20px; /* Adjust spacing */
-}
-.RRide .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    margin-left: 20px;
-    margin-top: 160px; /* Increase top margin to avoid overlap with the fixed header */
-    height: calc(100vh - 160px); /* Adjust height to fit remaining viewport space */
-    overflow-y: auto; /* Add vertical scrollbar if needed */
-}
-
-.RRide .drivers {
-    text-align: center;
-    overflow-y: auto; /* Add vertical scrollbar if needed */
-}
-
-.friend-request-box {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px; /* Adjust the margin as needed */
-    padding: 10px; /* Add padding for better spacing */
-    height: 180px;
-}
-
-.profilereq {
-    width: 80px;
-    height: 80px;
-    background-color: #ccc;
-    border-radius: 50%;
-    margin-right: 20px;
-    margin-left: 20px;
-    background-size: cover; /* Ensure the background image covers the entire div */
-    background-position: center; /* Center the background image */
-}
-
-.profilereq-info {
-    flex-grow: 1;
-    text-align: left;
-}
-
-.profilereq-info h4 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.profilereq-info button {
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(47, 45, 61, 0.5);
-}
-
-.popup-content {
-    background-color: #ffffff;
-    width: 300px;
-    margin: 20% auto;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.options {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.options a{
-    color: #fff;
-}
-button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background: #000;
-    color: #fff;
-}
-
-#closePopup {
-    margin-top: 20px;
-    background-color: #ea2020;
-    color: #fff;
-}
-
-button:hover {
-    background-color: #555353;
-}
-.riderBtn{
-    margin-bottom: 500px;
 }
