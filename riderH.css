@@ -104,6 +104,7 @@ body{
     overflow-y: auto; /* Add vertical scrollbar if needed */
 }
 
+
 .friend-request-box {
     display: flex;
     align-items: center;
