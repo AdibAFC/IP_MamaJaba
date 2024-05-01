@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rider-signup</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    :root {
+      font-size: 100%;
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    body {
+
+      padding: 0;
+      margin: 0;
+
+      font-weight: 500;
+
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 1000;
+
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 1000;
+
+    }
+
+    .left {
+
+      background-color: rgb(5, 19, 51);
+      max-width: 60%;
+    }
+
+    a {
+
+      color: rgb(3, 0, 16);
+    }
+
+
+    a:hover {
+      /* text-decoration: none; */
+      color: blue;
+    }
+
+    .split-screen {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .left {
+      height: 200px;
+    }
+
+    .left,
+    .right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .right {
+      background: url(../MamaJaba-/images/loginbg.jpg);
+      background-size: cover;
+    }
+
+    .left p {
+      font-weight: 550;
+    }
+
+    .left .copy h1 {
+      color: #97e9cb;
+      text-align: left;
+
+      .comic-sans {
+        font-family: 'Comic Sans MS', cursive;
+      }
+    }
+
+    .left .copy h2 {
+      color: rgb(242, 228, 228);
+      text-align: left;
+    }
+
+    .form p {
+      margin: 1.5rem 0;
+      font-size: 1.875rem;
+    }
+
+    .right form {
+      width: 328px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"],
+    form input[type="tel"] {
+
+      display: block;
+      width: 105%;
+      box-sizing: border-box;
+      border-radius: 8px;
+      border: 1.5px solid black;
+      padding: 0.8rem;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      font-weight: 100;
+    }
+
+    label {
+      color: aliceblue;
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .input_container_password {
+
+      position: relative;
+    }
+
+    .input_container_password i {
+      position: absolute;
+      top: 39px;
+      right: 0.8px;
+    }
+
+    .login_container {
+      color: rgb(232, 234, 236);
+      font-weight: lighter;
+      font-size: smaller;
+    }
+
+    .login_container p {
+      font-size: 16px;
+    }
+
+    .login_container strong {
+
+      color: aliceblue;
+      font-size: 18px;
+
+    }
+
+
+    .signup_btn {
+
+      display: block;
+      width: 430px;
+      background: rgb(56, 61, 207);
+      color: gainsboro;
+      font-weight: 500;
+      border: none;
+      padding: 1rem;
+      border-radius: 2px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-radius: 550px;
+    }
+
+    .continuewithemail_btn {
+      display: block;
+      width: 430px;
+      background: rgb(245, 245, 249);
+      color: rgb(6, 2, 2);
+      font-weight: 500;
+      border: none;
+      padding: 1rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      border-radius: 550px;
+
+    }
+
+
+
+    @media screen and (min-width: 900px) {
+      .split-screen {
+        flex-direction: row;
+        height: 100vh;
+
+      }
+
+      .left,
+      .right {
+
+        display: flex;
+        width: 50%;
+        height: auto;
+      }
+
+    }
+  </style>
+</head>
+
+
+
+
+
+<body>
+  <div class="split-screen">
+    <div class="left">
+      <form>
+        <section class="copy">
+          <h1><span class="comic-sans" style="font-family: 'Comic Sans MS', cursive;color: #97e9cb;">MamaJaba?</span>
+          </h1>
+          <h2>Create an account</h2>
+        </section>
+        <section class="copy1">
+
+
+          <div class="input_container_name">
+            <label for="fname">Name</label>
+            <input id="fname" name="fname" type="text" placeholder="Shiti">
+          </div>
+
+
+          <div class="input_container_pno">
+            <label for="phone">Contact no</label>
+            <input id="phone" name="phone" placeholder="+880123456789" type="tel" maxlength="11">
+          </div>
+
+
+
+          <div class="input_container_email">
+            <label for="email">CUET mail</label>
+            <input id="email" name="email" type="email" placeholder="u2004027@student.cuet.ac.bd ">
+          </div>
+
+          <div class="input_container_password">
+            <label for="password">Password</label>
+            <input id="password" name="password" placeholder="At least 6 characters" type="password" minlength="6">
+          </div>
+          <div class="input_container_password">
+            <label for="cpassword">Confirm Password</label>
+            <input id="cpassword" name="cpassword" type="password" placeholder="12345" minlength="6">
+          </div>
+          <br>
+
+
+
+        </section>
+        <button class="signup_btn" type="submit">Sign Up</button>
+
+        <br>
+
+        <button class="continuewithemail_btn" type="submit">Continue with E-mail
+
+        </button>
+
+        <div class="login_container">
+          <p>Already have an account? <a href="#"><strong><u>Log In</u> </strong></a></p>
+        </div>
+        </section>
+      </form>
+      <!-- <h1>Explore your creativity</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, voluptatum? Ratione nemo nostrum numquam voluptates non.</p> -->
+
+
+    </div>
+
+    <div class="right">
+      <section class="copy">
+
+      </section>
+
+
+    </div>
+  </div>
+  <script>
+    let icon = document.getElementById("eyeicon");
+    let pass = document.getElementById("password");
+
+    icon.onclick = function () {
+      if (pass.type == "password") {
+        pass.type = "text";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+      }
+      else {
+        pass.type = "password";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+      }
+      if (pass.type == "cpassword") {
+        pass.type = "text";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+      }
+      else {
+        pass.type = "cpassword";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+      }
+    }
+
+  </script>
+</body>
+
+</html>
