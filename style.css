@@ -50,7 +50,6 @@ body{
     height: 4rem;
 }
 
-
 .header .navbar a{
     margin: 0 1rem;
     font-size: 1.6rem;
@@ -61,7 +60,6 @@ body{
     border-bottom: 0.1rem solid var(--main-color);
     padding-bottom: 0.5rem;
 }
-
 .nav_btn {
     display: inline-block;
     background-color: black;
@@ -173,24 +171,24 @@ section{
 }
 .drive_btn {
     display: inline-block;
-    padding: 10px 20px; /* Adjust padding as needed */
-    background-color: var(--main-color); /* Background color */
-    color: #fff; /* Text color */
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: #fff;
     border: none;
     border-radius: 5px;
-    font-size: 16px; /* Adjust font size as needed */
+    font-size: 16px;
     text-decoration: none;
 }
 
 .drive_btn:hover {
-    background-color: #a18f67; /* Change background color on hover */
+    background-color: #a18f67;
 }
 .text-boxes input[type="text"] {
-    width: 80%; /* Set the width to 100% of the parent container */
-    padding: 10px; /* Add padding to the text boxes for better appearance */
-    margin-bottom: 10px; /* Add some space between the text boxes */
-    border-radius: 5px; /* Add border radius for rounded corners */
-    border: 1px solid #ccc; /* Add a border for better visibility */
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 .Review .box-container{
     display: grid;
@@ -209,10 +207,10 @@ section{
     padding: 2rem 0;
 }
 .Review .box-container .user {
-    width: 7rem; /* Set the width of the image to 100% of its container */
-    height: 7rem; /* Maintain aspect ratio */
+    width: 7rem;
+    height: 7rem;
     border-radius: 50%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 .Review .box-container h3{
     padding: 1rem 0;
@@ -223,120 +221,10 @@ section{
     font-size: 1.5rem;
 }
 .Review h1 {
-    text-align: center; /* Center align the heading */
-    font-size: 3rem; /* Increase the font size */
-    margin-bottom: 2rem; /* Add some bottom margin for spacing */
+    text-align: center; 
+    font-size: 3rem; 
+    margin-bottom: 2rem; 
     color: #9d883ce7;
-}
-.footer{
-    background: var(--black);
-    text-align: center;
-}
-.footer .share{
-    padding: 1rem 0;
-}
-.footer .share a{
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
-    color: #fff;
-    border: var(--border);
-    margin: .3rem;
-    border-radius: 50%;
-}
-.footer .share a:hover{
-    background-color: var(--main-color);
-}
-.footer .link{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 2rem 0;
-    gap: 1rem;
-}
-.footer .link a{
-    padding: .7rem 2rem;
-    color: #fff;
-    border: var(--border);
-    font-size: 2rem;
-}
-.footer .link a:hover{
-    color: var(--main-color);
-}
-.profile-picture {
-    border-radius: 50%;
-    width: 30px; /* Adjust as needed */
-    height: 30px; /* Adjust as needed */
-    background-color: #ccc; /* Placeholder color */
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav_btnride {
-    display: flex; /* Use flexbox for better alignment */
-    justify-content: flex-end; /* Align items to the end */
-    border: none;
-    font-size: 1.6rem;
-    margin-left: 10px; /* Adjust overall margin */
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Adjust margin between elements */
-.nav_btnride > * {
-    margin-right: 20px; /* Adjust spacing */
-}
-.RRide .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    margin-left: 20px;
-    margin-top: 160px; /* Increase top margin to avoid overlap with the fixed header */
-    height: calc(100vh - 160px); /* Adjust height to fit remaining viewport space */
-    overflow-y: auto; /* Add vertical scrollbar if needed */
-}
-
-.RRide .drivers {
-    text-align: center;
-    overflow-y: auto; /* Add vertical scrollbar if needed */
-}
-
-.friend-request-box {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px; /* Adjust the margin as needed */
-    padding: 10px; /* Add padding for better spacing */
-    height: 180px;
-}
-
-.profilereq {
-    width: 80px;
-    height: 80px;
-    background-color: #ccc;
-    border-radius: 50%;
-    margin-right: 20px;
-    margin-left: 20px;
-    background-size: cover; /* Ensure the background image covers the entire div */
-    background-position: center; /* Center the background image */
-}
-
-.profilereq-info {
-    flex-grow: 1;
-    text-align: left;
-}
-
-.profilereq-info h4 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.profilereq-info button {
-    margin-right: 10px;
-    cursor: pointer;
 }
 
 .popup {
@@ -388,4 +276,166 @@ button:hover {
 }
 .riderBtn{
     margin-bottom: 500px;
+}
+
+
+footer{
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to right, #000000, #2d0b00);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+}
+footer .row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+footer .col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+
+footer .col:nth-child(2), .col:nth-child(3)
+{
+    flex-basis: 15%;
+}
+footer .col p{
+    letter-spacing: 1px;
+}
+footer .comic-sans {
+    font-family: 'Comic Sans MS', cursive; /* Use Comic Sans MS font */
+    color: #97e9cb;
+    font-size: 20px;
+  
+}
+footer .logo{
+    width: 80px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+footer .col h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+footer ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+footer ul li a{
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+    transition: text-shadow 0.5s ease;
+}
+footer ul li a:hover{
+    text-shadow: 0 0  1px rgba(255, 255, 255, 0.5);
+}
+footer form{
+    padding-bottom: 15px;
+    display:  flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+footer form .fa-regular{
+    font-size: 18px;
+    margin-right: 10px;
+}
+footer form input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+footer form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+footer form button .fa-solid {
+    font-size: 16px;
+    color: #ccc;
+}
+footer .social-icons .fa-brands{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+    transition:  0.5s ease ; 
+}
+footer .social-icons .fa-brands:hover{
+    background: #2d0b00;
+    color: #fff;
+    box-shadow: 0 0 1rem #2d0b00 ;
+}
+footer hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+footer .copyright{
+    text-align: center;
+    letter-spacing: 1px;
+    color: #ccc;
+}
+footer .underline{
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+}
+footer .underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving{
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+@media (max-width: 700px)
+{
+    footer{
+        bottom: unset;
+    }
+    footer .col{
+        flex-basis: 100%;
+        
+    }
+    footer .col:nth-child(2), .col:nth-child(3)
+    {
+        flex-basis: 100%;
+    }
 }

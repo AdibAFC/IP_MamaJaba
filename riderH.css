@@ -1,3 +1,4 @@
+
 :root {
     --main-color: #d3ad7f;
     --black:#13131a;
@@ -16,7 +17,7 @@
     transition: .2s linear;
 }
 html{
-    /* font-size: 62.5%; */
+    font-size: 62.5%;
     overflow-x: hidden;
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
@@ -34,188 +35,134 @@ html::-webkit-scrollbar-thumb{
 body{
     background: white;
 }
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom:var(--border);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    width: 100%;
+}
+.header .logo img{
+    height: 4rem;
+}
+
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+.header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+}
+.nav_btnride {
+    display: flex; /* Use flexbox for better alignment */
+    justify-content: flex-end; /* Align items to the end */
+    border: none;
+    font-size: 1.6rem;
+    margin-left: 10px; /* Adjust overall margin */
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Adjust margin between elements */
+.nav_btnride > * {
+    margin-right: 20px; /* Adjust spacing */
+}
+.profile-picture {
+    border-radius: 50%;
+    width: 30px; /* Adjust as needed */
+    height: 30px; /* Adjust as needed */
+    background-color: #ccc; /* Placeholder color */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.RRide .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-left: 20px;
+    margin-top: 160px; /* Increase top margin to avoid overlap with the fixed header */
+    height: calc(100vh - 160px); /* Adjust height to fit remaining viewport space */
+    overflow-y: auto; /* Add vertical scrollbar if needed */
+}
+
+.RRide .drivers {
+    text-align: center;
+    overflow-y: auto; /* Add vertical scrollbar if needed */
+}
+
+.friend-request-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Adjust the margin as needed */
+    padding: 10px; /* Add padding for better spacing */
+    height: 180px;
+    background-color: #dadde2;
+}
+
+.profilereq {
+    width: 80px;
+    height: 80px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../IP_MamaJaba/images/nurul.jpg');
+}
+
+.profilereq-info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.profilereq-info h4 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profilereq-info button {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.highlight-text {
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 52px;
+    color: #ffffffee;
+    margin-left: 130%;
+}
+
+section{
+    padding: 2rem 7%;
+}
 .comic-sans {
     font-family: 'Comic Sans MS', cursive;
-    /* Use Comic Sans MS font */
     color: #97e9cb;
 }
 
-nav {
-    background: #1a1a1a;
-    width: 100%;
-    padding: 10px 10%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+.text-boxes input[type="text"] {
+    width: 80%; /* Set the width to 100% of the parent container */
+    padding: 10px; /* Add padding to the text boxes for better appearance */
+    margin-bottom: 10px; /* Add some space between the text boxes */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    border: 1px solid #ccc; /* Add a border for better visibility */
 }
 
-.logo {
-    font-size: 25px;
-    color: #a26a7f;
-    /* text-decoration: dashed; */
-    font-weight: 700;
-    /* margin-right: auto; */
-}
-
-.user-pic {
-    width: 65px;
-    height: 55px;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-left: 30px;
-    /* color: white; */
-}
-
-nav ul {
-    width: 100%;
-    text-align: right;
-}
-
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-    font-size: 17px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.sub-menu-wrap {
-    position: absolute;
-    top: 100%;
-    right: 10%;
-    width: 320px;
-    max-height: 0px;
-    overflow: hidden;
-    transition: max-height 0.5s;
-}
-
-.sub-menu-wrap.open-menu {
-    max-height: 400px;
-}
-
-.sub-menu {
-    background: #f4f1f1;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 8px #525252;
-}
-
-.user-info {
-    display: flex;
-    align-items: center;
-}
-
-.user-info h3 {
-    font-weight: 500;
-}
-
-.user-info img {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-.sub-menu hr {
-    border: 0;
-    height: 1px;
-    width: 100%;
-    background: #ccc;
-    margin: 15px 0 10px;
-}
-
-.sub-menu-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #525252;
-    margin: 12px 0;
-}
-
-.sub-menu-link p {
-    width: 100%;
-    margin-left: 10px;
-}
-
-.sub-menu-link img {
-    width: 40px;
-    background: #e5e5e5;
-    border-radius: 50%;
-    padding: 10px;
-    margin-right: 15px;
-}
-
-.sub-menu-link span {
-    font-size: 22px;
-    transition: transform 0.9s;
-
-}
-
-.sub-menu-link:hover span {
-    transform: translateX(5px);
-}
-
-.sub-menu-link:hover p {
-    font-weight: 600;
-}
-
-.ridereq {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    margin-top: 100px;
-}
-.ride-request {
-    width: 100%; /* Take up full width of the container */
-    max-width: 700px; /* Limit the width of each ride-request */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin-bottom: 20px; /* Add margin between ride-request divs */
-}
-
-.ride-request-info {
-    display: flex;
-    align-items: center;
-}
-
-.ride-request-info img {
-    width: 80px;
-    height: 80px;
-    margin-right: 20px;
-}
-
-.ride-request-details {
-    margin-right: 20px;
-}
-
-.ride-request-details p {
-    margin: 0;
-    font-size: 16px;
-    color: #333;
-}
-
-.see-more {
-    padding: 10px 20px;
-    background-color: #1d4d9f;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.see-more:hover {
-    background-color: #15396e;
-}
 *{
     margin: 0;
     padding: 0;
@@ -243,6 +190,10 @@ footer .row{
 footer .col{
     flex-basis: 25%;
     padding: 10px;
+}
+footer .row .col p{
+    
+    font-family: 'Poppins', sans-serif;
 }
 footer .col:nth-child(2), .col:nth-child(3)
 {
