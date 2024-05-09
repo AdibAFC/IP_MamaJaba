@@ -3,596 +3,340 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp for drivers</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Registration Form</title>
     <style>
-        * {
+        body {
+            width: 100%;
+            height: 100vh;
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-
-
-        .heading {
-            display: flex;
-            flex-direction: column;
-            padding-top: 35px;
-
-            letter-spacing: 0.5px;
-            padding-bottom: 65px;
-
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 45px;
+            background-color: #ffffff;
+            color: #f5f6f7;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-weight: 700;
-            letter-spacing: 0.5px;
-
+            font-size: 21px;
         }
 
-        h4 {
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        .flex-r,
+        .flex-c {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .flex-c {
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 120%;
+            min-height: 100vh;
+            padding: 20px 10px;
+            background: url('bb1e440cdf987d68abbaf117521b0bcb.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .login-text {
+            
+            background: rgba(74, 172, 194, 0.539);
+            border: 2px solid rgba(255,255,255,.2);
+            box-shadow:  0 0 10px rgba(255,255,255,.2);
+            backdrop-filter: blur(1500px);
+            max-width: 800px;
+            width: 650px;
+            min-height: 500px;
+            border-radius: 10px;
+            padding: 10px 25px;
+            color: #020a0c;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow:  1px 5px 15px rgba(4, 2, 2, 0.893);
+            box-shadow: 10px 10px 5px 5px rgba(25, 24, 24, 0.75); 
+            -webkit-box-shadow: 6px 10px 5px 0px rgba(0,0,0,0.75);      
+            -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+           
+        }
+
+        .logo {
+            margin-bottom: 70px;
+        }
+
+        .logo span,
+        .logo span i {
+            font-size: 25px;
+            color: #fdfffe;
+        }
+
+        .login-text h1 {
+            font-size: 35px;
+            color: rgba(19, 18, 18, 0.956);
+        }
+
+        .login-text p {
+            font-size: 15px;
+            color: #140101;
+        }
+
+        form {
+            align-items: flex-start !important;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        h1,
+        p {
+            margin: 0.6em auto;
             text-align: center;
-            font-size: larger;
+        }
+
+        form {
+            width: 50vw;
+            max-width: 500px;
+            min-width: 200px;
+            margin: 0 auto;
+            padding-bottom: 2em;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0rem 0;
+        }
+
+        fieldset:last-of-type {
+            border-bottom: none;
+        }
+
+        label {
+            display: block;
+            margin: 0.6rem 0;
+            color: rgb(16, 2, 2);
 
         }
 
-        h4 a {
+        input,
+        textarea,
+        select {
+            margin: 10px 0 0 0;
+            width: 100%;
+            min-height: 2.2em;
+            border-radius: 2%;
+            color: rgb(84, 76, 76);
+            padding-left: 10px;
+            width: 490px;
+            height: 30px;
+            border-radius: 0%;
+            box-sizing: content-box;
+            background-position: 15%;
+            font-weight: 800;
+
+        }
+
+        input,
+        textarea {
+            background-color: #fcfcfc6e;
+            border: 2px solid #07072b;
+            color: #110a0a;
+            font-size: 16px;
+            font-weight: 700;
+            width: 490px;
+            height: 30px;
+            font-weight: 800;
+            outline: none;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgb(157, 137, 137) ;
+            
+
+        }
+        textarea {
+    background-color: #fcfcfc6e;
+    border: 2px solid #07072b;
+    color: #110a0a;
+    font-size: 16px;
+    font-weight: 700;
+    width: 490px;
+    height: 80px; /* Adjust height as needed */
+    font-weight: 800;
+    outline: none;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgb(157, 137, 137);
+    padding: 10px;
+    resize: none; /* Prevent resizing */
+}
+
+
+
+        .inline {
+            width: unset;
+            margin: 0 0.5em 0 0;
+            vertical-align: middle;
+        }
+
+ 
+        
+        input[type="submit"] {
+    display: block;
+    width: 30%;
+    margin: 1em auto;
+    height: 0.9em;
+    font-size: 1.12rem;
+    background-color:rgb(41, 85, 219);
+    color: white;
+    border-color: white;
+    border-radius: 80px;
+    min-width: 200px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-decoration:underline;
+    /* Add glowing effect */
+    box-shadow: 5px 5px 20px #297cc0; /* Modify the color and intensity as needed */
+}
+
+input[type="submit"]:hover {
+    /* Increase the glow intensity and change color on hover */
+    box-shadow: 5px 5px 40px #2f97f1; /* Modify the color and intensity as needed */
+    color: #e1edf5; /* Change color on hover */
+    text-decoration: none;
+    text-decoration: underline;
+    letter-spacing: 0.1em;
+}
+
+
+
+        input[type="file"] {
+            padding: 2px 2px;
+        }
+
+        .inline {
+            display: inline;
             text-decoration: none;
-            color: black;
+            border: none;
+            border-radius: 100%;
+        }
+
+        a {
+            color: #1c1c2a;
         }
 
         a:hover {
-            text-decoration: underline;
-            color: rgb(57, 17, 216);
+            color: #e2204a;
+            color: ;
         }
 
-        .left {
-
-            /* background-color: rgb(245, 246, 249) ; */
-            max-width: 60%;
-            padding-top: 3%;
-            padding-left: 45px;
-        }
-
-        .right {
-            max-width: 30%;
-            padding-left: 0px;
-            padding-right: 40px;
-        }
-
-        .split-screen {
-            display: flex;
-            flex-direction: row;
-        }
-
-
-        .left,
-        .right {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* height: 400px;
-  width: 500px; */
-
-        }
-
-
-        .form p {
-            margin: 1.5rem 0;
-            font-size: 2.875rem;
-        }
-
-        .right form {
-            width: 216px;
-            padding-left: 4%;
-            margin-left: 0%;
-            padding-bottom: 4%;
-            padding-top: 12%;
-
-        }
-
-        form input[type="text"],
-        form input[type="password"],
-        select,
-        form input[type="tel"] {
-
-            display: block;
-            width: 180%;
-            box-sizing: border-box;
-            border-radius: 8px;
-            border: 1.5px solid black;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            font-size: 1rem;
-            font-weight: 100;
-
-
-        }
-
-
-        label {
-            color: rgb(1, 15, 26);
-            display: block;
-            margin-bottom: 4px;
-            font-size: 17px;
-            letter-spacing: 0.5px;
-            font-weight: 600;
-            padding-left: 1px;
-        }
-
-
-        .split-screen .right {
-            float: right;
-        }
-
-        .split-screen .right .img {
-            width: 50%;
-            align-content: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100px;
-            margin-bottom: -5px;
-
-
-        }
-
-        .img {
-
-            background-color: rgb(255, 255, 255);
-            display: flex;
-            margin-left: 55%;
-            padding-left: 0 0 0 0;
-            /* margin-right: 85%; */
-            padding-bottom: -5%;
-            border-radius: 50%;
-
-
-        }
-
-
-        input {
+        #preview-image {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            max-width: 110%;
             display: none;
-        }
-
-
-        .t {
-            padding-top: 3%;
-            margin-top: 0%;
-            border: 1px solid rgb(129, 124, 124);
-            border-radius: 8%;
-
-        }
-
-        .signup_btn {
-
-            display: block;
-            width: 250px;
-            background: rgb(53, 68, 119);
-            color: rgb(226, 221, 221);
-            font-weight: 500;
-            border: none;
-            padding: 1rem;
-            border-radius: 50px;
-            font-size: 1.45rem;
-            letter-spacing: 0.6px;
-            text-align: center;
-            align-content: center;
-            padding: 0.45%;
-            margin: auto;
-            margin-bottom: 0.6%;
-
-        }
-
-
-        @media screen and (min-width: 900px) {
-            .split-screen {
-                flex-direction: row;
-                height: 50vh;
-
-            }
-
-            .left,
-            .right {
-
-                display: flex;
-                width: 50%;
-                height: auto;
-            }
-
-        }
-
-        nav {
-            background: #1a1a1a;
-            width: 100%;
-            padding: 10px 10%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
+            /* Center the image */
             position: relative;
-        }
-
-        nav ul {
-            width: 100%;
-            text-align: right;
-        }
-
-        nav ul li {
-            display: inline-block;
-            list-style: none;
-            margin: 10px 20px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .logo {
-            font-size: 25px;
-            color: #a26a7f;
-            /* text-decoration: dashed; */
-            font-weight: 700;
-            /* margin-right: auto; */
-            /* filter: drop-shadow(0 0 5px #4a0341); */
+            left: 50%;
+            transform: translateX(-50%);
         }
 
 
-        button {
-            /* padding: 10px 10px; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 40px;
-            margin: 0px 35px;
-            width: 120px;
-            outline: none;
-            border-radius: 50px;
-            border-color: #f8f4f4;
-            border-bottom-width: 3px;
-            color: black;
-            font-size: 16px;
-            font-weight: 600;
-            /* border-radius: 5px; */
-            letter-spacing: 1px;
-            transition: all 0.3s ease 0s;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: rgba(0, 136, 169, 0.8);
-            color: #fff;
-        }
-
-        .sub-menu-wrap {
-            position: absolute;
-            top: 100%;
-            right: 10%;
-            width: 320px;
-            max-height: 0px;
-            overflow: hidden;
-            left: 75%;
-            transition: max-height 0.5s;
-        }
-
-        .sub-menu-wrap.open-menu {
-            max-height: 400px;
-
-        }
-
-        .sub-menu {
-            background: #f4f1f1;
-            border-radius: 5px;
-            box-shadow: 0 0 8px #525252;
-            padding: 20px;
-            margin: 10px;
-
-        }
-
-        .sub-menu hr {
-            border: 0;
-            height: 1px;
-            width: 100%;
-            background: #ccc;
-            margin: 15px 0 10px;
-        }
-
-        .sub-menu-link {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: #525252;
-            margin: 12px 0;
-        }
-
-        .sub-menu-link p {
-            width: 100%;
-            margin-left: 10px;
-        }
-
-        .sub-menu-link img {
-            width: 40px;
-            background: #e5e5e5;
-            border-radius: 50%;
-            padding: 10px;
-            margin-right: 15px;
-        }
-
-        .sub-menu-link:hover span {
-            transform: translateX(5px);
-        }
-
-        .sub-menu-link:hover p {
-            font-weight: 600;
-        }
-
-        .card label {
-            display: block;
-            width: 150px;
-            background: rgb(218, 68, 68);
-            color: #1c1414;
-            padding: 4px;
-            margin: 4.5px auto;
-            padding-left: 25px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-left: 40%;
-        }
-
-        .img {
-            display: flex;
-            margin-left: 55%;
-            padding-left: 0;
-            margin-top: -80px;
-        }
-
-        .input_container_email {
-            margin-top: 20px;
-
-        }
-
-        .right .input_container_email {
-            margin-top: 60px;
-        }
-
-        .input_container_password {
-            margin-top: 20px;
-        }
-
-
-        .logo {
-            font-size: 25px;
-            color: #a26a7f;
-            font-weight: 700;
-
-        }
-
-        button {
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 40px;
-            margin: 0px 35px;
-            width: 120px;
-            outline: none;
-            border-radius: 50px;
-            border-color: #f8f4f4;
-            border-bottom-width: 3px;
-            color: black;
-            font-size: 16px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            transition: all 0.3s ease 0s;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: rgba(0, 136, 169, 0.8);
-            color: #fff;
-        }
-
-
-
-
-
-        .logo {
-            font-family: 'Comic Sans MS', cursive;
-            color: #97e9cb;
-
-        }
-
-        .right {
-
-            position: relative;
-        }
-
-
-        .card label {
-
-            position: absolute;
-            top: 75px;
-            left: 20px;
-        }
-    </style>
+ </style>
 </head>
 
 <body>
 
-
-    <!-- <nav class="navbar">
-    <div class="navdiv">
-      <div class="logo"><a href="#">MAMAJABA?</a></div>
-    </div>
-  </nav> -->
-    <nav>
-        <div class="logo">MAMAJABA? </div>
-        <ul>
-            <li><a href="#">SERVICES</a></li>
-            <!-- <li><a href="#">ABOUT</a></li> -->
-            <li><a href="#">CONTACTS</a></li>
-        </ul>
-        <button onclick="toggleMenu()">Help<i class="fa-solid fa-caret-down"></i></button>
-
-        </div>
-        <div class="sub-menu-wrap" id="subMenu">
-            <div class="sub-menu">
-
-                <a href="#" class="sub-menu-link">
-                    <i class="fa-solid fa-comments"></i>
-                    <p>Chat with support</p>
-                </a>
-                <hr>
-                <a href="#" class="sub-menu-link">
-                    <i class="fa-solid fa-circle-question"></i>
-                    <p>Get help with your account</p>
-
-                </a>
-                <hr>
-                <a href="#" class="sub-menu-link">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    <p>Sign Out</p>
-                    <span>></span>
-                </a>
+    <div class="container">
+        <div class="flex-r login-wrapper">
+            <div class="login-text">
+                <div class="logo">
+                    <h1>Driver's information</h1>
+                    <p>Please fill out this form with the required information</p>
+                    <form method="post">
+                        <fieldset>
+                            <label for="first-name">Name: <input id="first-name" name="first-name" type="text" placeholder="Write your name" required /></label>
+                            <label for="email">CUET Email: <input id="email" name="email" type="email" placeholder="example@gmail.com" /></label>
+                            <label for="phone">Contact no: <input id="phone" name="phone" type="tel" placeholder="0123456789" required /></label>
+                            <label for="text">Licence Plate:<input id="Licence" name="Licence" type="text" placeholder="AB12C8" /></label>
+                            <label for="text">Years of Experience: <input id="Experience" name="Experience" type="text" placeholder="1 year" /></label>
+                            <label for="dropdown">Rickshaw model:
+                                <select id="dropdown" type="dropdown" required>
+                                    <option value="select" selected>Select</option>
+                                    <option value="opt1">Bangla Rickshaw</option>
+                                    <option value="opt2">Motor Rickshaw</option>
+                                </select>
+                            </label>
+                            <label for="new-password"> Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" placeholder="12345" /></label>
+                            <label for="new-password">Confirm Password: <input id="cnew-password" name="cnew-password" type="password" pattern="[a-z0-5]{8,}" placeholder="12345" /></label>
+                        </fieldset>
+                        <fieldset>
+                            <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file"  name="file" /></label>
+                        </fieldset>
+                        <img id="preview-image" src="#" alt="Preview" style="max-width: 100%; display: none;">
+                        <label for="terms-and-conditions">
+                            <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="#">terms and conditions</a>
+                        </label>
+                       
+                        <a href="#" style="--clr:#1e9bff"><input type="submit" value="SIGN UP" /> </a>
+                    </form>
+                </div>
             </div>
         </div>
-    </nav>
-
-
-    <div class="heading">
-        <div class="title">
-            <h1>Create new Account</h1>
-
-        </div>
     </div>
 
-
-
-    <div class="split-screen">
-        <div class="left">
-            <form>
-
-                <section class="copy1">
-
-
-                    <div class="input_container_name">
-                        <label for="fname">Name</label>
-                        <input id="fname" name="fname" type="text" placeholder="Nurul Absar" required>
-                    </div>
-
-
-                    <div class="input_container_pno">
-                        <label for="phone">Contact </label>
-                        <input id="phone" name="phone" placeholder="+880123456789" type="tel" maxlength="11" required>
-                    </div>
-
-
-
-                    <div class="input_container_email">
-                        <label for="text">Licence Plate</label>
-                        <input type="text" placeholder="AB1234CD" required>
-                    </div>
-
-                    <div class="input_container_email">
-                        <label for="experi">Years of Experience</label>
-                        <input id="experi" name="experi" type="text" placeholder="1 year" required>
-                    </div>
-
-
-
-
-                </section>
-
-                </section>
-            </form>
-        </div>
-        <div class="t"></div>
-
-        <div class="right">
-            <form>
-                <section class="copy">
-
-                    <div class="card">
-
-                        <img src="images/user1.png" alt="Unknown person" class="img" id="profile-pic"><br>
-                        <label for="input-file"> Update image</label>
-                        <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file" required>
-
-                    </div>
-
-
-
-                    <div class="input_container_email">
-                        <label for="dropdown">Rickshaw Model</label>
-                        <select id="dropdown" type="dropdown" required>
-                            <option value="select" selected>Select</option>
-                            <option value="opt1">Bangla Rickshaw</option>
-                            <option value="opt2">Motor Rickshaw</option>
-
-                        </select>
-                    </div>
-
-
-
-
-                    <div class="input_container_password">
-                        <label for="password">Password</label>
-                        <input id="password" name="password" placeholder="12345" type="password" minlength="6" required>
-                        <!-- <i class="far fa-eye-slash"></i> -->
-                    </div>
-
-                    <div class="input_container_password">
-                        <label for="password">Confirm Password</label>
-                        <input id="password" name="password" type="password" placeholder="12345" minlength="6" required>
-                        <!-- <i class="far fa-eye-slash"></i> -->
-                    </div>
-
-
-                </section>
-            </form>
-
-        </div>
-    </div>
-    <br>
-    <br>
-    <button class="signup_btn" type="submit">Sign Up</button>
-
-    <h4>Already Registered ? <a href="#"> Login </a></h4>
-
-
-
+    
 
     <script>
+        const fileInput = document.getElementById('profile-picture');
+        const previewImage = document.getElementById('preview-image');
 
-        let profilePicc = document.getElementById("profile-pic");
-
-        let InputFile = document.getElementById("input-file");
-
-        InputFile.onchange = function () {
-            profilePicc.src = URL.createObjectURL(InputFile.files[0])
-        }
-
-        let profilePic = document.getElementById("profile-pic");
-        let inputFile = document.getElementById("input-file");
-
-        inputFile.onchange = function () {
-            profilePic.src = URL.createObjectURL(inputFile.files[0]);
-        }
-        let subMenu = document.getElementById("subMenu");
-
-        function toggleMenu() {
-            subMenu.classList.toggle("open-menu");
-        }
+        fileInput.addEventListener('change', function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = 'block'; // Show the preview image
+                };
+                reader.readAsDataURL(file);
+            } else {
+                previewImage.src = '#';
+                previewImage.style.display = 'none'; // Hide the preview image if no file is selected
+            }
+        });
     </script>
 
+<script>
+    // Function to validate password and confirm password
+    function validatePassword() {
+        var password = document.getElementById("new-password").value;
+        var confirmPassword = document.getElementById("cnew-password").value;
 
+        // Check if passwords match
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
+
+    // Add event listener to form submission
+    document.querySelector('form').addEventListener('submit', function (event) {
+        // Check password and confirm password on form submission
+        if (!validatePassword()) {
+            event.preventDefault(); // Prevent form submission if passwords don't match
+        }
+    });
+</script>
 
 </body>
 

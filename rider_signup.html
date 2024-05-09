@@ -2,313 +2,347 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <style>
 
-  <title>Rider-signup</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+html{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    scroll-behavior: smooth;
+}
+body{
+    background: #fcfdfe;
+    overflow:scroll;
+    max-width: 100%;
+}
 
-  <style>
-    :root {
-      font-size: 100%;
-      font-size: 16px;
-      line-height: 1;
+.container{
+    min-height: calc(100vh - 40px * 2);
+    display: grid;
+    grid-template-columns: 40% 60%;
+    border-radius: 10px;
+    overflow: hidden;
+    /* width: 1000px;
+    height: ; */
+}
+.login-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: content;
+    padding-left: 135px;
+    background-color: rgb(255, 255, 255);
+    /* margin-top: 10px; */
+}
+.login-right{
+    display: flex;
+    justify-content: center;
+    max-height: 1000px;
+}
+.form-item {
+    position: relative;
+    margin-bottom: -10px; 
+    width: 440px;
+}
+
+.pass-key {
+    padding-right: 30px; /* Adjust according to the width of the image */
+}
+
+.password-toggle {
+    position: absolute;
+    top: 65%;
+    right: 21px; /* Adjust as needed */
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 30px;
+}
+
+
+.remember-forgot a:hover{
+  color: rgb(255, 72, 0);
+  text-decoration: underline;
+}
+.bg-grey{
+    width: 100%;
+    border-top: 25px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0.2em;
+    text-align: center;
+    color: #18032da9;
+    font-size: 18px;
+}
+.bg-grey a{
+  color: rgba(18, 16, 16, 0.948);
+  
+}
+.bg-grey a:hover{
+  color: rgb(243, 54, 12);
+  text-decoration: underline;
+  transition:ease 0.3s;
+  letter-spacing: 0.01em;
+}
+.login-right img{
+    width: 100%;
+    height: 100%;
+}
+.login-header{
+    margin-top: 20px;
+}
+.login-header h1{
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgb(22, 22, 227);
+}
+.login-header p{
+    margin-top: 15px;
+    opacity: 1;
+    font-size: 18px;
+    /* gap: 20px; */
+}
+.login-form{
+    width: 410px;
+    margin-top: 30px;
+    
+}
+.login-content{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    /* margin-bottom: 10px; */
+}
+
+input[type='email'],
+input[type='password'], input[type='text'],input[type='tel'] {
+    border: 1.5px solid black;
+    height: 55px;
+    padding: 0 1.3rem;
+    margin-bottom: 0.6%;
+    width: 100%;
+    outline: none;
+    transition: background .5s;
+    font-size: 18px;
+    border-radius: 100px;
+}
+.pass-key{
+    border: 1px solid black;
+    height: 55px;
+    padding: 0 2rem;
+    width: 100%;
+    outline: none;
+    transition: background .5s;
+    font-size: 18px;
+    border-radius: 100px;
+}
+.show{
+    display: block;
+    position: absolute;
+    margin-left: 380px;
+    bottom: 250px;
+    font-size: 15px;
+    color: black;
+    cursor: pointer;
+}
+label[for = email],
+label[for = password],
+label[for = text],label[for=tel],label [for=name], label[for= confirm-password] {
+    font-size: 1.5rem;
+    text-decoration: solid;
+    /* margin-bottom: 25px; */
+    padding-left: 10px;
+    font-weight: 4600;
+    padding-bottom: 25px;
+    margin-top: 15px;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+input[type="checkbox"]{
+    width: 30px;
+    height: 21px;
+    accent-color: rgb(14, 90, 241);
+}
+button{
+    border: none;
+    padding: 1rem;
+    height: 55px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 100px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 35px;
+    margin-top: 12px;
+    transition: .5s;
+    /* color: rgb(153, 203, 195); */
+    background-color: rgb(96, 158, 230);
+    margin-top: 15px;
+}
+button:hover{
+    background: rgb(10, 118, 234);
+    transition: ease 0.5s;
+    color: white;
+    letter-spacing: 0.1em;
+}
+::placeholder{
+    color: grey;
+    font-size: 1rem;
+}
+@media(max-width:768px){
+    .login-header h1{
+        font-size: 30px;
+    }
+    body{
+        padding: 20px;
+    }
+    .container{
+        grid-template-columns: auto;
+    }
+    .login-right{
+        display: none;
     }
 
-    body {
 
-      padding: 0;
-      margin: 0;
-
-      font-weight: 500;
-
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      font-weight: 1000;
-
-    }
-
-    h2 {
-      font-size: 1.6rem;
-      font-weight: 1000;
-
-    }
-
-    .left {
-
-      background-color: rgb(5, 19, 51);
-      max-width: 60%;
-    }
-
-    a {
-
-      color: rgb(3, 0, 16);
-    }
-
-
-    a:hover {
-      /* text-decoration: none; */
-      color: blue;
-    }
-
-    .split-screen {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .left {
-      height: 200px;
-    }
-
-    .left,
-    .right {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-    }
-
-    .right {
-      background: url(../MamaJaba-/images/loginbg.jpg);
-      background-size: cover;
-    }
-
-    .left p {
-      font-weight: 550;
-    }
-
-    .left .copy h1 {
-      color: #97e9cb;
-      text-align: left;
-
-      .comic-sans {
-        font-family: 'Comic Sans MS', cursive;
-      }
-    }
-
-    .left .copy h2 {
-      color: rgb(242, 228, 228);
-      text-align: left;
-    }
-
-    .form p {
-      margin: 1.5rem 0;
-      font-size: 1.875rem;
-    }
-
-    .right form {
-      width: 328px;
-    }
-
-    form input[type="text"],
-    form input[type="email"],
-    form input[type="password"],
-    form input[type="tel"] {
-
-      display: block;
-      width: 105%;
-      box-sizing: border-box;
-      border-radius: 8px;
-      border: 1.5px solid black;
-      padding: 0.8rem;
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
-      font-weight: 100;
-    }
-
-    label {
-      color: aliceblue;
-      display: block;
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
-      font-weight: 600;
-    }
-
-    .input_container_password {
-
-      position: relative;
-    }
-
-    .input_container_password i {
-      position: absolute;
-      top: 39px;
-      right: 0.8px;
-    }
-
-    .login_container {
-      color: rgb(232, 234, 236);
-      font-weight: lighter;
-      font-size: smaller;
-    }
-
-    .login_container p {
-      font-size: 16px;
-    }
-
-    .login_container strong {
-
-      color: aliceblue;
-      font-size: 18px;
-
-    }
-
-
-    .signup_btn {
-
-      display: block;
-      width: 430px;
-      background: rgb(56, 61, 207);
-      color: gainsboro;
-      font-weight: 500;
-      border: none;
-      padding: 1rem;
-      border-radius: 2px;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      border-radius: 550px;
-    }
-
-    .continuewithemail_btn {
-      display: block;
-      width: 430px;
-      background: rgb(245, 245, 249);
-      color: rgb(6, 2, 2);
-      font-weight: 500;
-      border: none;
-      padding: 1rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      letter-spacing: 0.5px;
-      border-radius: 550px;
-
-    }
-
-
-
-    @media screen and (min-width: 900px) {
-      .split-screen {
-        flex-direction: row;
-        height: 100vh;
-
-      }
-
-      .left,
-      .right {
-
-        display: flex;
-        width: 50%;
-        height: auto;
-      }
-
-    }
-  </style>
+}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Sign up Form</title>
 </head>
 
-
-
-
-
 <body>
-  <div class="split-screen">
-    <div class="left">
-      <form>
-        <section class="copy">
-          <h1><span class="comic-sans" style="font-family: 'Comic Sans MS', cursive;color: #97e9cb;">MamaJaba?</span>
-          </h1>
-          <h2>Create an account</h2>
-        </section>
-        <section class="copy1">
+    
 
+    <div class="container" id="home">
+        <div class="login-left">
+            <div class="login-header">
+                <h1>Welcome </h1>
+                <p>Don't have an account? Sign Up Free...</p>
+            </div>
+            <form action="" class="login-form" autocomplete="off">
+                <div class="login-content">
 
-          <div class="input_container_name">
-            <label for="fname">Name</label>
-            <input id="fname" name="fname" type="text" placeholder="Shiti">
-          </div>
+                    <div class="form-item">
+                        <label for="text"> Name : </label>
+                        <br>
+                        <input type="text" placeholder="Shiti Chowdhury">
+                    </div>
+                    <div class="form-item">
+                        <label for="email">CUET Email : </label>
+                        <br>
+                        <input type="email" name="" id="" placeholder="example@email.com">
+                    </div>
+                    <div class="form-item">
+                        <label for="tel"> Contact no : </label>
+                        <br>
+                        <input type="tel" name="" id="" placeholder="0123456789">
+                    </div>
+                    
+                    <div class="form-item">
+                        <label for="password">Password :</span></label>
+                        <input type="password" name="" id="password" placeholder="12345" required class="pass-key">
+                        <img src="eye-close.png" class="password-toggle" data-target="password">
+                    </div>
+                    
+                    <div class="form-item">
+                        <label for="confirm-password">Confirm Password :</span></label>
+                        <input type="password" name="" id="confirm-password" placeholder="12345" required class="pass-key">
+                        <img src="eye-close.png" class="password-toggle" data-target="confirm-password">
+                    </div>
 
-
-          <div class="input_container_pno">
-            <label for="phone">Contact no</label>
-            <input id="phone" name="phone" placeholder="+880123456789" type="tel" maxlength="11">
-          </div>
-
-
-
-          <div class="input_container_email">
-            <label for="email">CUET mail</label>
-            <input id="email" name="email" type="email" placeholder="u2004027@student.cuet.ac.bd ">
-          </div>
-
-          <div class="input_container_password">
-            <label for="password">Password</label>
-            <input id="password" name="password" placeholder="At least 6 characters" type="password" minlength="6">
-          </div>
-          <div class="input_container_password">
-            <label for="cpassword">Confirm Password</label>
-            <input id="cpassword" name="cpassword" type="password" placeholder="12345" minlength="6">
-          </div>
-          <br>
-
-
-
-        </section>
-        <button class="signup_btn" type="submit">Sign Up</button>
-
-        <br>
-
-        <button class="continuewithemail_btn" type="submit">Continue with E-mail
-
-        </button>
-
-        <div class="login_container">
-          <p>Already have an account? <a href="#"><strong><u>Log In</u> </strong></a></p>
+                    <div class="bg-grey">
+                        <div class="sing-up">Already have an account? <a href=""class="text-link" id="sign-up" ><u> Login </u></a></div>
+                        <!--<a href="#register" class="link-register">Sign Up</a>-->
+                    </div>
+    
+                    <button type="submit">
+                        SIGN UP
+                    </button>
+                </div>
+                
+            </form>
         </div>
-        </section>
-      </form>
-      <!-- <h1>Explore your creativity</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, voluptatum? Ratione nemo nostrum numquam voluptates non.</p> -->
-
-
+        <div class="login-right">
+            <img src="usability-testing-2.gif" width="400px" height="500px">
+        </div>
     </div>
 
-    <div class="right">
-      <section class="copy">
+    <script>
+    let eyeicon = document.getElementById("eyeicon");
+    let password = document.getElementById("password");
 
-      </section>
-
-
-    </div>
-  </div>
-  <script>
-    let icon = document.getElementById("eyeicon");
-    let pass = document.getElementById("password");
-
-    icon.onclick = function () {
-      if (pass.type == "password") {
-        pass.type = "text";
-        icon.classList.remove("fa-eye-slash");
-        icon.classList.add("fa-eye");
+    eyeicon.onclick = function() {
+      if (password.type == "password"){
+        password.type = "text"; 
+        eyeicon.src = "eye-open.png";
+      }else{
+        password.type = "password";
+        eyeicon.src = "eye-close.png";
       }
-      else {
-        pass.type = "password";
-        icon.classList.remove("fa-eye");
-        icon.classList.add("fa-eye-slash");
-      }
-      if (pass.type == "cpassword") {
-        pass.type = "text";
-        icon.classList.remove("fa-eye-slash");
-        icon.classList.add("fa-eye");
-      }
-      else {
-        pass.type = "cpassword";
-        icon.classList.remove("fa-eye");
-        icon.classList.add("fa-eye-slash");
-      }
-    }
-
+    } 
   </script>
+
+    <script>
+
+  
+toggle.onclick = function(active){
+  toggle.classList.toggle('active');
+  navbar.classList.toggle('active');
+  container.classList.toggle('active');
+}
+document.onclick = function(e){
+    if(e.target.id !== 'navbar'&& e.target.id !== 'toggle' && e.target.id != 'home'){
+        toggle.classList.remove('active');
+        navbar.classList.remove('active');
+        container.classList.remove('active');
+
+    }
+}
+if (links.length) {
+  links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      links.forEach((link) => {
+          link.classList.remove('active');
+      });
+      link.classList.add('active');
+    });
+  });
+}
+    </script>
+
+
+<script>
+document.querySelectorAll('.password-toggle').forEach(function(icon) {
+    icon.addEventListener('click', function() {
+        var targetId = this.getAttribute('data-target');
+        var passwordField = document.getElementById(targetId);
+
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            this.src = "eye-open.png";
+        } else {
+            passwordField.type = "password";
+            this.src = "eye-close.png";
+        }
+    });
+});
+
+</script>
 </body>
 
 </html>
