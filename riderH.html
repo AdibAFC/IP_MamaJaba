@@ -6,6 +6,8 @@
     <title>Rider's-Homepage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="riderH.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+   
 </head>
 <body>
     <header class="header">
@@ -33,8 +35,8 @@
         <div class="grid-container">
             <div class="content" style="margin-top: 80px;">
                 <div class="text-boxes">
-                    <input type="text" placeholder="Enter your location">
-                    <input type="text" placeholder="Enter your destination">
+                    <input type="text" class="form-control" placeholder="Enter your location">
+                    <input type="text" class="form-control" placeholder="Enter your destination">
                 </div>
             </div>
             <div class="drivers">
@@ -43,29 +45,29 @@
                     <div class="profilereq"></div>
                     <div class="profilereq-info">
                         <h4 style="margin-bottom: 20px;">Nurul Absar   36</h4>
-                        <button style="margin-right: 20px; padding: 15px; background-color: red; color: white; font-weight: bold;">On Trip</button>
-                        <button style="padding: 15px; background-color: green; color: white; font-weight: bold;">Available</button>
-
+                        <button class="btn btn-danger" style="margin-right: 20px;">On Trip</button>
+                        <button class="btn btn-success">Available</button>
                     </div>
                     <div class="profilereq-info">
-                        <button style="padding: 40px; background-color: rgb(155, 158, 183); color: rgb(28, 12, 112); font-weight: bold; font-size: 15px;">Request a Ride</button>
+                        <button class="btn btn-secondary">Request a Ride</button>
                     </div>
                 </div>
                 <div class="friend-request-box">
                     <div class="profilereq"></div>
                     <div class="profilereq-info">
                         <h4 style="margin-bottom: 20px;">Md. Rahim   32</h4>
-                        <button style="margin-right: 20px; padding: 15px; background-color: green; color: white; font-weight: bold;">On Trip</button>
-                        <button style="padding: 15px; background-color: red; color: white; font-weight: bold;">Available</button>
-
+                        <button class="btn btn-success" style="margin-right: 20px;">On Trip</button>
+                        <button class="btn btn-danger">Available</button>
                     </div>
                     <div class="profilereq-info">
-                        <button style="padding: 40px; background-color: rgb(183, 155, 155); color: rgb(116, 8, 17); font-weight: bold; font-size: 15px;">Request a Ride</button>
+                        <button class="btn btn-danger">Request a Ride</button>
                     </div>
                 </div>
-                
+            </div>
         </div>
     </section>
+
+
     <footer>
         <div class="row">
             <div class="col">
@@ -81,7 +83,6 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
-            
             <div class="col">
                 <h3>Products  <div class="underline"><span></span></div></h3>
                 <ul>
@@ -109,5 +110,7 @@
         <hr>
         <p class="copyright">AdiPriShi © 2024 - All Rights Reserved</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

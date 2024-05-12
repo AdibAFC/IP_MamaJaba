@@ -56,6 +56,7 @@ body{
     margin: 0 1rem;
     font-size: 1.6rem;
     color: #fff;
+    text-decoration: none;
 }
 .header .navbar a:hover{
     color: var(--main-color);
@@ -88,26 +89,37 @@ body{
     align-items: center;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    padding: 2rem 7%;
+}
+
 .RRide .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     margin-left: 20px;
-    margin-top: 160px; /* Increase top margin to avoid overlap with the fixed header */
-    height: calc(100vh - 160px); /* Adjust height to fit remaining viewport space */
-    overflow-y: auto; /* Add vertical scrollbar if needed */
+    margin-top: 160px;
+    height: calc(100vh - 160px);
+    overflow-y: auto;
 }
 
 .RRide .drivers {
     text-align: center;
-    overflow-y: auto; /* Add vertical scrollbar if needed */
+    overflow-y: auto;
 }
 
 .friend-request-box {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Adjust the margin as needed */
-    padding: 10px; /* Add padding for better spacing */
+    margin-bottom: 20px;
+    padding: 10px;
     height: 180px;
     background-color: #dadde2;
 }
@@ -138,6 +150,7 @@ body{
     margin-right: 10px;
     cursor: pointer;
 }
+
 .highlight-text {
     margin-bottom: 20px;
     font-size: 50px;
@@ -147,28 +160,20 @@ body{
     margin-left: 130%;
 }
 
-section{
-    padding: 2rem 7%;
-}
 .comic-sans {
     font-family: 'Comic Sans MS', cursive;
     color: #97e9cb;
 }
 
 .text-boxes input[type="text"] {
-    width: 80%; /* Set the width to 100% of the parent container */
-    padding: 10px; /* Add padding to the text boxes for better appearance */
-    margin-bottom: 10px; /* Add some space between the text boxes */
-    border-radius: 5px; /* Add border radius for rounded corners */
-    border: 1px solid #ccc; /* Add a border for better visibility */
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+
 footer{
     width: 100%;
     bottom: 0;
