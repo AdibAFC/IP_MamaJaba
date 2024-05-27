@@ -1,0 +1,246 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+    color: #f5f6f7;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 21px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flex-r,
+.flex-c {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.flex-c {
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 120%;
+    min-height: 100vh;
+    padding: 20px 10px;
+    background: url('bb1e440cdf987d68abbaf117521b0bcb.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.login-text {
+
+    background: rgba(74, 172, 194, 0.539);
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, .2);
+    backdrop-filter: blur(1500px);
+    max-width: 800px;
+    width: 650px;
+    min-height: 500px;
+    border-radius: 10px;
+    padding: 10px 25px;
+    color: #020a0c;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 5px 15px rgba(4, 2, 2, 0.893);
+    box-shadow: 10px 10px 5px 5px rgba(25, 24, 24, 0.75);
+    -webkit-box-shadow: 6px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+
+}
+
+.logo {
+    margin-bottom: 70px;
+}
+
+.logo span,
+.logo span i {
+    font-size: 25px;
+    color: #fdfffe;
+}
+
+.login-text h1 {
+    font-size: 35px;
+    color: rgba(19, 18, 18, 0.956);
+}
+
+.login-text p {
+    font-size: 15px;
+    color: #140101;
+}
+
+form {
+    align-items: flex-start !important;
+    width: 100%;
+    margin-top: 15px;
+}
+
+h1,
+p {
+    margin: 0.6em auto;
+    text-align: center;
+}
+
+form {
+    width: 50vw;
+    max-width: 500px;
+    min-width: 200px;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+fieldset {
+    border: none;
+    padding: 0rem 0;
+}
+
+fieldset:last-of-type {
+    border-bottom: none;
+}
+
+label {
+    display: block;
+    margin: 0.6rem 0;
+    color: rgb(16, 2, 2);
+
+}
+
+input,
+textarea,
+select {
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 2.2em;
+    border-radius: 2%;
+    color: rgb(84, 76, 76);
+    padding-left: 10px;
+    width: 490px;
+    height: 30px;
+    border-radius: 0%;
+    box-sizing: content-box;
+    background-position: 15%;
+    font-weight: 800;
+
+}
+
+input,
+textarea {
+    background-color: #fcfcfc6e;
+    border: 2px solid #07072b;
+    color: #110a0a;
+    font-size: 16px;
+    font-weight: 700;
+    width: 490px;
+    height: 30px;
+    font-weight: 800;
+    outline: none;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgb(157, 137, 137);
+}
+
+textarea {
+    background-color: #fcfcfc6e;
+    border: 2px solid #07072b;
+    color: #110a0a;
+    font-size: 16px;
+    font-weight: 700;
+    width: 490px;
+    height: 80px;
+    /* Adjust height as needed */
+    font-weight: 800;
+    outline: none;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgb(157, 137, 137);
+    padding: 10px;
+    resize: none;
+    /* Prevent resizing */
+}
+
+
+
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+
+
+
+input[type="submit"] {
+    display: block;
+    width: 30%;
+    margin: 1em auto;
+    height: 0.9em;
+    font-size: 1.12rem;
+    background-color: rgb(41, 85, 219);
+    color: white;
+    border-color: white;
+    border-radius: 80px;
+    min-width: 200px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    /* Add glowing effect */
+    box-shadow: 5px 5px 20px #297cc0;
+    /* Modify the color and intensity as needed */
+}
+
+input[type="submit"]:hover {
+    /* Increase the glow intensity and change color on hover */
+    box-shadow: 5px 5px 40px #2f97f1;
+    /* Modify the color and intensity as needed */
+    color: #e1edf5;
+    /* Change color on hover */
+    text-decoration: none;
+    text-decoration: underline;
+    letter-spacing: 0.1em;
+}
+
+
+
+input[type="file"] {
+    padding: 2px 2px;
+}
+
+.inline {
+    display: inline;
+    text-decoration: none;
+    border: none;
+    border-radius: 100%;
+}
+
+a {
+    color: #1c1c2a;
+}
+
+a:hover {
+    color: #e2204a;
+}
+
+#preview-image {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 110%;
+    display: none;
+    /* Center the image */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}

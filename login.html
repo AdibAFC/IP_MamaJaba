@@ -1,264 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            text-decoration: none;
-            list-style-type: none;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-        }
-
-        html {
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-            /* scroll-behavior: smooth; */
-        }
-
-        body {
-            background: #fcfdfe;
-            max-width: 100%;
-            overflow: hidden;
-        }
-
-        .container {
-            min-height: calc(100vh - 40px * 2);
-            display: grid;
-            grid-template-columns: 50% 50%;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .login-left {
-            display: flex;
-            flex-direction: column;
-            justify-content: content;
-            padding-left: 135px;
-            background-color: rgb(255, 255, 255);
-        }
-
-        .login-right {
-            display: flex;
-            justify-content: center;
-        }
-
-        .form-item {
-            position: relative;
-            margin-bottom: 5px;
-            width: auto;
-        }
-
-        .pass-key {
-            padding-right: 30px;
-            /* Adjust according to the width of the image */
-        }
-
-        .password-toggle {
-            position: absolute;
-            top: 65%;
-            right: 21px;
-            /* Adjust as needed */
-            transform: translateY(-50%);
-            cursor: pointer;
-            width: 30px;
-        }
-
-        .remember-forgot {
-            margin-top: 260px;
-            padding: 10px 0;
-            /* Adjust padding as needed */
-            font-size: 16px;
-            /* Adjust font size as needed */
-            position: absolute;
-            transform: translate(30px, -10px);
-            margin-left: 280px;
-        }
-
-        .remember-forgot a:hover {
-            color: rgb(255, 72, 0);
-            text-decoration: underline;
-        }
-
-        .bg-grey {
-            width: 100%;
-            border-top: 25px;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            padding: 0.4em;
-            text-align: center;
-            color: #18032da9;
-        }
-
-        .bg-grey a {
-            color: rgba(18, 16, 16, 0.948);
-
-        }
-
-        .bg-grey a:hover {
-            color: rgb(243, 54, 12);
-            text-decoration: underline;
-            transition: ease 0.3s;
-        }
-
-        .login-right img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .login-header {
-            margin-top: 30px;
-        }
-
-        .login-header h1 {
-            font-size: 3.4rem;
-            font-weight: 700;
-            color: rgb(22, 22, 227);
-        }
-
-        .login-header p {
-            margin-top: 28px;
-            opacity: 1;
-            font-size: 15px;
-            /* gap: 20px; */
-        }
-
-        .login-form {
-            width: 410px;
-            margin-top: 40px;
-
-        }
-
-        .login-content {
-            display: flex;
-            flex-direction: column;
-            gap: 38px;
-        }
-
-        .form-tem label:not(.checkboxLabel) {
-            display: inline-block;
-            background-color: white;
-            margin-bottom: 10px;
-            position: absolute;
-            padding: 0 10px;
-            transform: translate(30px, -10px);
-            font-size: 15px;
-        }
-
-        input[type='email'],
-        input[type='password'] {
-            border: 1.5px solid black;
-            height: 55px;
-            padding: 0 1.3rem;
-            width: 100%;
-            outline: none;
-            transition: background .5s;
-            font-size: 18px;
-            border-radius: 100px;
-        }
-
-        .pass-key {
-            border: 1px solid black;
-            height: 55px;
-            padding: 0 2rem;
-            width: 100%;
-            outline: none;
-            transition: background .5s;
-            font-size: 18px;
-            border-radius: 100px;
-        }
-
-        .show {
-            display: block;
-            position: absolute;
-            margin-left: 380px;
-            bottom: 250px;
-            font-size: 15px;
-            color: black;
-            cursor: pointer;
-        }
-
-        label[for=email],
-        label[for=password],
-        label[for=text] {
-            font-size: 1.25rem;
-            text-decoration: solid;
-            /* margin-bottom: 25px; */
-            padding-left: 10px;
-            font-weight: 4600;
-        }
-
-        .checkbox {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-        }
-
-        input[type="checkbox"] {
-            width: 30px;
-            height: 23px;
-            accent-color: rgb(14, 90, 241);
-        }
-
-        button {
-            border: none;
-            padding: 1rem;
-            height: 55px;
-            font-size: 18px;
-            border-radius: 100px;
-            text-transform: uppercase;
-            cursor: pointer;
-            margin-bottom: 35px;
-            margin-top: 12px;
-            transition: .5s;
-            /* color: rgb(153, 203, 195); */
-            background-color: rgb(55, 133, 222);
-            letter-spacing: 0.1em;
-        }
-
-        button:hover {
-            background: rgb(10, 118, 234);
-            transition: ease 0.5s;
-            color: white;
-            letter-spacing: 0.2em;
-        }
-
-        ::placeholder {
-            color: grey;
-            font-size: 1rem;
-        }
-
-
-        @media(max-width:768px) {
-            .login-header h1 {
-                font-size: 30px;
-            }
-
-            body {
-                padding: 20px;
-            }
-
-            .container {
-                grid-template-columns: auto;
-            }
-
-            .login-right {
-                display: none;
-            }
-
-
-        }
-    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
     <title>Login-Form</title>
 </head>
 <body>
@@ -268,22 +17,22 @@
                 <h1>Welcome</h1>
                 <p>Please login to continue......</p>
             </div>
-            <form action="" class="login-form" autocomplete="off" id="login-form">
+            <form action="login.php" class="login-form" autocomplete="off" id="login-form" method="POST">
                 <div class="login-content">
                     <div class="form-item">
                         <label for="email">CUET Email : </label>
                         <br>
-                        <input type="email" name="" id="email" placeholder="example@email.com">
+                        <input type="email" name="email" id="email" placeholder="example@email.com" required>
                     </div>
                     <div class="form-item">
                         <label for="password">Password :</label>
                         <br>
-                        <input type="password" name="" id="password" placeholder="Enter your Password" required class="pass-key">
+                        <input type="password" name="password" id="password" placeholder="Enter your Password" required class="pass-key">
                         <img src="images/eye-close.png" id="eyeicon" class="password-toggle">
                     </div>
                     <div class="form-item">
                         <div class="checkbox">
-                            <input type="checkbox" name="" id="rememberMeCheckbox" checked>
+                            <input type="checkbox" name="rememberMe" id="rememberMeCheckbox" checked>
                             <label for="rememberMeCheckbox" class="checkboxlabel">Remember Me</label>
                         </div>
                     </div>
@@ -291,7 +40,7 @@
                         <a href="#">Forgot password?</a>
                     </div>
                     <div class="bg-grey">
-                        <div class="sing-up">Don't have an account? <a href="" class="text-link" id="sign-up"><u>Sign up</u></a></div>
+                        <div class="sing-up">Don't have an account? <a href="signup.php" class="text-link" id="sign-up"><u>Sign up</u></a></div>
                     </div>
                     <button type="submit">LogIn</button>
                 </div>
@@ -301,29 +50,9 @@
             <img src="images/unold_icon1_animation_loop_f.png" width="700px" height="700px">
         </div>
     </div>
-
     <script>
-        document.getElementById('login-form').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            var email = document.getElementById('email').value;
-            var password = document.getElementById('password').value;
-
-            // Check email and password combination
-            if (email === 'driver@gmail.com' && password === '111111') {
-                window.location.href = 'driver.html'; // Redirect to driver.html
-            } else if (email === 'rider@gmail.com' && password === '222222') {
-                window.location.href = 'riderH.html'; // Redirect to riderH.html
-            } else if (email === 'admin@gmail.com' && password === '000000') {
-                window.location.href = 'admin.html'; // Redirect to admin.html
-            } else {
-                alert('Invalid email or password.'); // If no match found, display an error message
-            }
-        });
-
         let eyeicon = document.getElementById("eyeicon");
         let password = document.getElementById("password");
-
         eyeicon.onclick = function () {
             if (password.type === "password") {
                 password.type = "text";
@@ -335,6 +64,4 @@
         }
     </script>
 </body>
-
-
 </html>
