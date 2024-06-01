@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,53 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="riderH.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-   
+
 </head>
+
 <body>
-    <header class="header">
-        <a href="#" class="logo">
-            <img src="images/MamaJaba_logo.png">
-        </a>
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#About">About</a>
-            <a href="#Help">Help</a>
-        </nav>
-        
-        <div class="nav_btnride">
-            <!-- <a href="#" class="nmp">
-                <i class="fa-solid fa-bell" style="color: #ffffff; font-size: 24px;"></i>
-            </a>
-            <a href="#" class="nmp" style="background-color: #ffffff; color: rgb(14, 201, 17); margin-top: 2px; line-height: 20px; padding: 5px; border-radius: 5%;">My Trips</a> -->
-            <a href="#" class="profile-picture">
-                <i class="fa-solid fa-user" style="color: #1d4d9f; font-size: 24px;"></i>
-            </a>
+    <nav>
+        <div class="logo">
+            <img src="images/MamaJaba_logo1.gif" class="" style="height: 50px; margin: 10px;">
+            <!-- <h3 class="highlight-text"><span class="comic-sans">MamaJaba?</span></h3> -->
         </div>
-    </header>
+
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACTS</a></li>
+        </ul>
+        <img src="images/nurul.jpg" class="user-pic" onclick="toggleMenu()">
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="images/nurul.jpg">
+                    <h3>Nurul Abser</h3>
+                </div>
+                <hr>
+
+                <a href="#" class="sub-menu-link">
+                    <i class="fa-solid fa-user"></i>
+                    <p>Edit Profile</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <i class="fa-solid fa-gear"></i>
+                    <p>Settings & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <p>Log Out</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+    </nav>
 
     <section class="RRide" id="RRide">
         <div class="grid-container">
@@ -44,7 +69,7 @@
                 <div class="friend-request-box">
                     <div class="profilereq"></div>
                     <div class="profilereq-info">
-                        <h4 style="margin-bottom: 20px;">Nurul Absar   36</h4>
+                        <h4 style="margin-bottom: 20px;">Nurul Absar 36</h4>
                         <button class="btn btn-danger" style="margin-right: 20px;">On Trip</button>
                         <button class="btn btn-success">Available</button>
                     </div>
@@ -55,7 +80,7 @@
                 <div class="friend-request-box">
                     <div class="profilereq"></div>
                     <div class="profilereq-info">
-                        <h4 style="margin-bottom: 20px;">Md. Rahim   32</h4>
+                        <h4 style="margin-bottom: 20px;">Md. Rahim 32</h4>
                         <button class="btn btn-success" style="margin-right: 20px;">On Trip</button>
                         <button class="btn btn-danger">Available</button>
                     </div>
@@ -71,11 +96,16 @@
     <footer>
         <div class="row">
             <div class="col">
-                <div class="logo"><h3 class="h-text"><span class="comic-sans">MamaJaba?</span></h3></div>
-                <p>"MamaJaba" is a website designed for CUET students and faculty to conveniently request rickshaw rides within the campus. With easy booking, real-time tracking, and reliable service, MamaJaba simplifies transportation for CUET residents.</p>
+                <div class="logo">
+                    <h3 class="h-text"><span class="comic-sans">MamaJaba?</span></h3>
+                </div>
+                <p>"MamaJaba" is a website designed for CUET students and faculty to conveniently request rickshaw rides
+                    within the campus. With easy booking, real-time tracking, and reliable service, MamaJaba simplifies
+                    transportation for CUET residents.</p>
             </div>
             <div class="col">
-                <h3>Links <div class="underline"><span></span></div></h3>
+                <h3>Links <div class="underline"><span></span></div>
+                </h3>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About Us</a></li>
@@ -84,7 +114,8 @@
                 </ul>
             </div>
             <div class="col">
-                <h3>Products  <div class="underline"><span></span></div></h3>
+                <h3>Products <div class="underline"><span></span></div>
+                </h3>
                 <ul>
                     <li><a href="#">Ride</a></li>
                     <li><a href="#">Drive</a></li>
@@ -93,7 +124,8 @@
                 </ul>
             </div>
             <div class="col">
-                <h3>Newsletter  <div class="underline"><span></span></div></h3>
+                <h3>Newsletter <div class="underline"><span></span></div>
+                </h3>
                 <form>
                     <i class="fa-regular fa-envelope"></i>
                     <input type="email" placeholder="Enter Your Email Id">
@@ -111,6 +143,13 @@
         <p class="copyright">AdiPriShi © 2024 - All Rights Reserved</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let subMenu = document.getElementById("subMenu");
 
+        function toggleMenu() {
+            subMenu.classList.toggle("open-menu");
+        }
+    </script>
 </body>
+
 </html>

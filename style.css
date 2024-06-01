@@ -10,7 +10,8 @@ body {
 
 .navbar{
     color: #fff;
-    background-color: #000;
+    background-color: #242224;
+    padding-left: 40px;
 }
 .navbar-brand {
     font-family: 'Comic Sans MS', cursive;
@@ -35,11 +36,12 @@ body {
 }
 
 .navbar-nav {
-    padding-right: 200px;
-    padding-left: 300px;
+    padding-right: 110px;
+    padding-left: 90px;
 }
 
 .form-inline {
+    margin-left: 120px;
     display: flex;
     flex-direction: row;
     border-radius: 3rem;
@@ -58,7 +60,7 @@ body {
 
 .border-btn1{
     color: rgb(255, 255, 255);
-    background-color: #000;
+    background-color: #0f0e0e;
 }
 .border-btn1:hover {
     background-color: rgb(46, 48, 48);
