@@ -1,3 +1,16 @@
+<?php
+session_start();
+if (!isset($_SESSION['email'])) {
+    header('Location: login.html'); // Redirect to login page if not logged in
+    exit;
+}
+$name = $_SESSION['name'];
+$default="images/default.jpg";
+// $profile_image = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] : 'images/default.png';
+$profile_image = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] : NULL;
+if(!file_exists($profile_image))$profile_image=$default;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,16 +36,16 @@
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">CONTACTS</a></li>
         </ul>
-        <img src="images/nurul.jpg" class="user-pic" onclick="toggleMenu()">
+        <img src="<?php echo htmlspecialchars($profile_image); ?>" class="user-pic" onclick="toggleMenu()">
         <div class="sub-menu-wrap" id="subMenu">
             <div class="sub-menu">
                 <div class="user-info">
-                    <img src="images/nurul.jpg">
-                    <h3>Nurul Abser</h3>
+                    <img src="<?php echo htmlspecialchars($profile_image); ?>">
+                    <h3><?php echo htmlspecialchars($name); ?></h3>
                 </div>
                 <hr>
 
-                <a href="#" class="sub-menu-link">
+                <a href="riderProfile.php" class="sub-menu-link">
                     <i class="fa-solid fa-user"></i>
                     <p>Edit Profile</p>
                     <span>></span>
@@ -47,7 +60,7 @@
                     <p>Help & Support</p>
                     <span>></span>
                 </a>
-                <a href="#" class="sub-menu-link">
+                <a href="logout.php" class="sub-menu-link"> <!-- Add a logout script -->
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <p>Log Out</p>
                     <span>></span>
@@ -57,6 +70,7 @@
     </nav>
 
     <section class="RRide" id="RRide">
+
         <div class="grid-container">
             <div class="content" style="margin-top: 80px;">
                 <div class="text-boxes">

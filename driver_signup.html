@@ -16,11 +16,16 @@
                     <p>Please fill out this form with the required information</p>
                     <form method="POST" action="driver_signup.php" enctype="multipart/form-data">
                         <fieldset>
-                            <label for="first-name">Name: <input id="first-name" name="first-name" type="text" placeholder="Write your name" required /></label>
-                            <label for="email">CUET Email: <input id="email" name="email" type="email" placeholder="example@gmail.com" /></label>
-                            <label for="phone">Contact no: <input id="phone" name="phone" type="tel" placeholder="0123456789" required /></label>
-                            <label for="Licence">Licence Plate: <input id="Licence" name="Licence" type="text" placeholder="AB12C8" /></label>
-                            <label for="Experience">Years of Experience: <input id="Experience" name="Experience" type="text" placeholder="1 year" /></label>
+                            <label for="first-name">Name: <input id="first-name" name="first-name" type="text"
+                                    placeholder="Write your name" required /></label>
+                            <label for="email">CUET Email: <input id="email" name="email" type="email"
+                                    placeholder="example@gmail.com" /></label>
+                            <label for="phone">Contact no: <input id="phone" name="phone" type="tel"
+                                    placeholder="0123456789" required /></label>
+                            <label for="Licence">Licence Plate: <input id="Licence" name="Licence" type="text"
+                                    placeholder="AB12C8" /></label>
+                            <label for="Experience">Years of Experience: <input id="Experience" name="Experience"
+                                    type="text" placeholder="1 year" /></label>
                             <label for="dropdown">Rickshaw model:
                                 <select id="dropdown" name="rickshaw_model" required>
                                     <option value="select" selected>Select</option>
@@ -28,15 +33,19 @@
                                     <option value="Motor Rickshaw">Motor Rickshaw</option>
                                 </select>
                             </label>
-                            <label for="new-password">Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-9]{8,}" placeholder="12345" required /></label>
-                            <label for="cnew-password">Confirm Password: <input id="cnew-password" name="cnew-password" type="password" pattern="[a-z0-9]{8,}" placeholder="12345" required /></label>
+                            <label for="new-password">Password: <input id="new-password" name="new-password"
+                                    type="password" pattern="[a-z0-9]{8,}" placeholder="12345" required /></label>
+                            <label for="cnew-password">Confirm Password: <input id="cnew-password" name="cnew-password"
+                                    type="password" pattern="[a-z0-9]{8,}" placeholder="12345" required /></label>
                         </fieldset>
                         <fieldset>
-                            <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" name="profile-picture" /></label>
+                            <label for="profile-picture">Upload a profile picture: <input id="profile-picture"
+                                    type="file" name="profile-picture" /></label>
                         </fieldset>
                         <img id="preview-image" src="#" alt="Preview" style="max-width: 100%; display: none;">
                         <label for="terms-and-conditions">
-                            <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="#">terms and conditions</a>
+                            <input class="inline" id="terms-and-conditions" type="checkbox" required
+                                name="terms-and-conditions" /> I accept the <a href="#">terms and conditions</a>
                         </label>
                         <input type="submit" value="SIGN UP" />
                     </form>
