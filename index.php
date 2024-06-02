@@ -1,11 +1,21 @@
 <?php
-session_start();
-session_unset();
-session_destroy();
-header('Location: login.html');
-exit;
+// session_start();
+// session_unset();
+// session_destroy();
+// header('Location: login.html');
+// exit;
 ?>
+<?php
+session_start();
 
+// Check if the user is logged in, if not then redirect to login page
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+    // If user is logged in, you can either show different content or redirect to another page
+    // For example, redirect to the dashboard or user profile page
+    header("Location: index.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
