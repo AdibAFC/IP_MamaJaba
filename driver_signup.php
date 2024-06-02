@@ -62,7 +62,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($stmt->execute() && $stmt1->execute()) {
                 // Commit the transaction
                 $conn->commit();
-                echo "Registration Complete.";
+                echo "<script>
+                alert('Registration Successful!');
+                window.location.href = 'login.html';
+              </script>";
             } else {
                 // Rollback the transaction if any statement fails
                 $conn->rollback();
