@@ -9,22 +9,90 @@
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="admin_style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
 <body>
-    <nav>
-        <i class="fa-solid fa-bars"></i>
-        <a href="#" class="logo">
-            <img src="images/MamaJaba_logo.png">
-        </a>
-        <div class="logout">
-            <a href="index.html">
-                <button>Logout</button>
-            </a>
-        </div>
-        
-    </nav>
+
     <div class="hero">
+        <div class="nav">
+            <div class="sidebar active">
+                <div class="menu-btn">
+                    <i class="fa-solid fa-caret-left"></i>
+                </div>
+                <div class="head">
+                    <div class="user-img">
+                        <img src="/IPproject/images/peep1.jpg" alt="" />
+                    </div>
+                    <div class="user-details">
+                        <p class="title">Admin Panel</p>
+                        <p class="name">John Doe</p>
+                    </div>
+                </div>
+                <div class="navv">
+                    <div class="menu">
+                        <p class="title">Main</p>
+                        <ul>
+                            <li>
+                                <a href="#home">
+                                    <i class="fa-solid fa-desktop"></i>
+                                    <span class="text">Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-table"></i>
+                                    <span class="text">Tables</span>
+                                    <i class="fa-solid fa-caret-down"></i>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#sec1">
+                                            <span class="text">Riders</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#sec2">
+                                            <span class="text">Drivers</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#sec3">
+                                            <span class="text">Admins</span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            <li class="active">
+                                <a href="#">
+                                    <i class="fa-solid fa-gear"></i>
+                                    <span class="text">Settings</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu">
+                    <p class="title">Account</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span class="text">Help</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <span class="text">Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
         <div class="wrapper">
             <div class="container">
                 <img src="images/rickshaw_icon.png">
@@ -146,6 +214,110 @@
         </div>
         <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
         <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
+        <div class="main-content">
+            <section id="sec1">
+                <div class="filterEntries">
+                    <div class="entries">
+                        Show Entries
+                        <select name="table_size" id="table_size">
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                        </select>
+
+                    </div>
+                    <div class="filter">
+                        <label for="search">Search: <input type="search" id="search" placeholder="Enter name"></label>
+
+                    </div>
+                </div>
+            </section>
+            <table>
+                <thead>
+                    <tr class="heading">
+                        <th>DD No</th>
+                        <th>Picture</th>
+                        <th>Full Name</th>
+                        <th>Contact</th>
+                        <th>Rickshaw-Model</th>
+                        <th>License Plate</th>
+                        <th>Experience</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="userInfo">
+                    <!-- <tr><td class="empty" colspan="11">No data available in table</td></tr> -->
+                    <tr>
+                        <td>1</td>
+                        <td><img src="/IPproject/images/photo_2024-03-23_20-01-56.jpg" alt="" width="40" height="40">
+                        </td>
+                        <td>Nurul Abser</td>
+                        <td>+88012312345</td>
+                        <td>Motor-Rickshaw</td>
+                        <td>AE1309</td>
+                        <td>3Yrs</td>
+                        <td>
+                            <button><i class="fa-regular fa-eye"></i></button>
+                            <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="/IPproject/images/photo_2024-03-23_20-01-56.jpg" alt="" width="40" height="40">
+                        </td>
+                        <td>Nurul Abser</td>
+                        <td>+88012312345</td>
+                        <td>Motor-Rickshaw</td>
+                        <td>AE1309</td>
+                        <td>3Yrs</td>
+                        <td>
+                            <button><i class="fa-regular fa-eye"></i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="/IPproject/images/photo_2024-03-23_20-01-56.jpg" alt="" width="40" height="40">
+                        </td>
+                        <td>Nurul Abser</td>
+                        <td>+88012312345</td>
+                        <td>Motor-Rickshaw</td>
+                        <td>AE1309</td>
+                        <td>3Yrs</td>
+                        <td>
+                            <button><i class="fa-regular fa-eye"></i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><img src="/IPproject/images/photo_2024-03-23_20-01-56.jpg" alt="" width="40" height="40">
+                        </td>
+                        <td>Nurul Abser</td>
+                        <td>+88012312345</td>
+                        <td>Motor-Rickshaw</td>
+                        <td>AE1309</td>
+                        <td>3Yrs</td>
+                        <td>
+                            <button><i class="fa-regular fa-eye"></i></button>
+                            <button><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <footer>
+                <span class="showEntries">Showing 1 to 10 of 50 entries</span>
+                <div class="pagination">
+                    <div><i class="fa-solid fa-angles-left"></i></div>
+                    <div><i class="fa-solid fa-chevron-left"></i></div>
+                    <div>1</div>
+                    <div>2</div>
+                    <div><i class="fa-solid fa-chevron-right"></i></div>
+                    <div><i class="fa-solid fa-angles-right"></i></div>
+                </div>
+            </footer>
+        </div>
     </div>
     <script>
         let valueDisplays = document.querySelectorAll(".num");
@@ -164,6 +336,23 @@
             }, duration);
         });
 
+        $(".menu > ul > li").click(function (e) {
+            // Remove 'active' from already active items
+            $(this).siblings().removeClass("active");
+            // Toggle 'active' for clicked item
+            $(this).toggleClass("active");
+            // If it has a sub-menu, open it
+            $(this).find("ul").slideToggle();
+            // Close other submenus if any are open
+            $(this).siblings().find("ul").slideUp();
+
+            // Remove active class from submenu items
+            $(this).siblings().find("ul").find("li").removeClass("active");
+
+        });
+        $(".menu-btn").click(function () {
+            $(".sidebar").toggleClass("active");
+        });
         let slides = document.querySelectorAll('.slide-container');
         let index = 0;
 

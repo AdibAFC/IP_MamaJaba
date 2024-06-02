@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header('Location: driver.html');
             } elseif ($role == 'Rider') {
                 header('Location: riderH.php'); // Ensure this points to the correct page
-            } elseif ($role == 'admin') {
+            } elseif ($role == 'Admin') {
                 header('Location: admin.html');
             }
             exit;
