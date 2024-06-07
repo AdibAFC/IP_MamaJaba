@@ -215,7 +215,7 @@
         <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
         <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
         <div class="main-content">
-            <section id="sec1">
+                <section id="sec1">
                 <div class="filterEntries">
                     <div class="entries">
                         Show Entries
@@ -225,15 +225,13 @@
                             <option value="50">50</option>
                             <option value="100">100</option>
                         </select>
-
                     </div>
                     <div class="filter">
-                        <label for="search">Search: <input type="search" id="search" placeholder="Enter name"></label>
-
+                        <label for="search">Search: <input type="search" id="search" placeholder="Enter name" onkeyup="filterTable()"></label>
                     </div>
                 </div>
             </section>
-            <table>
+            <table id="driverTable">
                 <thead>
                     <tr class="heading">
                         <th>DriverID No</th>
@@ -248,30 +246,15 @@
                 </thead>
                 <tbody class="userInfo">
                     <?php include 'fetch_driver.php'; ?>
-                    <tr>
-                        <td>1</td>
-                        <td><img src="images/nurul.jpg" alt="" width="40" height="40">
-                        </td>
-                        <td>Nurul Abser</td>
-                        <td>+88012312345</td>
-                        <td>Motor-Rickshaw</td>
-                        <td>AE1309</td>
-                        <td>3Yrs</td>
-                        <td>
-                            <button><i class="fa-regular fa-eye"></i></button>
-                            <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
-
 
             <!-- Popup Modal Structure -->
             <div id="modal" class="modal">
                 <div class="modal-content">
-                    <span class="close-button">&times;</span>
+                    <button class="close-button">&times;</button>
                     <h2>Driver Details</h2>
-                    <img id="modal-image" src="" alt="Driver Picture" width="100" height="100">
+                    <img id="modal-image" src="" alt="Driver Picture">
                     <p id="modal-name"></p>
                     <p id="modal-contact"></p>
                     <p id="modal-rickshaw-model"></p>
@@ -279,8 +262,6 @@
                     <p id="modal-experience"></p>
                 </div>
             </div>
-
-
 
 
             <footer>
@@ -296,105 +277,7 @@
             </footer>
         </div>
     </div>
-    <script>
-        let valueDisplays = document.querySelectorAll(".num");
-        let interval = 4000;
-
-        valueDisplays.forEach((valueDisplay) => {
-            let startValue = 0;
-            let endValue = parseInt(valueDisplay.getAttribute("dat-val"));
-            let duration = Math.floor(interval / endValue);
-            let counter = setInterval(function () {
-                startValue += 1;
-                valueDisplay.textContent = startValue;
-                if (startValue == endValue) {
-                    clearInterval(counter);
-                }
-            }, duration);
-        });
-
-        $(".menu > ul > li").click(function (e) {
-            // Remove 'active' from already active items
-            $(this).siblings().removeClass("active");
-            // Toggle 'active' for clicked item
-            $(this).toggleClass("active");
-            // If it has a sub-menu, open it
-            $(this).find("ul").slideToggle();
-            // Close other submenus if any are open
-            $(this).siblings().find("ul").slideUp();
-
-            // Remove active class from submenu items
-            $(this).siblings().find("ul").find("li").removeClass("active");
-
-        });
-        $(".menu-btn").click(function () {
-            $(".sidebar").toggleClass("active");
-        });
-        let slides = document.querySelectorAll('.slide-container');
-        let index = 0;
-
-        function next() {
-            slides[index].classList.remove('active');
-            index = (index + 1) % slides.length;
-            slides[index].classList.add('active');
-        }
-        function prev() {
-            slides[index].classList.remove('active');
-            index = (index - 1 + slides.length) % slides.length;
-            slides[index].classList.add('active');
-        }
-
-
-
-
-
-
-
-
-
-        document.addEventListener('DOMContentLoaded', () => {
-        const modal = document.getElementById('modal');
-        const closeButton = document.querySelector('.close-button');
-        const modalImage = document.getElementById('modal-image');
-        const modalName = document.getElementById('modal-name');
-        const modalContact = document.getElementById('modal-contact');
-        const modalRickshawModel = document.getElementById('modal-rickshaw-model');
-        const modalLicencePlate = document.getElementById('modal-licence-plate');
-        const modalExperience = document.getElementById('modal-experience');
-
-        document.querySelectorAll('.fa-eye').forEach(button => {
-            button.addEventListener('click', function () {
-                const row = this.closest('tr');
-                const imageSrc = row.querySelector('img').src;
-                const name = row.children[2].textContent;
-                const contact = row.children[3].textContent;
-                const rickshawModel = row.children[4].textContent;
-                const licencePlate = row.children[5].textContent;
-                const experience = row.children[6].textContent;
-
-                modalImage.src = imageSrc;
-                modalName.textContent = `Name: ${name}`;
-                modalContact.textContent = `Contact: ${contact}`;
-                modalRickshawModel.textContent = `Rickshaw Model: ${rickshawModel}`;
-                modalLicencePlate.textContent = `Licence Plate: ${licencePlate}`;
-                modalExperience.textContent = `Experience: ${experience}`;
-
-                modal.style.display = 'block';
-            });
-        });
-
-    closeButton.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-});
-
-    </script>
+    <script src="admin.js"></script>
 </body>
 
 </html>

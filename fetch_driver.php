@@ -18,17 +18,19 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // Output data for each row
     while ($row = $result->fetch_assoc()) {
+        // Check if the picture field is null or empty
+        $picture = !empty($row['Picture']) ? $row['Picture'] : 'images/default.jpg';
         echo '<tr>';
         echo '<td>' . $row['DriverID'] . '</td>';
-        echo '<td><img src="' . $row['Picture'] . '" alt="" width="40" height="40"></td>';
+        echo '<td><img src="' . $picture . '" alt="Driver Picture" width="40" height="40"></td>';
         echo '<td>' . $row['Name'] . '</td>';
         echo '<td>' . $row['Phone'] . '</td>';
         echo '<td>' . $row['Rickshaw_Model'] . '</td>';
         echo '<td>' . $row['Licence'] . '</td>';
         echo '<td>' . $row['Experience'] . '</td>';
         echo '<td>';
-        echo '<button><i class="fa-regular fa-eye"></i></button>';
-        echo '<button class="delete-btn"><i class="fa-solid fa-trash"></i></button>';
+        echo '<button class="view-btn"><i class="fa-regular fa-eye"></i></button>';
+        echo '<button class="delete-btn" data-id="' . $row['DriverID'] . '"><i class="fa-solid fa-trash"></i></button>';
         echo '</td>';
         echo '</tr>';
     }
