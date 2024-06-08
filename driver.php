@@ -1,3 +1,15 @@
+<?php
+session_start();
+if (!isset($_SESSION['email'])) {
+    header('Location: login.html'); // Redirect to login page if not logged in
+    exit;
+}
+$name = $_SESSION['name'];
+$default="images/default.jpg";
+// $profile_image = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] : 'images/default.png';
+$profile_image = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] : NULL;
+if(!file_exists($profile_image))$profile_image=$default;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,16 +34,16 @@
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">CONTACTS</a></li>
         </ul>
-        <img src="images/nurul.jpg" class="user-pic" onclick="toggleMenu()">
+        <img src="<?php echo htmlspecialchars($profile_image); ?>" class="user-pic" onclick="toggleMenu()">
         <div class="sub-menu-wrap" id="subMenu">
             <div class="sub-menu">
                 <div class="user-info">
-                    <img src="images/nurul.jpg">
-                    <h3>Nurul Abser</h3>
+                    <img src="<?php echo htmlspecialchars($profile_image); ?>">
+                    <h3><?php echo htmlspecialchars($name); ?></h3>
                 </div>
                 <hr>
 
-                <a href="#" class="sub-menu-link">
+                <a href="driverProfile.php" class="sub-menu-link">
                     <i class="fa-solid fa-user"></i>
                     <p>Edit Profile</p>
                     <span>></span>
@@ -46,7 +58,7 @@
                     <p>Help & Support</p>
                     <span>></span>
                 </a>
-                <a href="#" class="sub-menu-link">
+                <a href="logout.php" class="sub-menu-link">
                     <i class="fa-solid fa-right-from-bracket"></i>
                     <p>Log Out</p>
                     <span>></span>
@@ -55,53 +67,6 @@
         </div>
     </nav>
     <section class="ridereq" id="ridereq">
-        <div class="ride-request" style="width: 700px;">
-            <div class="ride-request-info">
-                <img src="images/notification.png" alt="Rider's Image">
-                <div class="ride-request-details">
-                    <h2>Snk to CSE building</h2>
-                    <p style="margin-bottom: 20px;">A rider requested a ride</p>
-                    <p style="color: #515357;">11:01 AM</p>
-                </div>
-            </div>
-            <button>
-                <a href="rider_details.html" class="see-more">See More</a>
-            </button>
-        </div>
-        <div class="ride-request" style="width: 700px;">
-            <div class="ride-request-info">
-                <img src="images/notification.png" alt="Rider's Image">
-                <div class="ride-request-details">
-                    <h2>Snk to Archi building</h2>
-                    <p style="margin-bottom: 20px;">A rider requested a ride</p>
-                    <p style="color: #515357;">12:01 PM</p>
-                </div>
-            </div>
-            <button class="see-more">See More</button>
-        </div>
-        <div class="ride-request" style="width: 700px;">
-            <div class="ride-request-info">
-                <img src="images/notification.png" alt="Rider's Image">
-                <div class="ride-request-details">
-                    <h2>SRH to CSE building</h2>
-                    <p style="margin-bottom: 20px;">A rider requested a ride</p>
-                    <p style="color: #515357;">01:10 PM</p>
-                </div>
-            </div>
-            <button class="see-more">See More</button>
-        </div>
-        <div class="ride-request" style="width: 700px;">
-            <div class="ride-request-info">
-                <img src="images/notification.png" alt="Rider's Image">
-                <div class="ride-request-details">
-                    <h2>TSC to CSE building</h2>
-                    <p style="margin-bottom: 20px;">A rider requested a ride</p>
-                    <p style="color: #515357;">09:01 AM</p>
-                </div>
-            </div>
-            <button class="see-more">See More</button>
-        </div>
-
     </section>
 
 
@@ -147,13 +112,8 @@
         <hr>
         <p class="copyright">AdiPriShi © 2024 - All Rights Reserved</p>
     </footer>
-    <script>
-        let subMenu = document.getElementById("subMenu");
-
-        function toggleMenu() {
-            subMenu.classList.toggle("open-menu");
-        }
-    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="driver.js"></script>
 </body>
 
 </html>

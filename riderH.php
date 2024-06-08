@@ -5,6 +5,8 @@ if (!isset($_SESSION['email'])) {
     exit;
 }
 $name = $_SESSION['name'];
+$rider_id=$_SESSION['rider_id'];
+$phone=$_SESSION['contact'];
 $default="images/default.jpg";
 // $profile_image = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] : 'images/default.png';
 $profile_image = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] : NULL;
@@ -74,8 +76,9 @@ if(!file_exists($profile_image))$profile_image=$default;
         <div class="grid-container">
             <div class="content" style="margin-top: 80px;">
                 <div class="text-boxes">
-                    <input type="text" class="form-control" placeholder="Enter your location">
-                    <input type="text" class="form-control" placeholder="Enter your destination">
+                    <input type="text" id="pickUpLocation" class="form-control" placeholder="Enter your location">
+                    <input type="text" id="dropOffLocation" class="form-control" placeholder="Enter your destination">
+                    <button id="requestRide" class="btn btn-primary">Request Ride</button>
                 </div>
             </div>
             <div class="drivers">
@@ -157,13 +160,8 @@ if(!file_exists($profile_image))$profile_image=$default;
         <p class="copyright">AdiPriShi © 2024 - All Rights Reserved</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        let subMenu = document.getElementById("subMenu");
-
-        function toggleMenu() {
-            subMenu.classList.toggle("open-menu");
-        }
-    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="riderH.js"></script>
 </body>
 
 </html>
