@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&family=Righteous&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+body {
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Lato';
+    overflow-x: hidden;
+}
+
+.navbar{
+    color: #fff;
+    background-color: #242224;
+    padding-left: 40px;
+}
+.navbar-brand {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 35px;
+    color: aqua !important;
+    margin-left: 40px;
+}
+
+.nav-link {
+    font-size: 16px;
+    margin: 15px;
+    color: rgb(255, 255, 255) !important;
+    font-family: 'Roboto',sans-serif;
+}
+
+.nav-link:hover {
+    color: aqua !important;
+}
+
+.active .nav-link {
+    color: aqua !important;
+}
+
+.navbar-nav {
+    padding-right: 110px;
+    padding-left: 90px;
+}
+
+.form-inline {
+    margin-left: 120px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 3rem;
+    transition: background-color 300ms ease-in;
+}
+
+.menu-right-btn {
+    padding: 10px 20px;
+    margin-right: 0%;
+    background-color: transparent;
+    transition: all 300ms ease-in;
+    font-weight: bold;
+    border-radius: 3rem;
+    width: 100px;
+}
+
+.border-btn1{
+    color: rgb(255, 255, 255);
+    background-color: #0f0e0e;
+}
+.border-btn1:hover {
+    background-color: rgb(46, 48, 48);
+    color: rgb(255, 255, 255);
+}
+.border-btn2 {
+    color: #000;
+    background-color: #ffffff;
+}
+.border-btn2:hover {
+    background-color: rgb(169, 174, 174);
+    color: #000;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    background-color: rgba(33, 31, 46, 0.5);
+}
+
+.popup-content {
+    background-color: #ffffff;
+    width: 300px;
+    margin: 20% auto;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.options {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.options a{
+    color: #fff;
+    text-decoration: none;
+}
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+}
+
+#closePopup {
+    margin-top: 20px;
+    background-color: #ea2020;
+    color: #fff;
+}
+button:hover {
+    background-color: #555353;
+}
+.riderBtnpop{
+    margin-bottom: 500px;
+}
+@keyframes moving {
+    0% {
+        left: -20px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    footer {
+        bottom: unset;
+    }
+
+    footer .col {
+        flex-basis: 100%;
+
+    }
+
+    footer .col:nth-child(2),
+    .col:nth-child(3) {
+        flex-basis: 100%;
+    }
+}
+
+
+body {
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+background-color: #f1faee;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0;
+text-align: justify;
+}
+
+.container {
+background-color: #1d3557;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 10px;
+}
+
+.left-section {
+background-color: #1d3557;
+color: white;
+padding: 10px;
+border-radius: 10px;
+}
+
+.left-section h3 {
+padding-top: 35px;
+margin-bottom: 38px;
+font-size: 33px;
+}
+
+.left-section ul {
+padding-left: 0px;
+}
+
+.left-section ul li {
+margin-bottom: 24px;
+display: flex;
+font-size: 18px;
+align-items: center;
+}
+
+.left-section ul li i {
+margin-right: 16px;
+}
+
+.left-section .social-icons {
+display: flex;
+justify-content:flex-start;
+gap: 45px;
+margin-bottom: 21px;
+}
+
+.left-section .social-icons a {
+color: white;
+font-size: 22px;
+}
+
+.right-section {
+background-color: #006494;
+padding: 30px;
+border-radius: 10px;
+color: rgb(240, 239, 239);
+}
+
+.right-section h3 {
+margin-bottom: 20px;
+}
+
+.right-section .form-group {
+margin-bottom: 15px;
+}
+
+.right-section .btn {
+width: 100%;
+/* transition: 0.3s, color 0.3s; */
+background-color: #071820;
+color: white;
+
+}
+
+.right-section .btn
+{
+background-color: #467d99;
+color: white;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <!-- <a href="#" class="navbar-brand ml-3">MamaJaba?</a> -->
+            <img src="images/MamaJaba_logo1.gif" class="" style="height: 50px; margin: 10px;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
+                aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse"></div>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Ride" class="nav-link">Ride</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Drive" class="nav-link">Drive</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Review" class="nav-link">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#About" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Help" class="nav-link">Help</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <a href="login.html" class="btn menu-right-btn border-btn1" type="submit">
+                        Login
+                    </a>
+                    <a class="btn menu-right-btn border-btn2" type="submit" id="popupsignup">
+                        SignUp
+                    </a>
+                    <div class="popup" id="popup">
+                        <div class="popup-content">
+                            <div class="options">
+                                <button>
+                                    <a href="driver_signup.html" id="driverBtnpop">SignUp to Drive</a>
+                                </button>
+                                <button>
+                                    <a href="rider_signup.html" id="riderBtnpop">Create a Rider account</a>
+                                </button>
+                            </div>
+                            <button id="closePopup">Close</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+        <div class="col-md-5 left-section d-flex flex-column justify-content-between">
+            <div>
+                <h3>CONTACT US</h3>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-map-marker-alt"></i> CUET,Pahartali, Chattogram</li>
+                    <li><i class="fas fa-envelope"></i> mamajaba@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +880123456789</li>
+                    <li><i class="fas fa-info-circle"></i> To know more, connect with us</li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <!-- Right Section: Contact Form -->
+        <div class="col-md-5 right-section">
+            <h3>GET IN TOUCH</h3>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Enter your CUET Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" placeholder="Enter your text here..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">SUCCESS </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Your message has been submitted successfully!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event){
+event.preventDefault();
+$('#successModal').modal('show');
+});
+
+</script>
+
+
+
+<script>
+
+
+const openPopupBtn = document.getElementById("popupsignup");
+        const closePopupBtn = document.getElementById("closePopup");
+        const popup = document.getElementById("popup");
+        const riderBtn = document.getElementById("riderBtnpop");
+        const driverBtn = document.getElementById("driverBtnpop");
+
+        openPopupBtn.addEventListener("click", () => {
+            popup.style.display = "block";
+        });
+
+        closePopupBtn.addEventListener("click", () => {
+            popup.style.display = "none";
+        });
+</script>
+</body>
+</html>
