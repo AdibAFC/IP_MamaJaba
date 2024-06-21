@@ -36,15 +36,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Set session variables
             $_SESSION['email'] = $email;
             $_SESSION['role'] = $role;
-            $profile_image = '';
 
             // Fetch profile image and additional data based on role
             if ($role == 'Driver') {
-                $stmt = $conn->prepare("SELECT Picture, Name FROM driver WHERE Email = ?");
+                $stmt = $conn->prepare("SELECT DriverID, Picture, Name FROM driver WHERE Email = ?");
                 $stmt->bind_param("s", $email);
                 $stmt->execute();
-                $stmt->bind_result($profile_image, $name);
+                $stmt->bind_result($driver_id, $profile_image, $name);
                 $stmt->fetch();
+                $_SESSION['driver_id'] = $driver_id;
                 $_SESSION['profile_image'] = $profile_image;
                 $_SESSION['name'] = $name;
             } elseif ($role == 'Rider') {
@@ -57,10 +57,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['profile_image'] = $profile_image;
                 $_SESSION['name'] = $name;
                 $_SESSION['contact'] = $phone;
+            } elseif ($role == 'Admin') {
+                $stmt = $conn->prepare("SELECT id, image, name, email, contact FROM admin WHERE email = ?");
+                $stmt->bind_param("s", $email);
+                $stmt->execute();
+                $stmt->bind_result($admin_id, $profile_image, $name, $email, $phone);
+                $stmt->fetch();
+                $_SESSION['admin_id'] = $admin_id;
+                $_SESSION['profile_image'] = $profile_image;
+                $_SESSION['name'] = $name;
+                $_SESSION['email'] = $email;
+                $_SESSION['contact'] = $phone;
             }
 
-            // Store profile image in session
-            $_SESSION['profile_image'] = $profile_image;
 
             // Redirect based on user role
             if ($role == 'Driver') {

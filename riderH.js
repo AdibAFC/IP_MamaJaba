@@ -24,3 +24,60 @@ $(document).ready(function() {
         });
     });
 });
+
+
+
+
+
+
+
+function openPopup() {
+    document.querySelector(".overlay").classList.add("active");
+    document.getElementById("popup").classList.add("open-popup");
+}
+
+function closePopup() {
+    document.querySelector(".overlay").classList.remove("active");
+    document.getElementById("popup").classList.remove("open-popup");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const btn = document.querySelector(".star-widget button");
+    const post = document.querySelector(".post");
+    const widget = document.querySelector(".star-widget");
+    const editbtn = document.querySelector(".edit");
+
+    btn.onclick = (e) => {
+        e.preventDefault();  // Prevent the form from submitting
+        const form = e.target.closest('form');
+        submitReviewForm(form);
+    };
+
+    editbtn.onclick = () => {
+        widget.style.display = "block";
+        post.style.display = "none";
+        return false;
+    };
+});
+
+function submitReviewForm(form) {
+    const formData = new FormData(form);
+
+    fetch('submit_review.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+        if (data.includes('Review submitted successfully')) {
+            document.querySelector('.star-widget').style.display = 'none';
+            document.querySelector('.post').style.display = 'block';
+        } else {
+            alert('Failed to submit review.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}

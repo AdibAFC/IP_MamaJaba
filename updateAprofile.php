@@ -7,48 +7,58 @@ if (!isset($_SESSION['email'])) {
 
 $email = $_SESSION['email'];
 
-// Get form data
-$new_name = $_POST['name'];
-$new_email = $email; // Ensure email is not changed
-$phone = $_POST['phone'];
-$current_password = $_POST['current_password'];
-$new_password = $_POST['new_password'];
-$repeat_new_password = $_POST['repeat_new_password'];
-$profile_image = isset($_FILES['profile-picture']) ? $_FILES['profile-picture'] : NULL;
-
 // Database connection
 $conn = new mysqli('localhost', 'root', '', 'MamaJaba');
 if ($conn->connect_error) {
     die('Connection Failed: ' . $conn->connect_error);
 }
 
+// Get form data
+$new_name = $_POST['name'];
+$phone = $_POST['phone'];
+$current_password = $_POST['current-password'];
+$new_password = $_POST['new-password'];
+$repeat_new_password = $_POST['repeat-password'];
+$profile_image = isset($_FILES['profile-picture']) ? $_FILES['profile-picture'] : NULL;
+
 // Update user information
-if (!empty($new_name) || !empty($new_email) || !empty($phone) || $profile_image) {
+if (!empty($new_name) || !empty($phone) || $profile_image) {
     $image_path = null;
     if ($profile_image && $profile_image['size'] > 0 && $profile_image['size'] <= 800000) {
         $image_path = 'images/' . basename($profile_image['name']);
         move_uploaded_file($profile_image['tmp_name'], $image_path);
     } else {
-        $stmt = $conn->prepare("SELECT Picture FROM rider WHERE Email = ?");
+        $stmt = $conn->prepare("SELECT image FROM admin WHERE email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $stmt->bind_result($image_path);
         $stmt->fetch();
         $stmt->close();
         if (!$image_path || !file_exists($image_path)) {
-            $image_path = 'images/default.jpg'; // Ensure the default image path is used if no image exists
+            $image_path = 'images/default.jpg';
         }
     }
 
-    $stmt = $conn->prepare("UPDATE rider SET Name = ?, Phone = ?, Picture = ? WHERE Email = ?");
+    $stmt = $conn->prepare("UPDATE admin SET name = ?, contact = ?, image = ? WHERE email = ?");
     $stmt->bind_param("ssss", $new_name, $phone, $image_path, $email);
     $stmt->execute();
     $stmt->close();
 
-    $_SESSION['profile_image'] = $image_path; // Update session profile image
+    // Re-fetch the updated user data from the database
+    $stmt = $conn->prepare("SELECT name, contact, image FROM admin WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->bind_result($name, $contact, $profile_image);
+    $stmt->fetch();
+    $stmt->close();
+
+    // Update session variables
+    $_SESSION['name'] = $name;
+    $_SESSION['phone'] = $contact;
+    $_SESSION['profile_image'] = $profile_image;
 
     if (!empty($current_password) && !empty($new_password) && !empty($repeat_new_password)) {
-        $stmt = $conn->prepare("SELECT Password FROM rider WHERE Email = ?");
+        $stmt = $conn->prepare("SELECT password FROM admin WHERE email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $stmt->bind_result($password_hash);
@@ -57,7 +67,9 @@ if (!empty($new_name) || !empty($new_email) || !empty($phone) || $profile_image)
 
         if (password_verify($current_password, $password_hash) && $new_password === $repeat_new_password) {
             $new_password_hash = password_hash($new_password, PASSWORD_DEFAULT);
-            $stmt = $conn->prepare("UPDATE rider SET Password = ? WHERE Email = ?");
+            
+            // Update password in admin table
+            $stmt = $conn->prepare("UPDATE admin SET password = ? WHERE email = ?");
             $stmt->bind_param("ss", $new_password_hash, $email);
             $stmt->execute();
             $stmt->close();
@@ -72,7 +84,8 @@ if (!empty($new_name) || !empty($new_email) || !empty($phone) || $profile_image)
         }
     }
 
-    header('Location: riderProfile.php');
+    header('Location: admin.php');
+    exit;
 } else {
     echo "No changes to update.";
 }

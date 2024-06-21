@@ -4,6 +4,7 @@
     --black:#13131a;
     --bg:#010103;
     --border:.1rem solid rgba(255,255,255,.3);
+    --loc-color: #45ad99;
 }
 
 
@@ -177,46 +178,7 @@ section {
     overflow-y: auto;
 }
 
-.RRide .drivers {
-    text-align: center;
-    overflow-y: auto;
-}
 
-.friend-request-box {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 10px;
-    height: 180px;
-    background-color: #dadde2;
-}
-
-.profilereq {
-    width: 80px;
-    height: 80px;
-    background-color: #ccc;
-    border-radius: 50%;
-    margin-right: 20px;
-    margin-left: 20px;
-    background-size: cover;
-    background-position: center;
-    background-image: url('../IP_MamaJaba/images/nurul.jpg');
-}
-
-.profilereq-info {
-    flex-grow: 1;
-    text-align: left;
-}
-
-.profilereq-info h4 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.profilereq-info button {
-    margin-right: 10px;
-    cursor: pointer;
-}
 
 .highlight-text {
     margin-bottom: 20px;
@@ -402,4 +364,367 @@ footer .underline span{
     {
         flex-basis: 100%;
     }
+}
+
+
+:root{
+    --loc-color: #45ad99;
+ }
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+ }
+
+ .location-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%,-50%);
+    /* background: rgba(0,0,0,0.5); */
+    background: #000;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.6);
+    border-radius: 10px;
+ }
+ .location-box h2{
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+ }
+ .location-box h2 span{
+    color: var(--loc-color);
+ }
+ .location-box .user-box{
+    position: relative;
+ }
+ .location-box .user-box input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom:30px ;
+    outline: none;
+    background: transparent;
+ }
+ .location-box .user-box label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+ }
+ .location-box .user-box input:focus~label,
+ .location-box .user-box input:valid~label{
+    top: -20px;
+    left: 0;
+    color: var(--loc-color);;
+    font-size: 12px;
+ }
+ .location-box form a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--loc-color);
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 40px;
+    letter-spacing: 1px;
+ }
+ .location-box a:hover{
+    background: var(--loc-color);
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--loc-color),
+    0 0 25px var(--loc-color),
+    0 0 50px var(--loc-color),
+    0 0 100px var(--loc-color);
+
+ }
+
+ .location-box a span{
+    position: absolute;
+    display: block;
+ }
+ .location-box a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--loc-color));
+    animation: btn-anim1 1s linear infinite;
+ }
+@keyframes btn-anim1 {
+    0%{
+        left: -100%;
+    }
+    50%,
+    100%{
+        left: 100%;
+    }
+}
+.location-box a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--loc-color));
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: 0.25s ;
+}
+
+@keyframes btn-anim2 {
+    0%{
+        top: -100%;
+    }
+    50%,
+    100%{
+        top: 100%;
+    }
+}
+.location-box a span:nth-child(3){
+    bottom: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, var(--loc-color));
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: 0.5s ;
+}
+@keyframes btn-anim3 {
+    0%{
+        right: -100%;
+    }
+    50%,
+    100%{
+        right: 100%;
+    }
+}
+.location-box a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, var(--loc-color));
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: 0.75s ;
+}
+@keyframes btn-anim4 {
+    0%{
+        bottom: -100%;
+    }
+    50%,
+    100%{
+        bottom: 100%;
+    }
+}
+
+
+
+
+.review-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #222;
+    color: #999;
+    border: 1px solid #444;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.review-btn:hover {
+    background: #1b1b1b;
+}
+.overlay {
+    display: none;
+}
+
+.overlay.active,
+.review.active {
+    display: block;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+}
+
+.review {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    width: 400px;
+    background: #111;
+    padding: 20px 30px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;
+    visibility: hidden;
+    transition: transform 0.6s, top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+.review .post{
+    display: none;
+}
+
+.review .text{
+    font-size: 25px;
+    color: #747272;
+    font-weight: 500;
+}
+
+.review .edit{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.review .edit:hover{
+    text-decoration: underline;
+}
+
+.review .star-widget input {
+    display: none;
+}
+
+.star-widget label {
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label {
+    color: #fd4;
+}
+
+input:checked ~ label {
+    color: #fd4;
+}
+
+input#rate-5:checked ~ label {
+    color: #fe7;
+    text-shadow: 0 0 20px #952;
+}
+
+#rate-1:checked ~ form header:before {
+    content: "I just hate it 😠";
+}
+
+#rate-2:checked ~ form header:before {
+    content: "I don't like it ☹️";
+}
+
+#rate-3:checked ~ form header:before {
+    content: "It's awesome 🙂";
+}
+
+#rate-4:checked ~ form header:before {
+    content: "I just like it 😊";
+}
+
+#rate-5:checked ~ form header:before {
+    content: "I just love it 😍";
+}
+
+.review form {
+    display: none;
+}
+
+input:checked ~ form {
+    display: block;
+}
+
+form header {
+    width: 100%;
+    font-size: 25px;
+    color: #fe7;
+    font-weight: 500;
+    margin: 5px 0 20px 0;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+form .textarea {
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}
+
+form .textarea textarea {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #eee;
+    border: 1px solid#333;
+    background: #222;
+    padding: 10px;
+    font-size: 17px;
+    resize: none;
+}
+
+form .btn button {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #444;
+    outline: none;
+    background: #222;
+    color: #999;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 15px;
+    padding: 9px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form .btn button:hover {
+    background: #1b1b1b;
+}
+.post button{
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px 0;
+    background: #5b6316;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
 }

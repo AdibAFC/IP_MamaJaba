@@ -46,8 +46,8 @@ function prev() {
 }
 
 
-
 document.addEventListener('DOMContentLoaded', () => {
+    // Driver modal functionality
     const modal = document.getElementById('modal');
     const closeButton = document.querySelector('.close-button');
     const modalImage = document.getElementById('modal-image');
@@ -87,6 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.style.display = 'none';
         }
     });
+
+    // Delete driver functionality
     document.querySelectorAll('.delete-btn').forEach(button => {
         button.addEventListener('click', function () {
             const driverID = this.getAttribute('data-id');
@@ -112,24 +114,79 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Rider modal functionality
+    const rmodal = document.getElementById('rider_modal');
+    const rcloseButton = document.querySelector('.close-buttonr');
+    const rmodalImage = document.getElementById('rider-modal-image');
+    const rmodalName = document.getElementById('rider-modal-name');
+    const rmodalContact = document.getElementById('rider-modal-contact');
+    const rmodalEmail = document.getElementById('rider-modal-email');
+
+    document.querySelectorAll('.view-btnr').forEach(button => {
+        button.addEventListener('click', function () {
+            const row = this.closest('tr');
+            const imageSrc = row.querySelector('img').src;
+            const name = row.children[2].textContent;
+            const contact = row.children[3].textContent;
+            const email = row.children[4].textContent;
+
+            rmodalImage.src = imageSrc;
+            rmodalName.textContent = `Name: ${name}`;
+            rmodalContact.textContent = `Contact: ${contact}`;
+            rmodalEmail.textContent = `Email: ${email}`;
+
+            rmodal.style.display = 'flex';
+        });
+    });
+
+    rcloseButton.addEventListener('click', () => {
+        rmodal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target === rmodal) {
+            rmodal.style.display = 'none';
+        }
+    });
+
+    // Delete rider functionality
+    document.querySelectorAll('.delete-btnr').forEach(button => {
+        button.addEventListener('click', function () {
+            const riderID = this.getAttribute('data-id');
+
+            if (confirm('Are you sure you want to delete this rider?')) {
+                fetch('delete_rider.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: `RiderID=${riderID}`
+                })
+                    .then(response => response.text())
+                    .then(data => {
+                        if (data === 'Success') {
+                            alert('Rider deleted successfully');
+                            location.reload();  // Reload the page to reflect the deletion
+                        } else {
+                            alert('Failed to delete rider');
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+        });
+    });
 });
 
 
 function filterTable() {
-    // Get the search input value
     let input = document.getElementById('search');
     let filter = input.value.toLowerCase();
-    
-    // Get the table and rows
     let table = document.getElementById('driverTable');
     let rows = table.getElementsByTagName('tr');
-
-    // Loop through all table rows (excluding the first row which contains table headers)
     for (let i = 1; i < rows.length; i++) {
         let cells = rows[i].getElementsByTagName('td');
         let found = false;
-        
-        // Loop through each cell in the row
         for (let j = 0; j < cells.length; j++) {
             if (cells[j]) {
                 let cellText = cells[j].innerText || cells[j].textContent;
@@ -139,8 +196,46 @@ function filterTable() {
                 }
             }
         }
-
-        // Show or hide the row based on the search text
         rows[i].style.display = found ? '' : 'none';
+    }
+}
+
+function filterRiderTable() {
+    let input = document.getElementById('rider_search');
+    let filter = input.value.toLowerCase();
+    let table = document.getElementById('riderTable');
+    let rows = table.getElementsByTagName('tr');
+    for (let i = 1; i < rows.length; i++) {
+        let cells = rows[i].getElementsByTagName('td');
+        let found = false;
+        for (let j = 0; j < cells.length; j++) {
+            if (cells[j]) {
+                let cellText = cells[j].innerText || cells[j].textContent;
+                if (cellText.toLowerCase().indexOf(filter) > -1) {
+                    found = true;
+                    break;
+                }
+            }
+        }
+        rows[i].style.display = found ? '' : 'none';
+    }
+}
+
+
+
+
+
+
+const form = [...document.querySelector('.form').children];
+
+form.forEach((item, i) => {
+    setTimeout(() => {
+        item.style.opacity = 1;
+    }, i * 100);
+})
+
+window.onload = () => {
+    if (sessionStorage.name) {
+        location.href = '/';
     }
 }

@@ -16,6 +16,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+$driver_id = $_SESSION['driver_id'];
 $ride_request_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
 $sql = "SELECT rr.pick_up_location, rr.drop_off_location, rr.request_time, r.Name AS rider_name, r.Phone AS rider_contact
         FROM ride_requests rr
@@ -120,8 +121,8 @@ if (!file_exists($profile_image)) $profile_image = $default;
         </div>
     </div>
     <div class="btn">
-        <button class="ac" onclick="showToast(acceptMsg)">Accept</button>
-        <button class="dc" onclick="showToast(declineMsg)">Decline</button>
+        <button class="ac" data-id="<?php echo htmlspecialchars($ride_request_id); ?>" onclick="handleRequest('accept', this)">Accept</button>
+        <button class="dc" data-id="<?php echo htmlspecialchars($ride_request_id); ?>" onclick="handleRequest('decline', this)">Decline</button>
     </div>
     </div>
     <div class="history">
@@ -131,31 +132,7 @@ if (!file_exists($profile_image)) $profile_image = $default;
          
     </div>
    </div>
-   <script>
-    let subMenu=document.getElementById("subMenu");
-    let toastbox = document.getElementById("toastbox");
-    let acceptMsg = '<i class="fa-solid fa-circle-check"></i> Call Accepted';
-    let declineMsg = '<i class="fa-solid fa-circle-xmark"></i> Call Declined';
-
-    function toggleMenu(){
-        subMenu.classList.toggle("open-menu");
-    }
-
-    function showToast(msg){
-        let toast = document.createElement("div");
-        toast.classList.add("toast");
-        toast.innerHTML = msg;
-        toastbox.appendChild(toast);
-
-        if(msg.includes('Declined')){
-            toast.classList.add('decline');
-        }
-        setTimeout(()=>{
-            toast.remove();
-        },5000);
-    }
-    
-   </script>
+   <script src="rider_details.js"></script>
 </body>
 </html>
 <?php

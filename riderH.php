@@ -72,37 +72,63 @@ if(!file_exists($profile_image))$profile_image=$default;
     </nav>
 
     <section class="RRide" id="RRide">
-
+        <div class="location-box">
+            <h2>Get a <span>Ride </span></h2>
+            <form action="">
+                <div class="user-box">
+                    <input type="text" required>
+                    <label for="">&nbsp; Location</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" required>
+                    <label for="">&nbsp; Destination</label>
+                </div>
+                <a href="">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>Send Request
+                </a>
+            </form>
+        </div>
         <div class="grid-container">
             <div class="content" style="margin-top: 80px;">
                 <div class="text-boxes">
                     <input type="text" id="pickUpLocation" class="form-control" placeholder="Enter your location">
                     <input type="text" id="dropOffLocation" class="form-control" placeholder="Enter your destination">
                     <button id="requestRide" class="btn btn-primary">Request Ride</button>
-                </div>
-            </div>
-            <div class="drivers">
-                <h3 class="highlight-text1">Available Drivers</h3>
-                <div class="friend-request-box">
-                    <div class="profilereq"></div>
-                    <div class="profilereq-info">
-                        <h4 style="margin-bottom: 20px;">Nurul Absar 36</h4>
-                        <button class="btn btn-danger" style="margin-right: 20px;">On Trip</button>
-                        <button class="btn btn-success">Available</button>
-                    </div>
-                    <div class="profilereq-info">
-                        <button class="btn btn-secondary">Request a Ride</button>
-                    </div>
-                </div>
-                <div class="friend-request-box">
-                    <div class="profilereq"></div>
-                    <div class="profilereq-info">
-                        <h4 style="margin-bottom: 20px;">Md. Rahim 32</h4>
-                        <button class="btn btn-success" style="margin-right: 20px;">On Trip</button>
-                        <button class="btn btn-danger">Available</button>
-                    </div>
-                    <div class="profilereq-info">
-                        <button class="btn btn-danger">Request a Ride</button>
+                    
+                    <button class="review-btn" onclick="openPopup()">Leave a Review</button>
+                    <div class="overlay" onclick="closePopup()"></div> <!-- Overlay for blur effect -->
+                    <div class="review" id="popup">
+                        <div class="post">
+                            <div class="text">Thanks for rating us!</div>
+                            <div class="edit">EDIT</div>
+                            <button type="button" onclick="closePopup()">OK</button>
+                        </div>
+                        <div class="star-widget">
+                            <input type="radio" name="rate" id="rate-5" value=5>
+                            <label for="rate-5" class="fas fa-star"></label>
+                            <input type="radio" name="rate" id="rate-4" value=4>
+                            <label for="rate-4" class="fas fa-star"></label>
+                            <input type="radio" name="rate" id="rate-3" value=3>
+                            <label for="rate-3" class="fas fa-star"></label>
+                            <input type="radio" name="rate" id="rate-2" value=2>
+                            <label for="rate-2" class="fas fa-star"></label>
+                            <input type="radio" name="rate" id="rate-1" value=1>
+                            <label for="rate-1" class="fas fa-star"></label>
+                            <form id="reviewForm" method="POST" action="submit_review.php">
+                                <input type="hidden" name="rating" id="rating" value="">
+                                <header></header>
+                                <div class="textarea">
+                                    <textarea name="review_text" cols="30" placeholder="Describe your experience.."></textarea>
+                                </div>
+                                <input type="hidden" name="rider_id" value="<?php echo $rider_id; ?>">
+                                <div class="btn">
+                                    <button type="submit">Post</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -162,6 +188,28 @@ if(!file_exists($profile_image))$profile_image=$default;
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="riderH.js"></script>
+    <script>
+    // JavaScript to handle rating selection
+        const stars = document.querySelectorAll('.star-widget input[type="radio"]');
+        let ratingValue;
+
+        stars.forEach((star) => {
+            star.addEventListener('click', function () {
+                ratingValue = this.value;
+                document.getElementById('rating').value = ratingValue;
+                console.log('Rating selected:', ratingValue);
+            });
+        });
+
+        // Example function to validate form before submission
+        document.getElementById('reviewForm').addEventListener('submit', function (event) {
+            // Validate if a rating is selected
+            if (!ratingValue) {
+                alert('Please select a rating before submitting.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+</script>
 </body>
 
 </html>
