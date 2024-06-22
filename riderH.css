@@ -163,44 +163,7 @@ nav ul li a:hover {
 .sub-menu-link:hover p {
     font-weight: 600;
 }
-/*88*/
-section {
-    padding: 2rem 7%;
-}
 
-.RRide .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    margin-left: 20px;
-    margin-top: 160px;
-    height: calc(100vh - 160px);
-    overflow-y: auto;
-}
-
-
-
-.highlight-text {
-    margin-bottom: 20px;
-    font-size: 50px;
-    font-weight: 800;
-    line-height: 52px;
-    color: #ffffffee;
-    margin-left: 130%;
-}
-
-.comic-sans {
-    font-family: 'Comic Sans MS', cursive;
-    color: #97e9cb;
-}
-
-.text-boxes input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
 
 
 footer{
@@ -378,17 +341,19 @@ footer .underline span{
  }
 
  .location-box{
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
-    width: 400px;
-    padding: 40px;
+    width: 600px;
+    height: 500px;
+    padding: 80px;
     transform: translate(-50%,-50%);
     /* background: rgba(0,0,0,0.5); */
     background: #000;
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,0.6);
     border-radius: 10px;
+    margin-top: 300px;
  }
  .location-box h2{
     margin: 0 0 30px;
@@ -410,6 +375,9 @@ footer .underline span{
     margin-bottom:30px ;
     outline: none;
     background: transparent;
+    border: none; 
+    border-bottom: 0.5px solid #d2cdcd; 
+    border-right: 0.5px solid #c0b7b7; 
  }
  .location-box .user-box label{
     position: absolute;
@@ -537,15 +505,16 @@ footer .underline span{
     margin: 20px auto;
     padding: 10px 20px;
     font-size: 18px;
-    background: #222;
-    color: #999;
+    background: #000000;
+    color: #ffffff;
     border: 1px solid #444;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .review-btn:hover {
-    background: #1b1b1b;
+    background: #ffffff;
+    color: #000;
 }
 .overlay {
     display: none;

@@ -34,6 +34,10 @@ if(!file_exists($profile_image))$profile_image=$default;
         </div>
 
         <ul>
+            <li>
+                
+            </li>
+        
             <li><a href="#">HOME</a></li>
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">CONTACTS</a></li>
@@ -70,70 +74,58 @@ if(!file_exists($profile_image))$profile_image=$default;
             </div>
         </div>
     </nav>
-
-    <section class="RRide" id="RRide">
-        <div class="location-box">
-            <h2>Get a <span>Ride </span></h2>
-            <form action="">
-                <div class="user-box">
-                    <input type="text" required>
-                    <label for="">&nbsp; Location</label>
-                </div>
-                <div class="user-box">
-                    <input type="text" required>
-                    <label for="">&nbsp; Destination</label>
-                </div>
-                <a href="">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>Send Request
-                </a>
-            </form>
-        </div>
-        <div class="grid-container">
-            <div class="content" style="margin-top: 80px;">
-                <div class="text-boxes">
-                    <input type="text" id="pickUpLocation" class="form-control" placeholder="Enter your location">
-                    <input type="text" id="dropOffLocation" class="form-control" placeholder="Enter your destination">
-                    <button id="requestRide" class="btn btn-primary">Request Ride</button>
-                    
-                    <button class="review-btn" onclick="openPopup()">Leave a Review</button>
-                    <div class="overlay" onclick="closePopup()"></div> <!-- Overlay for blur effect -->
-                    <div class="review" id="popup">
-                        <div class="post">
-                            <div class="text">Thanks for rating us!</div>
-                            <div class="edit">EDIT</div>
-                            <button type="button" onclick="closePopup()">OK</button>
-                        </div>
-                        <div class="star-widget">
-                            <input type="radio" name="rate" id="rate-5" value=5>
-                            <label for="rate-5" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-4" value=4>
-                            <label for="rate-4" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-3" value=3>
-                            <label for="rate-3" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-2" value=2>
-                            <label for="rate-2" class="fas fa-star"></label>
-                            <input type="radio" name="rate" id="rate-1" value=1>
-                            <label for="rate-1" class="fas fa-star"></label>
-                            <form id="reviewForm" method="POST" action="submit_review.php">
-                                <input type="hidden" name="rating" id="rating" value="">
-                                <header></header>
-                                <div class="textarea">
-                                    <textarea name="review_text" cols="30" placeholder="Describe your experience.."></textarea>
-                                </div>
-                                <input type="hidden" name="rider_id" value="<?php echo $rider_id; ?>">
-                                <div class="btn">
-                                    <button type="submit">Post</button>
-                                </div>
-                            </form>
-                        </div>
+    <div class="location-box">
+        <h2>Get a <span>Ride </span></h2>
+        <form action="">
+            <div class="user-box">
+                <input type="text" id="pickUpLocation" required>
+                <label for="">&nbsp; Location</label>
+            </div>
+            <div class="user-box">
+                <input type="text" id="dropOffLocation" required>
+                <label for="">&nbsp; Destination</label>
+            </div>
+            <a href="" id="requestRide">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>Send Request
+            </a>
+            
+        </form>
+        <button class="review-btn" onclick="openPopup()">Rate Us</button>
+        <div class="overlay" onclick="closePopup()"></div>
+        <div class="review" id="popup">
+            <div class="post">
+                <div class="text">Thanks for rating us!</div>
+                <div class="edit">EDIT</div>
+                <button type="button" onclick="closePopup()">OK</button>
+            </div>
+            <div class="star-widget">
+                <input type="radio" name="rate" id="rate-5" value=5>
+                <label for="rate-5" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-4" value=4>
+                <label for="rate-4" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-3" value=3>
+                <label for="rate-3" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-2" value=2>
+                <label for="rate-2" class="fas fa-star"></label>
+                <input type="radio" name="rate" id="rate-1" value=1>
+                <label for="rate-1" class="fas fa-star"></label>
+                <form id="reviewForm" method="POST" action="submit_review.php">
+                    <input type="hidden" name="rating" id="rating" value="">
+                    <header></header>
+                    <div class="textarea">
+                        <textarea name="review_text" cols="30" placeholder="Describe your experience.."></textarea>
                     </div>
-                </div>
+                    <input type="hidden" name="rider_id" value="<?php echo $rider_id; ?>">
+                    <div class="btn">
+                        <button type="submit">Post</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
 
 
     <footer>
