@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['role'] = $role;
 
             // Fetch profile image and additional data based on role
-            if ($role == 'Driver') {
+            if ($role == 'driver') {
                 $stmt = $conn->prepare("SELECT DriverID, Picture, Name FROM driver WHERE Email = ?");
                 $stmt->bind_param("s", $email);
                 $stmt->execute();
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['driver_id'] = $driver_id;
                 $_SESSION['profile_image'] = $profile_image;
                 $_SESSION['name'] = $name;
-            } elseif ($role == 'Rider') {
+            } elseif ($role == 'rider') {
                 $stmt = $conn->prepare("SELECT RiderID, Picture, Name, Phone FROM rider WHERE Email = ?");
                 $stmt->bind_param("s", $email);
                 $stmt->execute();
@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['profile_image'] = $profile_image;
                 $_SESSION['name'] = $name;
                 $_SESSION['contact'] = $phone;
-            } elseif ($role == 'Admin') {
+            } elseif ($role == 'admin') {
                 $stmt = $conn->prepare("SELECT id, image, name, email, contact FROM admin WHERE email = ?");
                 $stmt->bind_param("s", $email);
                 $stmt->execute();
@@ -72,11 +72,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
             // Redirect based on user role
-            if ($role == 'Driver') {
+            if ($role == 'driver') {
                 header('Location: driver.php');
-            } elseif ($role == 'Rider') {
+            } elseif ($role == 'rider') {
                 header('Location: riderH.php'); // Ensure this points to the correct page
-            } elseif ($role == 'Admin') {
+            } elseif ($role == 'admin') {
+                echo 'admin';
                 header('Location: admin.php');
             }
             exit;

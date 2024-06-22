@@ -46,6 +46,7 @@ if (!file_exists($profile_image)) $profile_image = $default;
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,10 +56,13 @@ if (!file_exists($profile_image)) $profile_image = $default;
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <nav>
-        <div class="logo"><h3 class="highlight-text"><span class="comic-sans">MamaJaba?</span></h3></div>
-        
+        <div class="logo">
+            <h3 class="highlight-text"><span class="comic-sans">MamaJaba?</span></h3>
+        </div>
+
         <ul>
             <li><a href="#">HOME</a></li>
             <li><a href="#">ABOUT</a></li>
@@ -69,7 +73,9 @@ if (!file_exists($profile_image)) $profile_image = $default;
             <div class="sub-menu">
                 <div class="user-info">
                     <img src="<?php echo htmlspecialchars($profile_image); ?>">
-                    <h3><?php echo htmlspecialchars($name); ?></h3>
+                    <h3>
+                        <?php echo htmlspecialchars($name); ?>
+                    </h3>
                 </div>
                 <hr>
 
@@ -79,7 +85,7 @@ if (!file_exists($profile_image)) $profile_image = $default;
                     <span>></span>
                 </a>
                 <a href="#" class="sub-menu-link">
-                    <i class="fa-solid fa-gear"></i>    
+                    <i class="fa-solid fa-gear"></i>
                     <p>Settings & Privacy</p>
                     <span>></span>
                 </a>
@@ -97,43 +103,54 @@ if (!file_exists($profile_image)) $profile_image = $default;
         </div>
     </nav>
     <div class="hero">
-       <!-- <div class="title"> -->
-           <h2>Detail of Rider</h2>
-       <!-- </div> -->
-    <div class="container">
-        <div class="detail">
-        <div class="det">
-            <div class="topic">LOCATION</div>
-            <div class="txt"><?php echo htmlspecialchars($pick_up_location); ?></div>            
+        <!-- <div class="title"> -->
+        <h2>Detail of Rider</h2>
+        <!-- </div> -->
+        <div class="container">
+            <div class="detail">
+                <div class="det">
+                    <div class="topic">LOCATION</div>
+                    <div class="txt">
+                        <?php echo htmlspecialchars($pick_up_location); ?>
+                    </div>
+                </div>
+
+                <div class="det">
+                    <div class="topic">CONTACT</div>
+                    <div class="txt">
+                        <?php echo htmlspecialchars($rider_contact); ?>
+                    </div>
+                </div>
+                <div class="det">
+                    <div class="topic">DESTINATION</div>
+                    <div class="txt">
+                        <?php echo htmlspecialchars($drop_off_location); ?>
+                    </div>
+                </div>
+                <div class="dett">
+                    <div class="topic"><i class="fa-solid fa-clock"></i></div>
+                    <div class="txtt">
+                        <?php echo htmlspecialchars($request_time); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+                <button class="ac" data-id="<?php echo htmlspecialchars($ride_request_id); ?>"
+                    onclick="handleRequest('accept', this)">Accept</button>
+                <button class="dc" data-id="<?php echo htmlspecialchars($ride_request_id); ?>"
+                    onclick="handleRequest('decline', this)">Decline</button>
+            </div>
         </div>
-        
-        <div class="det">
-            <div class="topic">CONTACT</div>
-            <div class="txt"><?php echo htmlspecialchars($rider_contact); ?></div>            
+        <div class="history">
+            <a href="#">View Rider's Past History</a>
         </div>
-        <div class="det">
-            <div class="topic">DESTINATION</div>
-            <div class="txt"><?php echo htmlspecialchars($drop_off_location); ?></div>            
-        </div>
-        <div class="dett">
-            <div class="topic"><i class="fa-solid fa-clock"></i></div>
-            <div class="txtt"><?php echo htmlspecialchars($request_time); ?></div>            
+        <div id="toastbox">
+
         </div>
     </div>
-    <div class="btn">
-        <button class="ac" data-id="<?php echo htmlspecialchars($ride_request_id); ?>" onclick="handleRequest('accept', this)">Accept</button>
-        <button class="dc" data-id="<?php echo htmlspecialchars($ride_request_id); ?>" onclick="handleRequest('decline', this)">Decline</button>
-    </div>
-    </div>
-    <div class="history">
-        <a href="#">View Rider's Past History</a>
-    </div>
-    <div id="toastbox">
-         
-    </div>
-   </div>
-   <script src="rider_details.js"></script>
+    <script src="rider_details.js"></script>
 </body>
+
 </html>
 <?php
 $stmt->close();

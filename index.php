@@ -114,7 +114,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                             <div class="text-boxes">
                                 <input type="text" class="form-control mb-3" placeholder="Enter your location">
                                 <input type="text" class="form-control mb-3" placeholder="Enter your destination">
-                                <a href="riderH.html" class="btn btn-primary ride_btn">Request a Ride</a>
+                                <a href="login.html" class="btn btn-primary ride_btn">Request a Ride</a>
                             </div>
                         </div>
                     </div>
@@ -141,8 +141,8 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                             <h3 class="highlight-text1">Drive when you want, make what you need</h3>
                             <p>Make money on your schedule with deliveries or rides—or both. You can use your own car or
                                 choose a rental through Uber.</p>
-                            <a href="#" class="btn btn-primary drive_btn ">Get Started</a>
-                            <a href="#" class="btn btn-outline-secondary drive_btn">Already Have an account? Sign in</a>
+                            <a href="driver_signup.html" class="btn btn-primary drive_btn ">Get Started</a>
+                            <a href="login.html" class="btn btn-outline-secondary drive_btn">Already Have an account? Sign in</a>
                         </div>
                     </div>
                 </div>
@@ -293,7 +293,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                             Need assistance or have inquiries about our services? We're here to help! Feel free to reach
                             out to us anytime.
                         </p>
-                        <a href="#" class="btn btn-primary btn-lg">Contact Us</a>
+                        <a href="contactUs.html" class="btn btn-primary btn-lg">Contact Us</a>
                     </div>
                 </div>
             </div>

@@ -26,13 +26,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->connect_error) {
         die('Connection Failed: ' . $conn->connect_error);
     } else {
+        // Get the max riderid from the rider table
+        $result = $conn->query("SELECT MAX(riderid) AS max_riderid FROM rider");
+        $row = $result->fetch_assoc();
+        $max_riderid = $row['max_riderid'];
+        $new_riderid = $max_riderid + 1;
+
         // Prepare and bind for the rider table
-        $stmt = $conn->prepare("INSERT INTO rider (Name, Email, Phone, Password) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $fname, $email, $phone, $hashed_password);
+        $stmt = $conn->prepare("INSERT INTO rider (riderid, Name, Email, Phone, Password) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("issss", $new_riderid, $fname, $email, $phone, $hashed_password);
 
         // Prepare and bind for the users table
         $stmt1 = $conn->prepare("INSERT INTO user (Email, Password, Role) VALUES (?, ?, ?)");
-        $role = "Rider";
+        $role = "rider";
         $stmt1->bind_param("sss", $email, $hashed_password, $role);
 
         // Begin transaction
@@ -47,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 alert('Registration Successful!');
                 window.location.href = 'login.html';
               </script>";
-        exit();
+                exit();
             } else {
                 // Rollback the transaction if any statement fails
                 $conn->rollback();

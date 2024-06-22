@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Prepare and bind for the users table
         $stmt1 = $conn->prepare("INSERT INTO user (Email, Password, Role) VALUES (?, ?, ?)");
-        $role = "Driver";
+        $role = "driver";
         $stmt1->bind_param("sss", $email, $hashed_password, $role);
 
         // Begin transaction
