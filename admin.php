@@ -4,14 +4,69 @@ if (!isset($_SESSION['email'])) {
     header('Location: login.html'); // Redirect to login page if not logged in
     exit;
 }
+
 $email = $_SESSION['email'];
 $name = isset($_SESSION['name']) ? $_SESSION['name'] : '';
 $phone = isset($_SESSION['phone']) ? $_SESSION['phone'] : '';
-$default="images/default.jpg";
-$profile_image = $_SESSION['profile_image'];
-// $profile_image = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] : 'images/default.png';
-$profile_image = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] : NULL;
-if(!file_exists($profile_image))$profile_image=$default;
+$default = "images/default.jpg";
+$profile_image = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] : $default;
+
+if (!file_exists($profile_image)) {
+    $profile_image = $default;
+}
+
+$conn = new mysqli('localhost', 'root', '', 'mamajaba');
+if ($conn->connect_error) {
+    die('Connection Failed: ' . $conn->connect_error);
+}
+
+// Query to get count of reviews by rating
+$query_reviews_count = "SELECT rating, COUNT(*) AS count_reviews FROM reviews GROUP BY rating ORDER BY rating DESC";
+$result_reviews_count = $conn->query($query_reviews_count);
+$reviews_count = array_fill(1, 5, 0); // Initialize all ratings from 1 to 5 with 0 count
+
+if ($result_reviews_count) {
+    while ($row = $result_reviews_count->fetch_assoc()) {
+        $reviews_count[$row['rating']] = $row['count_reviews'];
+    }
+}
+
+// Query to get average rating and total reviews
+$query_avg_rating = "SELECT AVG(rating) AS avg_rating, COUNT(*) AS total_reviews FROM reviews";
+$result_avg_rating = $conn->query($query_avg_rating);
+if ($result_avg_rating) {
+    $row_avg_rating = $result_avg_rating->fetch_assoc();
+    $avg_rating = $row_avg_rating['avg_rating'];
+    $total_reviews = $row_avg_rating['total_reviews'];
+} else {
+    $avg_rating = 0;
+    $total_reviews = 0;
+}
+
+// Fetch the number of drivers
+$query_drivers = "SELECT COUNT(*) AS num_drivers FROM driver";
+$result_drivers = $conn->query($query_drivers);
+if ($result_drivers) {
+    $row_drivers = $result_drivers->fetch_assoc();
+    $num_drivers = $row_drivers['num_drivers'];
+} else {
+    $num_drivers = 0;
+}
+
+// Fetch the number of riders
+$query_riders = "SELECT COUNT(*) AS num_riders FROM rider";
+$result_riders = $conn->query($query_riders);
+if ($result_riders) {
+    $row_riders = $result_riders->fetch_assoc();
+    $num_riders = $row_riders['num_riders'];
+} else {
+    $num_riders = 0;
+}
+
+// Licensed rickshaws are equal to the number of drivers
+$num_rickshaws = $num_drivers;
+
+$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -114,20 +169,20 @@ if(!file_exists($profile_image))$profile_image=$default;
         </div>
         <div class="wrapper">
             <div class="container">
-                <img src="images/rickshaw_icon.png">
-                <span class="num" dat-val="37">000</span>
+                <img src="images/rickshaw_icon.png" alt="Rickshaw Icon">
+                <span class="num" dat-val="<?php echo $num_rickshaws; ?>">0</span>
                 <span class="text">Licensed Rickshaws</span>
             </div>
 
             <div class="container">
                 <i class="fa-solid fa-person-circle-check"></i>
-                <span class="num" dat-val="40">000</span>
+                <span class="num" dat-val="<?php echo $num_drivers; ?>">0</span>
                 <span class="text">Recruited Drivers</span>
             </div>
 
             <div class="container">
                 <i class="fa-solid fa-chart-simple"></i>
-                <span class="num" dat-val="800">000</span>
+                <span class="num" dat-val="<?php echo $num_riders; ?>">0</span>
                 <span class="text">No of Riders</span>
             </div>
             <div class="container">
@@ -137,6 +192,46 @@ if(!file_exists($profile_image))$profile_image=$default;
             </div>
         </div>
     </div>
+    
+    <div class="revstat-box">
+        <div class="avg-rating">
+            <h2><?php echo number_format($avg_rating, 1); ?> / 5.0</h2>
+            <div class="stars">
+                <?php
+                $full_stars = floor($avg_rating);
+                $half_star = $avg_rating - $full_stars >= 0.5 ? 1 : 0;
+                for ($i = 0; $i < $full_stars; $i++) {
+                    echo '<i class="fas fa-star"></i>';
+                }
+                if ($half_star) {
+                    echo '<i class="fas fa-star-half-alt"></i>';
+                }
+                for ($i = $full_stars + $half_star; $i < 5; $i++) {
+                    echo '<i class="far fa-star"></i>';
+                }
+                ?>
+            </div>
+            <p><?php echo $total_reviews; ?> Reviews</p>
+        </div>
+        <div class="ratings-breakdown">
+            <ul>
+                <?php
+                for ($rating = 5; $rating >= 1; $rating--) {
+                    $count_reviews = isset($reviews_count[$rating]) ? $reviews_count[$rating] : 0;
+                    $percentage = $total_reviews > 0 ? ($count_reviews / $total_reviews) * 100 : 0;
+                    echo "<li>
+                            {$rating}<span> <i class='fas fa-star'></i></span>
+                            <div class='bar'>
+                                <div class='bar-filled' style='width: {$percentage}%;'></div>
+                            </div>
+                            ({$count_reviews})
+                          </li>";
+                }
+                ?>
+            </ul>
+        </div>
+    </div>
+    
     <div class="review">
         <div class="title">
             <h2>Customer Reviews</h2>
@@ -189,6 +284,8 @@ if(!file_exists($profile_image))$profile_image=$default;
         <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
         <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
     </div>
+
+    
     <div class="main-content">
         <section id="sec1">
             <div class="filterEntries">

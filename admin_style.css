@@ -1130,3 +1130,79 @@ label.btn {
 .form input.email {
   text-transform: none;
 }
+
+
+/* .revstat-box {
+  background: #000;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+} */
+
+.revstat-box {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 400px;
+  padding: 40px;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  box-sizing: border-box;
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.revstat-box .avg-rating {
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.revstat-box .avg-rating h2 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.revstat-box .avg-rating .stars {
+  margin: 10px 0;
+  color: #ffd700;
+}
+
+.revstat-box .avg-rating p {
+  margin: 0;
+  color: #888;
+}
+
+.revstat-box .ratings-breakdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.revstat-box .ratings-breakdown ul li {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.revstat-box .ratings-breakdown ul li span {
+  width: 30px;
+  text-align: center;
+  color: #ffd700; /* Yellow color for the stars beside the review count */
+}
+
+.revstat-box .ratings-breakdown ul li .bar {
+  flex-grow: 1;
+  height: 10px;
+  background: #c8c5c5;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+.revstat-box .ratings-breakdown ul li .bar-filled {
+  height: 100%;
+  background: #ffd700;
+}

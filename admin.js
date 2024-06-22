@@ -8,7 +8,7 @@ valueDisplays.forEach((valueDisplay) => {
     let counter = setInterval(function () {
         startValue += 1;
         valueDisplay.textContent = startValue;
-        if (startValue == endValue) {
+        if (startValue >= endValue) {
             clearInterval(counter);
         }
     }, duration);
