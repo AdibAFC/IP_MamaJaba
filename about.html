@@ -1,660 +1,683 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
-
-<style>
-     @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&family=Righteous&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
-    :root {
-  --first-color: hsl(82,60%,28%);
-  --title-color: hsl(0,0%,15%);
-  --text-color: hsl(0,0%,35%);
-  --body-color: hsl(0,0%,95%);
-  --container-color: hsl(0,0%,95%);
-  --body-font: "Poppins",sans-serif;
-  --h2-font-size: 1.25rem;
-  --small-font-size: .813rem;
-  --dark1: #0000004d;
-  --dark2: #181c20;
-  --dark3: #212529;
-  --dark4: #2d3135;
-  --dark5: #424549;
-  --dark6: #404346;
-  --dark7: #9c9c9c;
-  --dark8: #dae0e7;
-  /* Fixed missing semicolon and typo */
-  --dark9: #262a2e;
-  --red1: #1c729b;
-  /* Moved inside the :root block */
-  
-}
-
-body {
-        font-family: 'Poppins', sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-        background-color: #c3e6da;
-        text-align: justify;
-        overflow-x: hidden;
-    }
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-.navbar{
-    color: #fff;
-    background-color: #242224;
-    padding-left: 40px;
-}
-.navbar-brand {
-    font-family: 'Comic Sans MS', cursive;
-    font-size: 35px;
-    color: aqua !important;
-    margin-left: 40px;
-}
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&family=Righteous&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-.nav-link {
-    font-size: 16px;
-    margin: 15px;
-    color: rgb(255, 255, 255) !important;
-    font-family: 'Roboto',sans-serif;
-}
+        :root {
+            --first-color: hsl(82, 60%, 28%);
+            --title-color: hsl(0, 0%, 15%);
+            --text-color: hsl(0, 0%, 35%);
+            --body-color: hsl(0, 0%, 95%);
+            --container-color: hsl(0, 0%, 95%);
+            --body-font: "Poppins", sans-serif;
+            --h2-font-size: 1.25rem;
+            --small-font-size: .813rem;
+            --dark1: #0000004d;
+            --dark2: #181c20;
+            --dark3: #212529;
+            --dark4: #2d3135;
+            --dark5: #424549;
+            --dark6: #404346;
+            --dark7: #9c9c9c;
+            --dark8: #dae0e7;
+            /* Fixed missing semicolon and typo */
+            --dark9: #262a2e;
+            --red1: #1c729b;
+            /* Moved inside the :root block */
 
-.nav-link:hover {
-    color: aqua !important;
-}
+        }
 
-.active .nav-link {
-    color: aqua !important;
-}
-
-.navbar-nav {
-    padding-right: 110px;
-    padding-left: 90px;
-}
-
-.form-inline {
-    margin-left: 120px;
-    display: flex;
-    flex-direction: row;
-    border-radius: 3rem;
-    transition: background-color 300ms ease-in;
-}
-
-.menu-right-btn {
-    padding: 10px 20px;
-    margin-right: 0%;
-    background-color: transparent;
-    transition: all 300ms ease-in;
-    font-weight: bold;
-    border-radius: 3rem;
-    width: 100px;
-}
-
-.border-btn1{
-    color: rgb(255, 255, 255);
-    background-color: #0f0e0e;
-}
-.border-btn1:hover {
-    background-color: rgb(46, 48, 48);
-    color: rgb(255, 255, 255);
-}
-.border-btn2 {
-    color: #000;
-    background-color: #ffffff;
-}
-.border-btn2:hover {
-    background-color: rgb(169, 174, 174);
-    color: #000;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #c3e6da;
+            text-align: justify;
+            overflow-x: hidden;
+        }
 
 
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-}
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    background-color: rgba(33, 31, 46, 0.5);
-}
+        .navbar {
+            color: #fff;
+            background-color: #242224;
+            padding-left: 40px;
+        }
 
-.popup-content {
-    background-color: #ffffff;
-    width: 300px;
-    margin: 20% auto;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-}
+        .navbar-brand {
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 35px;
+            color: aqua !important;
+            margin-left: 40px;
+        }
 
-.options {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.options a{
-    color: #fff;
-    text-decoration: none;
-}
-button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background: #000;
-    color: #fff;
-}
+        .nav-link {
+            font-size: 16px;
+            margin: 15px;
+            color: rgb(255, 255, 255) !important;
+            font-family: 'Roboto', sans-serif;
+        }
 
-#closePopup {
-    margin-top: 20px;
-    background-color: #ea2020;
-    color: #fff;
-}
-button:hover {
-    background-color: #555353;
-}
-.riderBtnpop{
-    margin-bottom: 500px;
-}
-@keyframes moving {
-    0% {
-        left: -20px;
-    }
+        .nav-link:hover {
+            color: aqua !important;
+        }
 
-    100% {
-        left: 100%;
-    }
-}
+        .active .nav-link {
+            color: aqua !important;
+        }
 
-@media (max-width: 700px) {
-    footer {
-        bottom: unset;
-    }
+        .navbar-nav {
+            padding-right: 110px;
+            padding-left: 90px;
+        }
 
-    footer .col {
-        flex-basis: 100%;
+        .form-inline {
+            margin-left: 120px;
+            display: flex;
+            flex-direction: row;
+            border-radius: 3rem;
+            transition: background-color 300ms ease-in;
+        }
 
-    }
+        .menu-right-btn {
+            padding: 10px 20px;
+            margin-right: 0%;
+            background-color: transparent;
+            transition: all 300ms ease-in;
+            font-weight: bold;
+            border-radius: 3rem;
+            width: 100px;
+        }
 
-    footer .col:nth-child(2),
-    .col:nth-child(3) {
-        flex-basis: 100%;
-    }
-}
+        .border-btn1 {
+            color: rgb(255, 255, 255);
+            background-color: #0f0e0e;
+        }
+
+        .border-btn1:hover {
+            background-color: rgb(46, 48, 48);
+            color: rgb(255, 255, 255);
+        }
+
+        .border-btn2 {
+            color: #000;
+            background-color: #ffffff;
+        }
+
+        .border-btn2:hover {
+            background-color: rgb(169, 174, 174);
+            color: #000;
+        }
 
 
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
 
-    main {
-        padding: 15px;  
-        max-width: 1250px;
-        margin: auto;
-        background: #045060;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-    }
+        }
 
-    h1 {
-        
-        font-size: 45px;
-        color: white;
-    }
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            background-color: rgba(33, 31, 46, 0.5);
+        }
 
-    h2 {
-        font-size: 35px;
-    }
+        .popup-content {
+            background-color: #ffffff;
+            width: 300px;
+            margin: 20% auto;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
 
-    h1, h2 {
-        color: #fffefe;
-        text-align: center;
-        margin-bottom: 8px;
-    }
-    p{
-        font-size: 18px;
-        color: white;
-    }
-   
-
-    .mission, .services {
-        margin-bottom: 40px;
-    }
-    .admins{
-        margin-bottom: 1px;
-    }
-
-    section img {
-        width: 100%;
-        height: 400px;
-        margin-bottom: 10px;
-        border-radius: 8px;
-        
-    }
-
-    .mission, .services {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .mission .text, .services .text {
-        flex: 1;
-        padding: 20px;
-    }
-
-    .mission .image, .services .image {
-        flex: 1;
-    }
-
-    .mission .image img, .services .image img {
-        width: 100%;
-        border-radius: 8px;
-    }
-
-    .team ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        list-style-type: none;
-        padding: 0;
-    }
-
-    .team ul li {
-        width: 45%;
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .team ul li img {
-        width: 150px;
-        height: 170px;
-        border-radius: 50%;
-        margin-bottom: 10px;
-    }
-
-    ul {
-        list-style-type: none;
-        padding: 0;
-        color: white;
-    }
-
-    ul li {
-        margin-bottom: 10px;
-    }
-
-    @media (max-width: 768px) {
-        .mission, .services {
+        .options {
+            margin-top: 20px;
+            display: flex;
             flex-direction: column;
+            gap: 20px;
+        }
+
+        .options a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #000;
+            color: #fff;
+        }
+
+        #closePopup {
+            margin-top: 20px;
+            background-color: #ea2020;
+            color: #fff;
+        }
+
+        button:hover {
+            background-color: #555353;
+        }
+
+        .riderBtnpop {
+            margin-bottom: 500px;
+        }
+
+        @keyframes moving {
+            0% {
+                left: -20px;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        @media (max-width: 700px) {
+            footer {
+                bottom: unset;
+            }
+
+            footer .col {
+                flex-basis: 100%;
+
+            }
+
+            footer .col:nth-child(2),
+            .col:nth-child(3) {
+                flex-basis: 100%;
+            }
+        }
+
+
+
+        main {
+            padding: 15px;
+            max-width: 1250px;
+            margin: auto;
+            background: #045060;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+
+            font-size: 45px;
+            color: white;
+        }
+
+        h2 {
+            font-size: 35px;
+        }
+
+        h1,
+        h2 {
+            color: #fffefe;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        p {
+            font-size: 18px;
+            color: white;
+        }
+
+
+        .mission,
+        .services {
+            margin-bottom: 40px;
+        }
+
+        .admins {
+            margin-bottom: 1px;
+        }
+
+        section img {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+
+        }
+
+        .mission,
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .mission .text,
+        .services .text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .mission .image,
+        .services .image {
+            flex: 1;
+        }
+
+        .mission .image img,
+        .services .image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .team ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            list-style-type: none;
+            padding: 0;
         }
 
         .team ul li {
-            width: 100%;
-        }
-    }
-
-    .main-content {
-  width: 80vw;
-  margin-left: 20vw;
-
-  padding: 20px;
-  box-shadow: 3px 3px 20px var(--dark1);
-  background: var(--dark4);
-  border-radius: 10px;
-  margin: 0px;
-  margin-top: 10px;
-}
-.main-content {
-  overflow-x: auto;
-}
-
-
-
-    .card-cont {
-        display: grid;
-        place-items: center;
-        margin-inline: 1rem;
-        padding-block: 0rem;
-    }
-
-    .card-cont h1 {
-        /* font-size: var(--h2-font-size); */
-        font-weight: 600;
-        color: #ffffff;
-        margin-bottom: 5px;
-    }
-
-    .card-container {
-        display: grid;
-        row-gap: 3rem;
-    }
-
-    .card-article {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .card-img {
-        width: 328px;
-        border-radius: 1.5rem;
-    }
-
-    .card-data {
-        width: 240px;
-        background-color: #fff;
-        padding: 1.5rem 2rem;
-        box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
-        border-radius: 1rem;
-        position: absolute;
-        bottom: -9rem;
-        left: 0;
-        right: 0;
-        margin-inline: auto;
-        opacity: 0;
-        transition: opacity 1s 1s;
-    }
-
-    .card-desc {
-        display: block;
-        font-size: var(--small-font-size);
-        margin-bottom: .2rem;
-        letter-spacing: 1px;
-    }
-
-    .card-title {
-        font-size: var(--h2-font-size);
-        font-weight: 500;
-        color: var(--title-color);
-        margin-bottom: .75rem;
-    }
-
-    .card-btn {
-        text-decoration: none;
-        font-size: var(--small-font-size);
-        font-weight: 600;
-        color: var(--first-color);
-    }
-
-    .card-article:hover .card-data {
-        animation: show-data 1s forwards;
-        opacity: 1;
-        transition: opacity .3s;
-    }
-
-    .card-article:hover {
-        animation: remove-overflow 2s forwards;
-    }
-
-    .card-article:not(:hover) {
-        animation: show-overflow 2s forwards;
-    }
-
-    .card-article:not(:hover) .card-data {
-        animation: remove-data 1s forwards;
-    }
-
-    @keyframes show-data {
-        50% {
-            transform: translateY(-10rem);
+            width: 45%;
+            margin-bottom: 20px;
+            text-align: center;
         }
 
-        100% {
-            transform: translateY(-7rem);
-        }
-    }
-
-    @keyframes remove-overflow {
-        to {
-            overflow: initial;
-        }
-    }
-
-    @keyframes remove-data {
-        0% {
-            transform: translateY(-7rem);
+        .team ul li img {
+            width: 150px;
+            height: 170px;
+            border-radius: 50%;
+            margin-bottom: 10px;
         }
 
-        50% {
-            transform: translateY(-10rem);
+        ul {
+            list-style-type: none;
+            padding: 0;
+            color: white;
         }
 
-        100% {
-            transform: translateY(.5rem);
-        }
-    }
-
-    @keyframes show-overflow {
-        0% {
-            overflow: initial;
-            pointer-events: none;
+        ul li {
+            margin-bottom: 10px;
         }
 
-        50% {
-            overflow: hidden;
-        }
-    }
+        @media (max-width: 768px) {
 
-    @media screen and (min-width: 1120px) {
+            .mission,
+            .services {
+                flex-direction: column;
+            }
+
+            .team ul li {
+                width: 100%;
+            }
+        }
+
+        .main-content {
+            width: 80vw;
+            margin-left: 20vw;
+
+            padding: 20px;
+            box-shadow: 3px 3px 20px var(--dark1);
+            background: var(--dark4);
+            border-radius: 10px;
+            margin: 0px;
+            margin-top: 10px;
+        }
+
+        .main-content {
+            overflow-x: auto;
+        }
+
+
+
         .card-cont {
-            height: 100vh;
+            display: grid;
+            place-items: center;
+            margin-inline: 1rem;
+            padding-block: 0rem;
+        }
+
+        .card-cont h1 {
+            /* font-size: var(--h2-font-size); */
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 5px;
         }
 
         .card-container {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-        .card-img {
-            width: 320px;
+            display: grid;
+            row-gap: 3rem;
         }
 
         .card-article {
-            margin: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-img {
+            width: 328px;
+            border-radius: 1.5rem;
         }
 
         .card-data {
-            width: 300px;
-            padding-inline: 2.5rem;
+            width: 240px;
+            background-color: #fff;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+            border-radius: 1rem;
+            position: absolute;
+            bottom: -9rem;
+            left: 0;
+            right: 0;
+            margin-inline: auto;
+            opacity: 0;
+            transition: opacity 1s 1s;
+        }
+
+        .card-desc {
+            display: block;
+            font-size: var(--small-font-size);
+            margin-bottom: .2rem;
+            letter-spacing: 1px;
+        }
+
+        .card-title {
+            font-size: var(--h2-font-size);
+            font-weight: 500;
+            color: var(--title-color);
+            margin-bottom: .75rem;
+        }
+
+        .card-btn {
+            text-decoration: none;
+            font-size: var(--small-font-size);
+            font-weight: 600;
+            color: var(--first-color);
+        }
+
+        .card-article:hover .card-data {
+            animation: show-data 1s forwards;
+            opacity: 1;
+            transition: opacity .3s;
+        }
+
+        .card-article:hover {
+            animation: remove-overflow 2s forwards;
+        }
+
+        .card-article:not(:hover) {
+            animation: show-overflow 2s forwards;
+        }
+
+        .card-article:not(:hover) .card-data {
+            animation: remove-data 1s forwards;
+        }
+
+        @keyframes show-data {
+            50% {
+                transform: translateY(-10rem);
+            }
+
+            100% {
+                transform: translateY(-7rem);
+            }
+        }
+
+        @keyframes remove-overflow {
+            to {
+                overflow: initial;
+            }
+        }
+
+        @keyframes remove-data {
+            0% {
+                transform: translateY(-7rem);
+            }
+
+            50% {
+                transform: translateY(-10rem);
+            }
+
+            100% {
+                transform: translateY(.5rem);
+            }
+        }
+
+        @keyframes show-overflow {
+            0% {
+                overflow: initial;
+                pointer-events: none;
+            }
+
+            50% {
+                overflow: hidden;
+            }
+        }
+
+        @media screen and (min-width: 1120px) {
+            .card-cont {
+                height: 100vh;
+            }
+
+            .card-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .card-img {
+                width: 320px;
+            }
+
+            .card-article {
+                margin: 30px;
+            }
+
+            .card-data {
+                width: 300px;
+                padding-inline: 2.5rem;
+
+            }
+        }
+
+        /* Hover effect for all images */
+        .image {
+            transition: transform 0.3s ease;
+        }
+
+        .image:hover {
+            transform: scale(0.95);
+        }
+
+
+
+        footer {
+            width: 100%;
+            bottom: 0;
+            background: linear-gradient(to right, #000000, #2d0b00);
+            color: #fff;
+            padding: 100px 0 30px;
+            border-top-left-radius: 125px;
+            font-size: 13px;
+            line-height: 20px;
+        }
+
+        footer .row {
+            width: 85%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        footer .col {
+            flex-basis: 25%;
+            padding: 10px;
+        }
+
+
+        footer .col:nth-child(2),
+        .col:nth-child(3) {
+            flex-basis: 15%;
+        }
+
+        footer .col p {
+            letter-spacing: 1px;
+        }
+
+        footer .comic-sans {
+            font-family: 'Comic Sans MS', cursive;
+            color: #97e9cb;
+            font-size: 20px;
 
         }
-    }
 
-    /* Hover effect for all images */
-    .image {
-        transition: transform 0.3s ease;
-    }
+        footer .logo {
+            width: 80px;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
 
-    .image:hover {
-        transform: scale(0.95);
-    }
+        footer .col h3 {
+            width: fit-content;
+            margin-bottom: 40px;
+            position: relative;
+            font-size: 15px;
+            font-weight: bold;
+        }
 
+        footer ul li {
+            list-style: none;
+            margin-bottom: 12px;
+        }
 
+        footer ul li a {
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 1px;
+            transition: text-shadow 0.5s ease;
+        }
 
-    footer {
-    width: 100%;
-    bottom: 0;
-    background: linear-gradient(to right, #000000, #2d0b00);
-    color: #fff;
-    padding: 100px 0 30px;
-    border-top-left-radius: 125px;
-    font-size: 13px;
-    line-height: 20px;
-}
+        footer ul li a:hover {
+            text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+        }
 
-footer .row {
-    width: 85%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-}
+        footer form {
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 50px;
+        }
 
-footer .col {
-    flex-basis: 25%;
-    padding: 10px;
-}
+        footer form .fa-regular {
+            font-size: 18px;
+            margin-right: 10px;
+        }
 
+        footer form input {
+            width: 100%;
+            background: transparent;
+            color: #ccc;
+            border: 0;
+            outline: none;
+        }
 
-footer .col:nth-child(2),
-.col:nth-child(3) {
-    flex-basis: 15%;
-}
+        footer form button {
+            background: transparent;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+        }
 
-footer .col p {
-    letter-spacing: 1px;
-}
+        footer form button .fa-solid {
+            font-size: 16px;
+            color: #ccc;
+        }
 
-footer .comic-sans {
-    font-family: 'Comic Sans MS', cursive;
-    color: #97e9cb;
-    font-size: 20px;
+        footer .social-icons .fa-brands {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-size: 20px;
+            color: #000;
+            background: #fff;
+            margin-right: 15px;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
 
-}
+        footer .social-icons .fa-brands:hover {
+            background: #2d0b00;
+            color: #fff;
+            box-shadow: 0 0 1rem #2d0b00;
+        }
 
-footer .logo {
-    width: 80px;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-}
+        footer hr {
+            width: 90%;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+            margin: 20px auto;
+        }
 
-footer .col h3 {
-    width: fit-content;
-    margin-bottom: 40px;
-    position: relative;
-    font-size: 15px;
-    font-weight: bold;
-}
+        footer .copyright {
+            text-align: center;
+            letter-spacing: 1px;
+            color: #ccc;
+        }
 
-footer ul li {
-    list-style: none;
-    margin-bottom: 12px;
-}
+        footer .underline {
+            width: 100%;
+            height: 5px;
+            background: #767676;
+            border-radius: 3px;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            overflow: hidden;
+        }
 
-footer ul li a {
-    text-decoration: none;
-    color: #fff;
-    letter-spacing: 1px;
-    transition: text-shadow 0.5s ease;
-}
-
-footer ul li a:hover {
-    text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
-}
-
-footer form {
-    padding-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 50px;
-}
-
-footer form .fa-regular {
-    font-size: 18px;
-    margin-right: 10px;
-}
-
-footer form input {
-    width: 100%;
-    background: transparent;
-    color: #ccc;
-    border: 0;
-    outline: none;
-}
-
-footer form button {
-    background: transparent;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-}
-
-footer form button .fa-solid {
-    font-size: 16px;
-    color: #ccc;
-}
-
-footer .social-icons .fa-brands {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 20px;
-    color: #000;
-    background: #fff;
-    margin-right: 15px;
-    cursor: pointer;
-    transition: 0.5s ease;
-}
-
-footer .social-icons .fa-brands:hover {
-    background: #2d0b00;
-    color: #fff;
-    box-shadow: 0 0 1rem #2d0b00;
-}
-
-footer hr {
-    width: 90%;
-    border: 0;
-    border-bottom: 1px solid #ccc;
-    margin: 20px auto;
-}
-
-footer .copyright {
-    text-align: center;
-    letter-spacing: 1px;
-    color: #ccc;
-}
-
-footer .underline {
-    width: 100%;
-    height: 5px;
-    background: #767676;
-    border-radius: 3px;
-    position: absolute;
-    top: 25px;
-    left: 0;
-    overflow: hidden;
-}
-
-footer .underline span {
-    width: 15px;
-    height: 100%;
-    background: #fff;
-    border-radius: 3px;
-    position: absolute;
-    top: 0;
-    left: 10px;
-    animation: moving 2s linear infinite;
-}
-</style>
+        footer .underline span {
+            width: 15px;
+            height: 100%;
+            background: #fff;
+            border-radius: 3px;
+            position: absolute;
+            top: 0;
+            left: 10px;
+            animation: moving 2s linear infinite;
+        }
+    </style>
 
 
     </style>
 </head>
+
 <body>
 
     <header>
@@ -713,38 +736,48 @@ footer .underline span {
             </div>
         </nav>
     </header>
-    
-<br>
 
-    
+    <br>
+
+
 
     <main>
         <section class="about">
             <!-- <h1>About Us</h1> -->
-            <img src=  "MAMAJABA.png" id="about-img">
-            
+            <img src="images/about1.jpg" id="about-img">
+
             <h2>Our Story</h2>
-            <p>Welcome to <strong>MamaJaba?</strong>, your number one source for safe, reliable, and convenient rickshaw rides. We’re dedicated to providing you the very best ride-hailing service, with an emphasis on efficiency, safety, and affordability.</p>
-            <p>Founded in 2024, <strong>MamaJaba?</strong> has come a long way from its beginnings in Chittagong University of Engineering & Technology(CUET).When we first started out, our passion for making urban transportation hassle-free drove us to start this initiative, so that <strong>MamaJaba?</strong> can offer you the most dependable rickshaw ride experience. We now serve customers all over the cuet areas and are thrilled that we're able to turn our passion into our own service.</p>
+            <p>Welcome to <strong>MamaJaba?</strong>, your number one source for safe, reliable, and convenient rickshaw
+                rides. We’re dedicated to providing you the very best ride-hailing service, with an emphasis on
+                efficiency, safety, and affordability.</p>
+            <p>Founded in 2024, <strong>MamaJaba?</strong> has come a long way from its beginnings in Chittagong
+                University of Engineering & Technology(CUET).When we first started out, our passion for making urban
+                transportation hassle-free drove us to start this initiative, so that <strong>MamaJaba?</strong> can
+                offer you the most dependable rickshaw ride experience. We now serve customers all over the cuet areas
+                and are thrilled that we're able to turn our passion into our own service.</p>
         </section>
 
         <section class="mission">
             <div class="text">
                 <h2>Our Mission</h2>
-                <p>At <strong>MamaJaba?</strong>, our mission is to revolutionize urban transportation by providing a seamless, efficient, and sustainable way to get around the city. We aim to connect riders with drivers in a way that benefits both, ensuring quick, safe, and cost-effective travel.</p>
+                <p>At <strong>MamaJaba?</strong>, our mission is to revolutionize urban transportation by providing a
+                    seamless, efficient, and sustainable way to get around the city. We aim to connect riders with
+                    drivers in a way that benefits both, ensuring quick, safe, and cost-effective travel.</p>
             </div>
             <div class="image">
-                <img src="181112_Blog_Feature_Mission (2).jpg" alt="Mission Image" id="mission-img">
+                <img src="images/mission.jpg" alt="Mission Image" id="mission-img">
             </div>
         </section>
 
         <section class="services">
             <div class="image">
-                <img src="pexels-pixabay-60504.jpg" alt="Services Image" id="services-img">
+                <img src="images/service.jpg" alt="Services Image" id="services-img">
             </div>
             <div class="text">
                 <h2>What We Do</h2>
-                <p><strong>MamaJaba?</strong> connects riders with trusted rickshaw drivers via our user-friendly website. Whether commuting, running errands, or exploring the city, we ensure a smooth journey with services like:</p>
+                <p><strong>MamaJaba?</strong> connects riders with trusted rickshaw drivers via our user-friendly
+                    website. Whether commuting, running errands, or exploring the city, we ensure a smooth journey with
+                    services like:</p>
                 <ul>
                     <li><strong>Ride-Hailing:</strong> Request a ride easily.</li>
                     <li><strong>Driver Ratings:</strong> Rate drivers and read reviews for quality assurance.</li>
@@ -758,7 +791,7 @@ footer .underline span {
                     <h1>Our Admins</h1>
                     <div class="card-container">
                         <article class="card-article">
-                            <img src="pr.jpg" alt="" srcset="" class="card-img">
+                            <img src="images/pritha.jpg" alt="" srcset="" class="card-img">
                             <div class="card-data">
                                 <span class="card-desc">MamaJaba Admin #1</span>
                                 <h2 class="card-title">Pritha Saha</h2>
@@ -766,7 +799,7 @@ footer .underline span {
                             </div>
                         </article>
                         <article class="card-article">
-                            <img src="ad.jpg" alt="" srcset="" class="card-img">
+                            <img src="images/adiba.jpg" alt="" srcset="" class="card-img">
                             <div class="card-data">
                                 <span class="card-desc">MamaJaba Admin #2</span>
                                 <h2 class="card-title">Adiba Fairooz Chowdhury</h2>
@@ -774,7 +807,7 @@ footer .underline span {
                             </div>
                         </article>
                         <article class="card-article">
-                            <img src="sc.jpg" alt="" srcset="" class="card-img">
+                            <img src="images/shiti.jpg" alt="" srcset="" class="card-img">
                             <div class="card-data">
                                 <span class="card-desc">MamaJaba Admin #3</span>
                                 <h2 class="card-title">Shiti Chowdhury</h2>
@@ -782,10 +815,10 @@ footer .underline span {
                             </div>
                         </article>
                     </div>
-                </div>    
+                </div>
             </div>
         </section>
-        
+
     </main>
 
     <br><br>
@@ -811,7 +844,7 @@ footer .underline span {
                 </ul>
             </div>
             <div class="col">
-                <h3 style="margin-left: 30px;">Products <div class="underline" ><span></span></div>
+                <h3 style="margin-left: 30px;">Products <div class="underline"><span></span></div>
                 </h3>
                 <ul>
                     <li><a href="#">Ride</a></li>
@@ -846,8 +879,8 @@ footer .underline span {
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-        <script>
-            const openPopupBtn = document.getElementById("popupsignup");
+    <script>
+        const openPopupBtn = document.getElementById("popupsignup");
         const closePopupBtn = document.getElementById("closePopup");
         const popup = document.getElementById("popup");
         const riderBtn = document.getElementById("riderBtnpop");
@@ -860,7 +893,8 @@ footer .underline span {
         closePopupBtn.addEventListener("click", () => {
             popup.style.display = "none";
         });
-        </script>
+    </script>
 
 </body>
+
 </html>

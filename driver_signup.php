@@ -45,9 +45,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->connect_error) {
         die('Connection Failed: ' . $conn->connect_error);
     } else {
+
+        // Get the max driverid from the driver table
+        $result = $conn->query("SELECT MAX(driverid) AS max_driverid FROM driver");
+        $row = $result->fetch_assoc();
+        $max_driverid = $row['max_driverid'];
+        $new_driverid = $max_driverid + 1;
+        
         // Prepare and bind for the driver table
-        $stmt = $conn->prepare("INSERT INTO driver (Name, Email, Phone, Licence, Experience, Rickshaw_Model, Password, Picture) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssssss", $name, $email, $phone, $licence, $experience, $rickshaw_model, $hashed_password, $profile_picture);
+        $stmt = $conn->prepare("INSERT INTO driver (driverid, Name, Email, Phone, Licence, Experience, Rickshaw_Model, Password, Picture) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("issssssss", $new_driverid, $name, $email, $phone, $licence, $experience, $rickshaw_model, $hashed_password, $profile_picture);
 
         // Prepare and bind for the users table
         $stmt1 = $conn->prepare("INSERT INTO user (Email, Password, Role) VALUES (?, ?, ?)");

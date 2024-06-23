@@ -81,3 +81,30 @@ function submitReviewForm(form) {
         console.error('Error:', error);
     });
 }
+
+
+
+document.getElementById('notification-btn').addEventListener('click', function() {
+    const notificationsDiv = document.getElementById('notifications');
+    if (notificationsDiv.style.display === 'block') {
+        notificationsDiv.style.display = 'none';
+    } else {
+        notificationsDiv.style.display = 'block';
+    }
+});
+
+function closeNotification(button) {
+    const notification = button.parentElement;
+    notification.remove();
+    updateNotificationCount();
+}
+
+function updateNotificationCount() {
+    const notifications = document.querySelectorAll('.notification');
+    const count = notifications.length;
+    const notificationCountSpan = document.getElementById('notification-count');
+    notificationCountSpan.textContent = count;
+    if (count === 0) {
+        notificationCountSpan.style.display = 'none';
+    }
+}

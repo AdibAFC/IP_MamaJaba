@@ -35,9 +35,24 @@ if(!file_exists($profile_image))$profile_image=$default;
 
         <ul>
             <li>
-                
+                <button id="notification-btn" class="notification-btn">
+                    <i class="fa-solid fa-bell fa-xl" style="color: #FFF;"></i> <span id="notification-count" class="badge">3</span>
+                </button>
+                <div id="notifications" class="notifications">
+                    <div class="notification">
+                        <span>Notification 1</span>
+                        <button class="close-btn" onclick="closeNotification(this)">x</button>
+                    </div>
+                    <div class="notification">
+                        <span>Notification 2</span>
+                        <button class="close-btn" onclick="closeNotification(this)">x</button>
+                    </div>
+                    <div class="notification">
+                        <span>Notification 3</span>
+                        <button class="close-btn" onclick="closeNotification(this)">x</button>
+                    </div>
+                </div>
             </li>
-        
             <li><a href="#">HOME</a></li>
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">CONTACTS</a></li>

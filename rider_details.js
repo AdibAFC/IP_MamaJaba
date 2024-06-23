@@ -15,20 +15,25 @@ function handleRequest(action, button) {
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
-            var response = JSON.parse(xhr.responseText);
-            if (response.success) {
-                if (action === 'accept') {
-                    // Remove the request from all drivers' pages
-                    document.querySelectorAll('.ride-request[data-id="' + requestId + '"]').forEach(function (request) {
-                        request.remove();
-                    });
-                } else if (action === 'decline') {
-                    // Remove the request only from the current driver's page
-                    button.closest('.ride-request').remove();
+            try {
+                var response = JSON.parse(xhr.responseText);
+                if (response.success) {
+                    if (action === 'accept') {
+                        // Remove the request from all drivers' pages
+                        document.querySelectorAll('.ride-request[data-id="' + requestId + '"]').forEach(function (request) {
+                            request.remove();
+                        });
+                    } else if (action === 'decline') {
+                        // Remove the request only from the current driver's page
+                        button.closest('.ride-request').remove();
+                    }
+                    showToast(response.message);
+                } else {
+                    showToast(response.message);
                 }
-                showToast(response.message);
-            } else {
-                showToast(response.message);
+            } catch (e) {
+                console.error('Failed to parse response as JSON:', xhr.responseText);
+                showToast('An error occurred while processing your request.');
             }
         }
     };
@@ -36,7 +41,6 @@ function handleRequest(action, button) {
 }
 
 function showToast(msg) {
-    let toastbox = document.getElementById("toastbox");
     let toast = document.createElement("div");
     toast.classList.add("toast");
     toast.innerHTML = msg;

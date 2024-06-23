@@ -354,6 +354,7 @@ footer .underline span{
     box-shadow: 0 15px 25px rgba(0,0,0,0.6);
     border-radius: 10px;
     margin-top: 300px;
+    z-index: 1;
  }
  .location-box h2{
     margin: 0 0 30px;
@@ -695,5 +696,43 @@ form .btn button:hover {
     outline: none;
     font-size: 18px;
     border-radius: 4px;
+    cursor: pointer;
+}
+
+.notification-btn {
+    position: relative;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.badge {
+    background-color: red;
+    color: white;
+    border-radius: 70%;
+    padding: 2px 8px;
+    position: absolute;
+    top: -10px;
+    right: -13px;
+}
+
+.notifications {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    z-index: 3;
+}
+
+.notification {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.close-btn {
+    background-color: transparent;
+    border: none;
     cursor: pointer;
 }
