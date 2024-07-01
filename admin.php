@@ -213,6 +213,8 @@ $conn->close();
             </div>
             <p><?php echo $total_reviews; ?> Reviews</p>
         </div>
+
+        
         <div class="ratings-breakdown">
             <ul>
                 <?php
@@ -231,6 +233,23 @@ $conn->close();
             </ul>
         </div>
     </div>
+
+
+
+
+
+
+
+
+    <div id="chartContainer">
+        <canvas id="myChart"></canvas>
+        <div class="chart">
+            <button onclick="changeChartType('bar')">Bar</button>
+            <button onclick="changeChartType('line')">Line</button>
+            <button onclick="changeChartType('pie')">Pie</button>
+        </div>
+    </div>
+    
     <div id="chartContainer">
         <canvas id="myChart"></canvas>
         <div class="chart">
@@ -480,6 +499,13 @@ $conn->close();
         </div>
     </div>
     <script src="admin.js"></script>
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         const fileInput = document.getElementById('profile-picture');

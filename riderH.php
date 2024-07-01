@@ -112,6 +112,11 @@ if(!file_exists($profile_image))$profile_image=$default;
             <div class="success" id="success">Request Sent Successfully!</div>
             <div class="danger" id="danger">Fields Can't Be Empty!</div>
         </div>
+        <button class="review-btn" onclick="openPopup()">Rate Us</button>
+        <div class="message">
+            <div class="success" id="success">Request Sent Successfully!</div>
+            <div class="danger" id="danger">Fields Can't Be Empty!</div>
+        </div>
         <!-- <button class="review-btn" onclick="openPopup()">Rate Us</button>
         <div class="overlay" onclick="closePopup()"></div>
         <div class="review" id="popup">

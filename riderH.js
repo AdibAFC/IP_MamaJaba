@@ -110,7 +110,7 @@ function updateNotificationCount() {
 }
 
 
-
+//message
 document.getElementById('requestRide').addEventListener('click', function(event) {
     event.preventDefault(); 
     message();

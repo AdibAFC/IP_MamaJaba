@@ -364,8 +364,7 @@ footer .underline span {
     }
 }
 
-
-:root {
+:root{
     --loc-color: #45ad99;
 }
 
@@ -795,6 +794,47 @@ form .btn button:hover {
     border: none;
     cursor: pointer;
 }
+
+
+.message 
+{
+    width: 100%;
+    position: relative;
+    padding-top: 35px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+.message .success{
+    font-size: 15px;
+    font-weight: 500;
+    color: green;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
+}
+.message .danger{
+    font-size: 15px;
+    font-weight: 500;
+    color: red;
+    position: absolute;
+    transition: .3s;
+    animation: buttons .3s linear;
+    display: none;
+}
+
+@keyframes buttons{
+    0%{
+        transform: scale(0.1);
+    }
+    50%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
 
 
 
