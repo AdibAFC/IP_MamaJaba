@@ -19,7 +19,7 @@ if ($conn->connect_error) {
 
 $rider_id = $_SESSION['rider_id'];
 
-$stmt = $conn->prepare("SELECT msg FROM notifications WHERE rider_id = ? AND is_read = 0");
+$stmt = $conn->prepare("SELECT msg FROM notifications WHERE rider_id = ? AND is_read = 0 ORDER BY time DESC");
 $stmt->bind_param("i", $rider_id);
 $stmt->execute();
 $stmt->bind_result($message);

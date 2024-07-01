@@ -1206,3 +1206,35 @@ label.btn {
   height: 100%;
   background: #ffd700;
 }
+
+
+#chartContainer {
+  text-align: center;
+  padding-left: 210px;
+}
+canvas {
+  max-width: 80%;
+  max-height: 350px;
+}
+.chart{
+  justify-content: center;
+  margin-right: 200px;
+}
+.chart button {
+  align-items: first baseline;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin: 15px;
+}
+.chart button:hover{
+  color: #ffffff !important;
+  background-color: #787171;
+}
