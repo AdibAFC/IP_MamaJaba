@@ -329,7 +329,6 @@ footer .underline span{
     }
 }
 
-
 :root{
     --loc-color: #45ad99;
  }
@@ -736,6 +735,7 @@ form .btn button:hover {
     border: none;
     cursor: pointer;
 }
+
 
 .message 
 {
