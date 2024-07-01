@@ -1,3 +1,5 @@
+
+//
 let valueDisplays = document.querySelectorAll(".num");
 let interval = 4000;
 
@@ -44,7 +46,6 @@ function prev() {
     index = (index - 1 + slides.length) % slides.length;
     slides[index].classList.add('active');
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
     // Driver modal functionality
