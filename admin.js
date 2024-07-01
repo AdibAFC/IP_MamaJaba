@@ -245,47 +245,6 @@ window.onload = () => {
 
 
 
-
-
-
-
-const jsonData = {
-    "labels": ["January", "February", "March", "April", "May", "June", "July"],
-    "datasets": [
-        {
-            "label": "Admin Dataset",
-            "backgroundColor": "rgba(12, 137, 194, 0.2)",
-            "borderColor": "rgba(12, 137, 194, 1)",
-            "borderWidth": 1,
-            "data": [65, 59, 80, 81, 56, 55, 40]
-        }
-    ]
-};
-
-let chartType = 'bar';
-let myChart;
-
-function createChart() {
-    const ctx = document.getElementById('myChart').getContext('2d');
-    myChart = new Chart(ctx, {
-        type: chartType,
-        data: jsonData,
-        options: {
-            responsive: true,
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-}
-
-
-
-
-
-
 const jsonData = {
     "labels": ["January", "February", "March", "April", "May", "June", "July"],
     "datasets": [

@@ -250,14 +250,6 @@ $conn->close();
         </div>
     </div>
     
-    <div id="chartContainer">
-        <canvas id="myChart"></canvas>
-        <div class="chart">
-            <button onclick="changeChartType('bar')">Bar</button>
-            <button onclick="changeChartType('line')">Line</button>
-            <button onclick="changeChartType('pie')">Pie</button>
-        </div>
-    </div>
     
     <div class="review">
         <div class="title">
@@ -500,10 +492,6 @@ $conn->close();
     </div>
     <script src="admin.js"></script>
 
-
-    
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
 
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
