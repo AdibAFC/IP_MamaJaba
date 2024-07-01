@@ -31,6 +31,7 @@ $(document).ready(function() {
 
 
 
+//
 function openPopup() {
     document.querySelector(".overlay").classList.add("active");
     document.getElementById("popup").classList.add("open-popup");
@@ -59,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return false;
     };
 });
+
 
 function submitReviewForm(form) {
     const formData = new FormData(form);
