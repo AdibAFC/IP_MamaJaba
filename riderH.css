@@ -556,7 +556,7 @@ footer .underline span {
 
 
 
-.review-btn {
+/* .review-btn {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
@@ -566,12 +566,12 @@ footer .underline span {
     border: 1px solid #444;
     cursor: pointer;
     transition: all 0.3s ease;
-}
+} */
 
-.review-btn:hover {
+/* .review-btn:hover {
     background: #3b5e5f;
     color: #ffffff;
-}
+} */
 
 .overlay {
     display: none;
@@ -610,6 +610,7 @@ footer .underline span {
     z-index: 1000;
     visibility: hidden;
     transition: transform 0.6s, top 0.4s;
+    margin-top: 200px;
 }
 
 .open-popup {

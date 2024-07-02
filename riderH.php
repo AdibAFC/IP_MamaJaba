@@ -36,7 +36,8 @@ if(!file_exists($profile_image))$profile_image=$default;
         <ul>
             <li>
                 <button id="notification-btn" class="notification-btn">
-                    <i class="fa-solid fa-bell fa-xl" style="color: #FFF;"></i> <span id="notification-count" class="badge">3</span>
+                    <i class="fa-solid fa-bell fa-xl" style="color: #FFF;"></i> <span id="notification-count"
+                        class="badge">3</span>
                 </button>
                 <div id="notifications" class="notifications">
                     <div class="notification">
@@ -56,13 +57,53 @@ if(!file_exists($profile_image))$profile_image=$default;
             <li><a href="#">HOME</a></li>
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">CONTACTS</a></li>
+            <li>
+                <a href="#" class="review-btn" onclick="openPopup()">RATE US
+
+                </a>
+                <!-- <button class="review-btn" onclick="openPopup()">Rate Us</button> -->
+                <div class="overlay" onclick="closePopup()"></div>
+                <div class="review" id="popup">
+                    <div class="post">
+                        <div class="text">Thanks for rating us!</div>
+                        <div class="edit">EDIT</div>
+                        <button type="button" onclick="closePopup()">OK</button>
+                    </div>
+                    <div class="star-widget">
+                        <input type="radio" name="rate" id="rate-5" value=5>
+                        <label for="rate-5" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-4" value=4>
+                        <label for="rate-4" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-3" value=3>
+                        <label for="rate-3" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-2" value=2>
+                        <label for="rate-2" class="fas fa-star"></label>
+                        <input type="radio" name="rate" id="rate-1" value=1>
+                        <label for="rate-1" class="fas fa-star"></label>
+                        <form id="reviewForm" method="POST" action="submit_review.php">
+                            <input type="hidden" name="rating" id="rating" value="">
+                            <header></header>
+                            <div class="textarea">
+                                <textarea name="review_text" cols="30"
+                                    placeholder="Describe your experience.."></textarea>
+                            </div>
+                            <input type="hidden" name="rider_id" value="<?php echo $rider_id; ?>">
+                            <div class="btn">
+                                <button type="submit">Post</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </li>
         </ul>
         <img src="<?php echo htmlspecialchars($profile_image); ?>" class="user-pic" onclick="toggleMenu()">
         <div class="sub-menu-wrap" id="subMenu">
             <div class="sub-menu">
                 <div class="user-info">
                     <img src="<?php echo htmlspecialchars($profile_image); ?>">
-                    <h3><?php echo htmlspecialchars($name); ?></h3>
+                    <h3>
+                        <?php echo htmlspecialchars($name); ?>
+                    </h3>
                 </div>
                 <hr>
 
@@ -106,49 +147,12 @@ if(!file_exists($profile_image))$profile_image=$default;
                 <span></span>
                 <span></span>Send Request
             </a>
-            
+
         </form>
         <div class="message">
             <div class="success" id="success">Request Sent Successfully!</div>
             <div class="danger" id="danger">Fields Can't Be Empty!</div>
         </div>
-        <button class="review-btn" onclick="openPopup()">Rate Us</button>
-        <div class="message">
-            <div class="success" id="success">Request Sent Successfully!</div>
-            <div class="danger" id="danger">Fields Can't Be Empty!</div>
-        </div>
-        <!-- <button class="review-btn" onclick="openPopup()">Rate Us</button>
-        <div class="overlay" onclick="closePopup()"></div>
-        <div class="review" id="popup">
-            <div class="post">
-                <div class="text">Thanks for rating us!</div>
-                <div class="edit">EDIT</div>
-                <button type="button" onclick="closePopup()">OK</button>
-            </div>
-            <div class="star-widget">
-                <input type="radio" name="rate" id="rate-5" value=5>
-                <label for="rate-5" class="fas fa-star"></label>
-                <input type="radio" name="rate" id="rate-4" value=4>
-                <label for="rate-4" class="fas fa-star"></label>
-                <input type="radio" name="rate" id="rate-3" value=3>
-                <label for="rate-3" class="fas fa-star"></label>
-                <input type="radio" name="rate" id="rate-2" value=2>
-                <label for="rate-2" class="fas fa-star"></label>
-                <input type="radio" name="rate" id="rate-1" value=1>
-                <label for="rate-1" class="fas fa-star"></label>
-                <form id="reviewForm" method="POST" action="submit_review.php">
-                    <input type="hidden" name="rating" id="rating" value="">
-                    <header></header>
-                    <div class="textarea">
-                        <textarea name="review_text" cols="30" placeholder="Describe your experience.."></textarea>
-                    </div>
-                    <input type="hidden" name="rider_id" value="<?php echo $rider_id; ?>">
-                    <div class="btn">
-                        <button type="submit">Post</button>
-                    </div>
-                </form>
-            </div>
-        </div> -->
     </div>
 
 
@@ -205,7 +209,7 @@ if(!file_exists($profile_image))$profile_image=$default;
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="riderH.js"></script>
     <script>
-    // JavaScript to handle rating selection
+        // JavaScript to handle rating selection
         const stars = document.querySelectorAll('.star-widget input[type="radio"]');
         let ratingValue;
 
@@ -225,7 +229,7 @@ if(!file_exists($profile_image))$profile_image=$default;
                 event.preventDefault(); // Prevent form submission
             }
         });
-</script>
+    </script>
 </body>
 
 </html>
