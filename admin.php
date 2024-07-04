@@ -429,7 +429,8 @@ $conn->close();
         </footer>
     </div>
 
-    <div class="main-content">
+   
+ <div class="main-content">
         <div class="card-cont" id="sec3">
             <h1>Our Admins</h1>
             <div class="card-container">
@@ -460,7 +461,6 @@ $conn->close();
             </div>
         </div>
     </div>
-
     <div class="section-4" id="settings">
         <div class="container-fluid d-flex justify-content-center align-items-center">
             <div class="col-md-6">
