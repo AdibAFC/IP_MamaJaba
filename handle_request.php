@@ -55,7 +55,7 @@ if ($action == 'accept') {
         $new_id = $max_id + 1;
 
         $notification_msg = "$driver_name has accepted your ride request, please wait at the $location.";
-        $notify_stmt = $conn->prepare("INSERT INTO notifications (id, rider_id, driver_id, msg) VALUES (?, ?, ?, ?)");
+        $notify_stmt = $conn->prepare("INSERT INTO notifications (id, rider_id, driver_id, msg, is_read) VALUES (?, ?, ?, ?, 0)");
         $notify_stmt->bind_param("iiis", $new_id, $rider_id, $driver_id, $notification_msg);
         $notify_stmt->execute();
         $notify_stmt->close();

@@ -19,26 +19,22 @@ if ($conn->connect_error) {
 
 $rider_id = $_SESSION['rider_id'];
 
-$stmt = $conn->prepare("SELECT msg FROM notifications WHERE rider_id = ? AND is_read = 0 ORDER BY time DESC");
+$stmt = $conn->prepare("SELECT id, driver_id, msg, time FROM notifications WHERE rider_id = ? AND is_read = 0 ORDER BY time DESC");
 $stmt->bind_param("i", $rider_id);
 $stmt->execute();
-$stmt->bind_result($message);
+$stmt->bind_result($id, $driver_id, $msg, $time);
 
 $notifications = [];
 while ($stmt->fetch()) {
-    $notifications[] = ['message' => $message];
+    $notifications[] = [
+        'id' => $id,
+        'driver_id' => $driver_id,
+        'msg' => $msg,
+        'time' => $time
+    ];
 }
 
 $stmt->close();
-
-if (!empty($notifications)) {
-    // Mark notifications as viewed
-    $update_stmt = $conn->prepare("UPDATE notifications SET is_read = 1 WHERE rider_id = ?");
-    $update_stmt->bind_param("i", $rider_id);
-    $update_stmt->execute();
-    $update_stmt->close();
-}
-
 echo json_encode($notifications);
 $conn->close();
 ?>

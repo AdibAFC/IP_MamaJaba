@@ -36,23 +36,11 @@ if(!file_exists($profile_image))$profile_image=$default;
         <ul>
             <li>
                 <button id="notification-btn" class="notification-btn">
-                    <i class="fa-solid fa-bell fa-xl" style="color: #FFF;"></i> <span id="notification-count"
-                        class="badge">3</span>
+                    <i class="fa-solid fa-bell fa-xl" style="color: #FFF;"></i>
+                    <span id="notification-count" class="badge">0</span>
                 </button>
-                <div id="notifications" class="notifications">
-                    <div class="notification">
-                        <span>Notification 1</span>
-                        <button class="close-btn" onclick="closeNotification(this)">x</button>
-                    </div>
-                    <div class="notification">
-                        <span>Notification 2</span>
-                        <button class="close-btn" onclick="closeNotification(this)">x</button>
-                    </div>
-                    <div class="notification">
-                        <span>Notification 3</span>
-                        <button class="close-btn" onclick="closeNotification(this)">x</button>
-                    </div>
-                </div>
+                <div id="notifications" class="notifications hidden"></div>
+                <p id="rid" value="<?php echo json_encode($rider_id); ?>" style="display:none;"></p>
             </li>
             <li><a href="#">HOME</a></li>
             <li><a href="#">ABOUT</a></li>
@@ -208,28 +196,6 @@ if(!file_exists($profile_image))$profile_image=$default;
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="riderH.js"></script>
-    <script>
-        // JavaScript to handle rating selection
-        const stars = document.querySelectorAll('.star-widget input[type="radio"]');
-        let ratingValue;
-
-        stars.forEach((star) => {
-            star.addEventListener('click', function () {
-                ratingValue = this.value;
-                document.getElementById('rating').value = ratingValue;
-                console.log('Rating selected:', ratingValue);
-            });
-        });
-
-        // Example function to validate form before submission
-        document.getElementById('reviewForm').addEventListener('submit', function (event) {
-            // Validate if a rating is selected
-            if (!ratingValue) {
-                alert('Please select a rating before submitting.');
-                event.preventDefault(); // Prevent form submission
-            }
-        });
-    </script>
 </body>
 
 </html>

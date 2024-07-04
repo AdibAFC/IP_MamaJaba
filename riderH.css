@@ -772,29 +772,70 @@ form .btn button:hover {
     position: absolute;
     top: -10px;
     right: -13px;
+    display: inline;
 }
 
 .notifications {
-    display: none;
     position: absolute;
-    background-color: white;
-    border: 1px solid #ccc;
+    top: 75px; /* Adjust based on the height of your header */
+    right: 250; /* Align with the right side of the notification button */
+    width: 350px; /* Increased width */
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: transparent;
+    /* border: 1px solid #ccc; */
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    z-index: 1000;
     padding: 10px;
-    width: 200px;
-    z-index: 3;
+    transition: all 0.3s ease-in-out;
+}
+
+.notifications.hidden {
+    display: none;
 }
 
 .notification {
+    position: relative; /* To position the close button inside it */
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5px;
+    align-items: center;
+    background-color: #f9f9f9;
+    margin-bottom: 8px;
+    padding: 15px; /* Increased padding */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+.notification span {
+    flex-grow: 1;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #333;
 }
 
 .close-btn {
+    position: absolute; /* Positioned absolutely within the notification */
+    top: 10px;
+    right: 10px;
     background-color: transparent;
     border: none;
+    color: #888;
     cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
+
+.close-btn:hover {
+    color: #e74c3c;
+}
+
+/* Hover Effect */
+.notification:hover {
+    background-color: #f0f0f0;
+    transform: translateX(-7px);
+}
+
 
 
 .message 
@@ -809,7 +850,7 @@ form .btn button:hover {
 .message .success{
     font-size: 15px;
     font-weight: 500;
-    color: green;
+    color: rgb(9, 237, 9);
     position: absolute;
     animation: buttons .3s linear;
     display: none;
@@ -817,7 +858,7 @@ form .btn button:hover {
 .message .danger{
     font-size: 15px;
     font-weight: 500;
-    color: red;
+    color: rgb(255, 34, 34);
     position: absolute;
     transition: .3s;
     animation: buttons .3s linear;
