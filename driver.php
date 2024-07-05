@@ -26,14 +26,13 @@ if(!file_exists($profile_image))$profile_image=$default;
 
 <body>
 
-   <nav>
+    <nav>
         <div class="logo">
             <img src="images/MamaJaba_logo1.gif" class="" style="height: 50px; margin: 10px;">
             <!-- <h3 class="highlight-text"><span class="comic-sans">MamaJaba?</span></h3> -->
         </div>
 
         <ul>
-        <!-- <i class="fa-solid fa-location-crosshairs fa-xl" style="color: #ffffff;"></i> -->
             <li><a href="#">HOME</a></li>
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">CONTACTS</a></li>
@@ -43,7 +42,9 @@ if(!file_exists($profile_image))$profile_image=$default;
             <div class="sub-menu">
                 <div class="user-info">
                     <img src="<?php echo htmlspecialchars($profile_image); ?>">
-                    <h3><?php echo htmlspecialchars($name); ?></h3>
+                    <h3>
+                        <?php echo htmlspecialchars($name); ?>
+                    </h3>
                 </div>
                 <hr>
 
@@ -71,8 +72,18 @@ if(!file_exists($profile_image))$profile_image=$default;
         </div>
     </nav>
     <div class="mapbtn">
-    <button class="beating-button"><i class="fa-solid fa-location-dot fa-2xl" style="color: #07c035;"></i><button>
-</div>
+        <button class="beating-button" onclick="openmap()"><i class="fa-solid fa-location-dot fa-2xl"
+                style="color: #07c035;"></i><button>
+    </div>
+    <div class="overlay" onclick="closemap()"></div>
+    <div class="map-container" id="popup">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.368374615738!2d91.9684936290414!3d22.461942319091374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ad2fca34ae5549%3A0x35c88a37b3e90e97!2sChittagong%20University%20of%20Engineering%20and%20Technology%20(CUET)!5e0!3m2!1sen!2sbd!4v1720165415651!5m2!1sen!2sbd"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+
     <section class="ridereq" id="ridereq">
     </section>
 
@@ -80,11 +91,16 @@ if(!file_exists($profile_image))$profile_image=$default;
     <footer>
         <div class="row">
             <div class="col">
-                <div class="logo"><h3 class="highlight-text"><span class="comic-sans">MamaJaba?</span></h3></div>
-                <p>"MamaJaba" is a website designed for CUET students and faculty to conveniently request rickshaw rides within the campus. With easy booking, real-time tracking, and reliable service, MamaJaba simplifies transportation for CUET residents.</p>
+                <div class="logo">
+                    <h3 class="highlight-text"><span class="comic-sans">MamaJaba?</span></h3>
+                </div>
+                <p>"MamaJaba" is a website designed for CUET students and faculty to conveniently request rickshaw rides
+                    within the campus. With easy booking, real-time tracking, and reliable service, MamaJaba simplifies
+                    transportation for CUET residents.</p>
             </div>
             <div class="col">
-                <h3>Links <div class="underline"><span></span></div></h3>
+                <h3>Links <div class="underline"><span></span></div>
+                </h3>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About Us</a></li>
@@ -93,7 +109,8 @@ if(!file_exists($profile_image))$profile_image=$default;
                 </ul>
             </div>
             <div class="col">
-                <h3>Products  <div class="underline"><span></span></div></h3>
+                <h3>Products <div class="underline"><span></span></div>
+                </h3>
                 <ul>
                     <li><a href="#">Ride</a></li>
                     <li><a href="#">Drive</a></li>
@@ -102,7 +119,8 @@ if(!file_exists($profile_image))$profile_image=$default;
                 </ul>
             </div>
             <div class="col">
-                <h3>Newsletter  <div class="underline"><span></span></div></h3>
+                <h3>Newsletter <div class="underline"><span></span></div>
+                </h3>
                 <form>
                     <i class="fa-regular fa-envelope"></i>
                     <input type="email" placeholder="Enter Your Email Id">

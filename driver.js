@@ -17,3 +17,14 @@ $(document).ready(function() {
     fetchRideRequests();
     setInterval(fetchRideRequests, 5000); // Poll every 5 seconds
 });
+
+
+function openmap() {
+    document.querySelector(".overlay").classList.add("active");
+    document.getElementById("popup").classList.add("open-popup");
+}
+
+function closemap() {
+    document.querySelector(".overlay").classList.remove("active");
+    document.getElementById("popup").classList.remove("open-popup");
+}
