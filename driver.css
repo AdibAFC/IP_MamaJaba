@@ -28,16 +28,24 @@ html::-webkit-scrollbar-track{
     background: transparent;
 }
 html::-webkit-scrollbar-thumb{
-    background: #fff;
+    background: #999797;
     border-radius: 5rem;
 }
 body{
     background: white;
+    display: flex;
+    flex-direction: column;
 }
 .comic-sans {
     font-family: 'Comic Sans MS', cursive;
     /* Use Comic Sans MS font */
     color: #97e9cb;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
@@ -169,7 +177,7 @@ nav ul li a {
     display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
-    margin-top: 100px;
+    margin-top: 20px;
 }
 .ride-request {
     width: 100%; /* Take up full width of the container */
@@ -181,6 +189,13 @@ nav ul li a {
     border: 1px solid #ccc;
     border-radius: 10px;
     margin-bottom: 20px; /* Add margin between ride-request divs */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #f9f9f9;
+}
+.ride-request:hover{
+    background-color: #f0f0f0;
+    transform: translateY(-7px);
 }
 
 .ride-request-info {
@@ -226,6 +241,8 @@ footer{
     width: 100%;
     bottom: 0;
     background: linear-gradient(to right, #000000, #2d0b00);
+    background-color: #000;
+    margin-top: auto; 
     color: #fff;
     padding: 100px 0 30px;
     border-top-left-radius: 125px;
@@ -379,4 +396,49 @@ footer .underline span{
     {
         flex-basis: 100%;
     }
+}
+
+main {
+    flex: 1; /* This makes the main content area take up the available space */
+}
+
+.no-requests-message {
+    font-size: 24px;
+    color: #515357;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+.lonely-driver{
+    border-radius: 100px;
+    width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+@keyframes beat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.beating-button {
+    padding: 10px;
+    background-color: #ffffff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    animation: beat 1s infinite;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    margin: 30px;
+}
+
+.beating-button:hover {
+    background-color: #b4ffcd;
 }

@@ -779,7 +779,7 @@ form .btn button:hover {
     position: absolute;
     top: 75px; /* Adjust based on the height of your header */
     right: 250; /* Align with the right side of the notification button */
-    width: 350px; /* Increased width */
+    width: 380px; /* Increased width */
     max-height: 400px;
     overflow-y: auto;
     background-color: transparent;
@@ -802,8 +802,8 @@ form .btn button:hover {
     align-items: center;
     background-color: #f9f9f9;
     margin-bottom: 8px;
-    padding: 15px; /* Increased padding */
-    border-radius: 5px;
+    padding: 20px; /* Increased padding */
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
 }

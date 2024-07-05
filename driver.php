@@ -18,7 +18,9 @@ if(!file_exists($profile_image))$profile_image=$default;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Driver's-Homepage</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="driver.css">
 </head>
 
@@ -31,6 +33,7 @@ if(!file_exists($profile_image))$profile_image=$default;
         </div>
 
         <ul>
+        <!-- <i class="fa-solid fa-location-crosshairs fa-xl" style="color: #ffffff;"></i> -->
             <li><a href="#">HOME</a></li>
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">CONTACTS</a></li>
@@ -67,6 +70,9 @@ if(!file_exists($profile_image))$profile_image=$default;
             </div>
         </div>
     </nav>
+    <div class="mapbtn">
+    <button class="beating-button"><i class="fa-solid fa-location-dot fa-2xl" style="color: #07c035;"></i><button>
+</div>
     <section class="ridereq" id="ridereq">
     </section>
 

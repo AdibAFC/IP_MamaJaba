@@ -48,8 +48,9 @@ if ($result->num_rows > 0) {
         echo '</div>';
     }
 } else {
-    echo '<p>No ride requests available</p>';
+    echo '<img src="images/driver_cartoon.gif" alt="Lonely Driver" class="lonely-driver">';
+    echo '<p class="no-requests-message">No Ride Requests Available</p>';
 }
-
+echo '</main>';
 $conn->close();
 ?>
