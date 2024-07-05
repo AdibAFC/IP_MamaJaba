@@ -7,7 +7,7 @@ if (!isset($_SESSION['email'])) {
 
 $email = $_SESSION['email'];
 $name = isset($_SESSION['name']) ? $_SESSION['name'] : '';
-$phone = isset($_SESSION['phone']) ? $_SESSION['phone'] : '';
+$phone = isset($_SESSION['contact']) ? $_SESSION['contact'] : '';
 $default = "images/default.jpg";
 $profile_image = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] : $default;
 
