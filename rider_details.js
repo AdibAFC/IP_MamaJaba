@@ -15,6 +15,7 @@ function handleRequest(action, button) {
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function () {
         if (xhr.readyState == 4 && xhr.status == 200) {
+            console.log(xhr.responseText);
             try {
                 var response = JSON.parse(xhr.responseText);
                 if (response.success) {
@@ -28,6 +29,7 @@ function handleRequest(action, button) {
                         button.closest('.ride-request').remove();
                     }
                     showToast(response.message);
+                    console.log(xhr.responseText);
                 } else {
                     showToast(response.message);
                 }

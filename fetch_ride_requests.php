@@ -16,8 +16,21 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM ride_requests WHERE status = 'pending' ORDER BY request_time DESC";
-$result = $conn->query($sql);
+$driver_id = $_SESSION['driver_id']; // Assuming driver_id is stored in the session
+
+// Modified SQL query to exclude ride requests declined by the current driver
+$sql = "
+    SELECT rr.*
+    FROM ride_requests rr
+    LEFT JOIN ride_request_declines rrd ON rr.id = rrd.ride_request_id AND rrd.driver_id = ?
+    WHERE rr.status = 'pending' AND rrd.ride_request_id IS NULL
+    ORDER BY rr.request_time DESC
+";
+
+$stmt = $conn->prepare($sql);
+$stmt->bind_param('i', $driver_id);
+$stmt->execute();
+$result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {

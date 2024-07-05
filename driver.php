@@ -5,6 +5,7 @@ if (!isset($_SESSION['email'])) {
     exit;
 }
 $name = $_SESSION['name'];
+$driver_id = $_SESSION['driver_id'];
 $default="images/default.jpg";
 // $profile_image = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] : 'images/default.png';
 $profile_image = isset($_SESSION['profile_image']) ? $_SESSION['profile_image'] : NULL;

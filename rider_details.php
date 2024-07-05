@@ -106,39 +106,41 @@ if (!file_exists($profile_image)) $profile_image = $default;
         <!-- <div class="title"> -->
         <h2>Detail of Rider</h2>
         <!-- </div> -->
-        <div class="container">
-            <div class="detail">
-                <div class="det">
-                    <div class="topic">LOCATION</div>
-                    <div class="txt">
-                        <?php echo htmlspecialchars($pick_up_location); ?>
+        <div class="ride-request" data-id="<?php echo htmlspecialchars($ride_request_id); ?>">
+            <div class="container">
+                <div class="detail">
+                    <div class="det">
+                        <div class="topic">LOCATION</div>
+                        <div class="txt">
+                            <?php echo htmlspecialchars($pick_up_location); ?>
+                        </div>
                     </div>
-                </div>
 
-                <div class="det">
-                    <div class="topic">CONTACT</div>
-                    <div class="txt">
-                        <?php echo htmlspecialchars($rider_contact); ?>
+                    <div class="det">
+                        <div class="topic">CONTACT</div>
+                        <div class="txt">
+                            <?php echo htmlspecialchars($rider_contact); ?>
+                        </div>
+                    </div>
+                    <div class="det">
+                        <div class="topic">DESTINATION</div>
+                        <div class="txt">
+                            <?php echo htmlspecialchars($drop_off_location); ?>
+                        </div>
+                    </div>
+                    <div class="dett">
+                        <div class="topic"><i class="fa-solid fa-clock"></i></div>
+                        <div class="txtt">
+                            <?php echo htmlspecialchars($request_time); ?>
+                        </div>
                     </div>
                 </div>
-                <div class="det">
-                    <div class="topic">DESTINATION</div>
-                    <div class="txt">
-                        <?php echo htmlspecialchars($drop_off_location); ?>
-                    </div>
+                <div class="btn">
+                    <button class="ac" data-id="<?php echo htmlspecialchars($ride_request_id); ?>"
+                        onclick="handleRequest('accept', this)">Accept</button>
+                    <button class="dc" data-id="<?php echo htmlspecialchars($ride_request_id); ?>"
+                        onclick="handleRequest('decline', this)">Decline</button>
                 </div>
-                <div class="dett">
-                    <div class="topic"><i class="fa-solid fa-clock"></i></div>
-                    <div class="txtt">
-                        <?php echo htmlspecialchars($request_time); ?>
-                    </div>
-                </div>
-            </div>
-            <div class="btn">
-                <button class="ac" data-id="<?php echo htmlspecialchars($ride_request_id); ?>"
-                    onclick="handleRequest('accept', this)">Accept</button>
-                <button class="dc" data-id="<?php echo htmlspecialchars($ride_request_id); ?>"
-                    onclick="handleRequest('decline', this)">Decline</button>
             </div>
         </div>
         <div class="history">
