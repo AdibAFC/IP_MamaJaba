@@ -38,7 +38,8 @@ if(!file_exists($profile_image))$profile_image=$default;
             <li><a href="#">CONTACTS</a></li>
         </ul>
         <img src="<?php echo htmlspecialchars($profile_image); ?>" class="user-pic" onclick="toggleMenu()">
-        <div class="sub-menu-wrap" id="subMenu">
+
+          <div class="sub-menu-wrap" id="subMenu">
             <div class="sub-menu">
                 <div class="user-info">
                     <img src="<?php echo htmlspecialchars($profile_image); ?>">
