@@ -86,9 +86,7 @@ if(!file_exists($profile_image))$profile_image=$default;
 
     <section class="ridereq" id="ridereq">
     </section>
-
-
-    <footer>
+  <footer>
         <div class="row">
             <div class="col">
                 <div class="logo">
@@ -137,6 +135,8 @@ if(!file_exists($profile_image))$profile_image=$default;
         <hr>
         <p class="copyright">AdiPriShi © 2024 - All Rights Reserved</p>
     </footer>
+
+  
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="driver.js"></script>
 </body>
