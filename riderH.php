@@ -46,7 +46,7 @@ if(!file_exists($profile_image))$profile_image=$default;
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">CONTACTS</a></li>
             <li>
-                <a href="#" class="review-btn" onclick="openPopup()">RATE US
+                    <a href="#" class="review-btn" onclick="openPopup()">RATE US
 
                 </a>
                 <!-- <button class="review-btn" onclick="openPopup()">Rate Us</button> -->
