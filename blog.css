@@ -150,6 +150,14 @@ nav{
     box-shadow: 0 10px 20px hsla(33, 33%, 5%, 0.2);
     padding: 15px;
     border-radius: 0.5rem;
+    transition: background-color 1s ease, box-shadow 0.3s ease;
+}
+.post-box:hover {
+    transform: scale(1.05);
+    background-color: #373131;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    
 }
 .sign{
     width: 500px;
@@ -195,6 +203,9 @@ nav{
     -webkit-line-clamp: 2 ;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+.post-box:hover .post-title {
+   color: var(--bg-color);
 }
 .post-date{
     display: flex;
