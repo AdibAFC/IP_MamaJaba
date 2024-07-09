@@ -573,6 +573,7 @@ footer .underline span {
     color: #ffffff;
 } */
 
+
 .overlay {
     display: none;
 }
@@ -757,7 +758,6 @@ form .btn button:hover {
     border-radius: 4px;
     cursor: pointer;
 }
-
 .notification-btn {
     position: relative;
     background-color: transparent;
