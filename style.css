@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&family=Righteous&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-
 body {
     padding: 0%;
     margin: 0%;
@@ -12,6 +11,14 @@ body {
     color: #fff;
     background-color: #242224;
     padding-left: 40px;
+    width: 100%;
+}
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030; /* Ensure it appears above other content */
 }
 .navbar-brand {
     font-family: 'Comic Sans MS', cursive;
@@ -50,31 +57,61 @@ body {
 
 .menu-right-btn {
     padding: 10px 20px;
-    margin-right: 0%;
-    background-color: transparent;
+    margin-right: 5%;
+    background-color: #0f0e0e;
+    color: #fff;
     transition: all 300ms ease-in;
     font-weight: bold;
     border-radius: 3rem;
     width: 100px;
+    position: relative;
+    background: none;
+   
+    /* outline: none; */
+    overflow: hidden;
+    transition: all 0.3s;
+    z-index: 100;
+    border: 2px solid aqua;
 }
 
-.border-btn1{
-    color: rgb(255, 255, 255);
-    background-color: #0f0e0e;
+.border-btn1:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.3s;
+    color: #0f0e0e;
+    background-color: rgb(255, 255, 255);
 }
 .border-btn1:hover {
-    background-color: rgb(46, 48, 48);
-    color: rgb(255, 255, 255);
+    color: rgb(46, 48, 48);
+    
 }
-.border-btn2 {
-    color: #000;
-    background-color: #ffffff;
+.border-btn1:hover::after{
+    width: 100%;
+}
+.border-btn2:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.3s;
+    color: #0f0e0e;
+    background-color: rgb(255, 255, 255);
 }
 .border-btn2:hover {
-    background-color: rgb(169, 174, 174);
-    color: #000;
+    color: rgb(46, 48, 48);
+     
 }
-
+.border-btn2:hover::after{
+    width: 100%;
+}
 .site-content {
     background-image: url(../IP_MamaJaba/images/home_bg1.png);
     background-attachment: fixed;
@@ -217,17 +254,92 @@ body {
     border: 1px solid #ccc;
 }
 
+.typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .15em solid rgb(255, 238, 1); /* Cursor */
+    animation: typing 4s steps(15) infinite, blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    0%, 100% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: rgb(255, 238, 1);
+    }
+}
+
 
 
 .section-1 .heading-1 {
     margin-top: 8%;
 }
-
 .section-1 .heading-2 {
     margin-bottom: 5%;
     font-size: 39px;
 }
+.section-1 .reveal{
+    position: relative;
+    display: inline-block;
+    font-size: 2.5em;
+    padding: 0 5px;
+    font-weight: 500;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+.section-1 .reveal.active{
+    transform: scaleX(1);
+    transition-delay: 0s;
+}
+.section-1 .reveal:nth-child(2)
+{
+    display: inline-block;
+    letter-spacing: 2px;
+}
+.section-1 .reveal::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #055f69;
+    transform-origin: right;
+    transition: 0.5s;
+    transition-delay: 0s;
+}
 
+.section-1 .reveal-1::before {
+    background:  #055f69;;
+}
+
+.section-1 .reveal-2::before {
+    background: rgb(255, 238, 1)
+}
+
+.section-1 .reveal:nth-child(2):before
+{
+    background: #d5d514;
+}
+.section-1 .reveal.active::before
+{
+    transform: scaleX(0);
+    transition-delay: 0.5s;
+} 
 .section-1 .para-1 {
     width: 60%;
     margin-left: 20%;
