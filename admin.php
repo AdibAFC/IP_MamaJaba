@@ -501,7 +501,7 @@ $conn->close();
             </div>
         </div>
     </div>
-    <script src="adm.js"></script>
+    <script src="admin.js"></script>
 
 
     
