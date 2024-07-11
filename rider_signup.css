@@ -5,7 +5,6 @@
     text-decoration: none;
     list-style-type: none;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
 }
 
 html {
@@ -25,8 +24,6 @@ body {
     grid-template-columns: 40% 60%;
     border-radius: 10px;
     overflow: hidden;
-    /* width: 1000px;
-  height: ; */
 }
 
 .login-left {
@@ -35,7 +32,6 @@ body {
     justify-content: content;
     padding-left: 135px;
     background-color: rgb(255, 255, 255);
-    /* margin-top: 10px; */
 }
 
 .login-right {
@@ -52,19 +48,17 @@ body {
 
 .pass-key {
     padding-right: 30px;
-    /* Adjust according to the width of the image */
 }
 
 .password-toggle {
     position: absolute;
-    top: 65%;
-    right: 21px;
-    /* Adjust as needed */
+    top: 50%;
+    right: 15px;
     transform: translateY(-50%);
     cursor: pointer;
     width: 30px;
+    margin-top: 12px;
 }
-
 
 .remember-forgot a:hover {
     color: rgb(255, 72, 0);
@@ -84,7 +78,6 @@ body {
 
 .bg-grey a {
     color: rgba(18, 16, 16, 0.948);
-
 }
 
 .bg-grey a:hover {
@@ -113,20 +106,17 @@ body {
     margin-top: 15px;
     opacity: 1;
     font-size: 18px;
-    /* gap: 20px; */
 }
 
 .login-form {
     width: 410px;
     margin-top: 30px;
-
 }
 
 .login-content {
     display: flex;
     flex-direction: column;
     gap: 36px;
-    /* margin-bottom: 10px; */
 }
 
 input[type='email'],
@@ -173,7 +163,6 @@ label [for=name],
 label[for=confirm-password] {
     font-size: 1.5rem;
     text-decoration: solid;
-    /* margin-bottom: 25px; */
     padding-left: 10px;
     font-weight: 4600;
     padding-bottom: 25px;
@@ -204,7 +193,6 @@ button {
     margin-bottom: 35px;
     margin-top: 12px;
     transition: .5s;
-    /* color: rgb(153, 203, 195); */
     background-color: rgb(96, 158, 230);
     margin-top: 15px;
 }
@@ -214,7 +202,6 @@ button:hover {
     transition: ease 0.5s;
     color: white;
     letter-spacing: 0.1em;
-
 }
 
 ::placeholder {
@@ -238,6 +225,4 @@ button:hover {
     .login-right {
         display: none;
     }
-
-
 }
