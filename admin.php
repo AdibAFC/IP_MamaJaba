@@ -68,7 +68,6 @@ $num_rickshaws = $num_drivers;
 
 $conn->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,7 +79,7 @@ $conn->close();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="admin_style.css">
+    <link rel="stylesheet" href="adm.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 
@@ -108,9 +107,27 @@ $conn->close();
                         <p class="title">Main</p>
                         <ul>
                             <li>
-                                <a href="#home">
+                                <a href="#main">
                                     <i class="fa-solid fa-desktop"></i>
                                     <span class="text">Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#rev">
+                                    <i class="fa-solid fa-quote-right"></i>
+                                    <span class="text"> Reviews</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#dat">
+                                    <i class="fa-solid fa-chart-pie"></i>
+                                    <span class="text">Dataset</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="text">Rating</span>
                                 </a>
                             </li>
                             <li>
@@ -167,7 +184,7 @@ $conn->close();
 
             </div>
         </div>
-        <div class="wrapper">
+        <div class="wrapper" id="main">
             <div class="container">
                 <img src="images/rickshaw_icon.png" alt="Rickshaw Icon">
                 <span class="num" dat-val="<?php echo $num_rickshaws; ?>">0</span>
@@ -192,66 +209,8 @@ $conn->close();
             </div>
         </div>
     </div>
-    
-    <div class="revstat-box">
-        <div class="avg-rating">
-            <h2><?php echo number_format($avg_rating, 1); ?> / 5.0</h2>
-            <div class="stars">
-                <?php
-                $full_stars = floor($avg_rating);
-                $half_star = $avg_rating - $full_stars >= 0.5 ? 1 : 0;
-                for ($i = 0; $i < $full_stars; $i++) {
-                    echo '<i class="fas fa-star"></i>';
-                }
-                if ($half_star) {
-                    echo '<i class="fas fa-star-half-alt"></i>';
-                }
-                for ($i = $full_stars + $half_star; $i < 5; $i++) {
-                    echo '<i class="far fa-star"></i>';
-                }
-                ?>
-            </div>
-            <p><?php echo $total_reviews; ?> Reviews</p>
-        </div>
-
-        
-        <div class="ratings-breakdown">
-            <ul>
-                <?php
-                for ($rating = 5; $rating >= 1; $rating--) {
-                    $count_reviews = isset($reviews_count[$rating]) ? $reviews_count[$rating] : 0;
-                    $percentage = $total_reviews > 0 ? ($count_reviews / $total_reviews) * 100 : 0;
-                    echo "<li>
-                            {$rating}<span> <i class='fas fa-star'></i></span>
-                            <div class='bar'>
-                                <div class='bar-filled' style='width: {$percentage}%;'></div>
-                            </div>
-                            ({$count_reviews})
-                          </li>";
-                }
-                ?>
-            </ul>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-    <div id="chartContainer">
-        <canvas id="myChart"></canvas>
-        <div class="chart">
-            <button onclick="changeChartType('bar')">Bar</button>
-            <button onclick="changeChartType('line')">Line</button>
-            <button onclick="changeChartType('pie')">Pie</button>
-        </div>
-    </div>
-    
-    
-    <div class="review">
+    <div id="rev">
+    <div class="review" >
         <div class="title">
             <h2>Customer Reviews</h2>
         </div>
@@ -302,6 +261,58 @@ $conn->close();
         </div>
         <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
         <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
+    </div>
+    </div>
+    
+    <div id="chartContainer" id="dat">
+        <canvas id="myChart"></canvas>
+        <div class="chart">
+            <button onclick="changeChartType('bar')">Bar</button>
+            <button onclick="changeChartType('line')">Line</button>
+            <button onclick="changeChartType('pie')">Pie</button>
+        </div>
+    </div>
+    <div id="rate">
+    <div class="revstat-box" >
+        <div class="avg-rating" >
+            <h2><?php echo number_format($avg_rating, 1); ?> / 5.0</h2>
+            <div class="stars">
+                <?php
+                $full_stars = floor($avg_rating);
+                $half_star = $avg_rating - $full_stars >= 0.5 ? 1 : 0;
+                for ($i = 0; $i < $full_stars; $i++) {
+                    echo '<i class="fas fa-star"></i>';
+                }
+                if ($half_star) {
+                    echo '<i class="fas fa-star-half-alt"></i>';
+                }
+                for ($i = $full_stars + $half_star; $i < 5; $i++) {
+                    echo '<i class="far fa-star"></i>';
+                }
+                ?>
+            </div>
+            <p><?php echo $total_reviews; ?> Reviews</p>
+        </div>
+
+        
+        <div class="ratings-breakdown">
+            <ul>
+                <?php
+                for ($rating = 5; $rating >= 1; $rating--) {
+                    $count_reviews = isset($reviews_count[$rating]) ? $reviews_count[$rating] : 0;
+                    $percentage = $total_reviews > 0 ? ($count_reviews / $total_reviews) * 100 : 0;
+                    echo "<li>
+                            {$rating}<span> <i class='fas fa-star'></i></span>
+                            <div class='bar'>
+                                <div class='bar-filled' style='width: {$percentage}%;'></div>
+                            </div>
+                            ({$count_reviews})
+                          </li>";
+                }
+                ?>
+            </ul>
+        </div>
+    </div>
     </div>
 
     
@@ -490,7 +501,7 @@ $conn->close();
             </div>
         </div>
     </div>
-    <script src="admin.js"></script>
+    <script src="adm.js"></script>
 
 
     
@@ -520,6 +531,7 @@ $conn->close();
             fileInput.value = '';
         });
     </script>
+    
 </body>
 
 </html>
