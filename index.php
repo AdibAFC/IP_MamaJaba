@@ -416,10 +416,12 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
             sr.reveal('.Ride', {
                 origin: 'bottom',
                 distance: '50px',
+                delay: 200,
             });
             sr.reveal('.Drive', {
                 origin: 'bottom',
                 distance: '50px',
+                delay: 200,
             });
 
             sr.reveal('footer', {
@@ -427,13 +429,29 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                 distance: '20px',
                 delay: 200,
             });
+            
+            sr.reveal('.site-content .d-flex',{
+                delay: 200,
+            });
+            sr.reveal('.section-2 .d-flex',{
+                delay: 200,
+            });
+            sr.reveal('.section-3 .col-md-4',{
+                delay: 200,
+            });
+            sr.reveal('.section-4 .content',{
+                delay: 200,
+            });
+            sr.reveal('.section-1 .card',{
+                delay: 200,
+            });
         });
-        window.sr = ScrollReveal({ duration: 1000 });
-        sr.reveal('.site-content .d-flex');
-        sr.reveal('.section-2 .d-flex');
-        sr.reveal('.section-3 .col-md-4');
-        sr.reveal('.section-4 .content');
-        sr.reveal('.section-1 .card');
+        // window.sr = ScrollReveal({ duration: 1000 });
+        // sr.reveal('.site-content .d-flex');
+        // sr.reveal('.section-2 .d-flex');
+        // sr.reveal('.section-3 .col-md-4');
+        // sr.reveal('.section-4 .content');
+        // sr.reveal('.section-1 .card');
         const openPopupBtn = document.getElementById("popupsignup");
         const closePopupBtn = document.getElementById("closePopup");
         const popup = document.getElementById("popup");
