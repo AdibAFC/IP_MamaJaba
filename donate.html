@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Donate</title>
+  <link rel="stylesheet" href="donate.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="text-center">Support MamaJaba</h2>
+    <p class="text-center">Choose your preferred payment method:</p>
+
+    <div class="payment-option" onclick="showDetails('bkash')">
+      <span>bKash</span>
+      <img src="images/bkash.png" alt="bKash">
+    </div>
+
+    <div class="payment-option" onclick="showDetails('rocket')">
+      <span>Rocket</span>
+      <img src="images/rocket.png" alt="Rocket">
+    </div>
+
+    <div class="payment-option" onclick="showDetails('nagad')">
+      <span>Nagad</span>
+      <img src="images/nagad.png" alt="Nagad">
+    </div>
+
+    <div id="bkash-details" class="payment-details">
+      <h4 class="text-center">Donate via bKash</h4>
+      <p class="text-center">Scan the QR code below to donate via bKash:</p>
+      <div class="qr-code">
+        <img src="images/qr_bkash.png" alt="bKash QR Code">
+      </div>
+      <p class="text-center mt-4">Or use this bKash number: <strong>01XXXXXXXXX</strong></p>
+    </div>
+
+    <div id="rocket-details" class="payment-details">
+      <h4 class="text-center">Donate via Rocket</h4>
+      <p class="text-center">Scan the QR code below to donate via Rocket:</p>
+      <div class="qr-code">
+        <img src="images/qr_rocket.png" alt="Rocket QR Code">
+      </div>
+      <p class="text-center mt-4">Or use this Rocket number: <strong>01XXXXXXXXX</strong></p>
+    </div>
+
+    <div id="nagad-details" class="payment-details">
+      <h4 class="text-center">Donate via Nagad</h4>
+      <p class="text-center">Scan the QR code below to donate via Nagad:</p>
+      <div class="qr-code">
+        <img src="images/qr_nagad.png" alt="Nagad QR Code">
+      </div>
+      <p class="text-center mt-4">Or use this Nagad number: <strong>01XXXXXXXXX</strong></p>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script>
+    function showDetails(paymentMethod) {
+      // Hide all payment details
+      document.querySelectorAll('.payment-details').forEach(function (element) {
+        element.style.display = 'none';
+      });
+
+      // Show selected payment details with animation
+      const details = document.getElementById(paymentMethod + '-details');
+      details.style.display = 'block';
+      gsap.from(details, { opacity: 0, y: 20, duration: 0.5 });
+    }
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

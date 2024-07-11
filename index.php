@@ -357,7 +357,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
         <div class="popup-content-support">
             <p style="color: rgb(225, 229, 232);">If you find MamaJaba useful, please consider supporting.</p>
             <p style="color: rgb(167, 169, 169);">Your contribution helps support continued development of MamaJaba. MamaJaba is free, thanks to your support.</p>
-            <button class="btn-donate">❤ Donate</button>
+            <button class="btn-donate" onclick="window.location.href='donate.html'">❤ Donate</button>
         </div>
     </div>
 
