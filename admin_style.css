@@ -1146,7 +1146,7 @@ label.btn {
   height: 400px;
   padding: 40px;
   margin-bottom: 100px;
-  margin-top: 100px;
+  margin-top: 250px;
   box-sizing: border-box;
   position: relative;
   background: #fff;
@@ -1211,6 +1211,7 @@ label.btn {
 
 
 #chartContainer {
+  margin-top: 250px;
   text-align: center;
   padding-left: 210px;
 }
