@@ -33,7 +33,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <!-- <a href="#" class="navbar-brand ml-3">MamaJaba?</a> -->
             <img src="images/MamaJaba_logo1.gif" class="" style="height: 50px; margin: 10px;">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
@@ -288,7 +288,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
             <div class="container-fluid d-flex justify-content-center align-items-center">
                 <div class="col-md-6">
                     <div class="content">
-                        <h1 class="text-white">Have Questions?</h1>
+                        <h1 class="text-white typing-effect">Have Questions?</h1>
                         <p class="para-1">
                             Need assistance or have inquiries about our services? We're here to help! Feel free to reach
                             out to us anytime.
@@ -304,8 +304,9 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
         <!-- Reviews -->
         <div class="section-1" id="Review">
             <div class="container text-center">
-                <h1 class="heading-1">Reviews</h1>
-                <h1 class="heading-2">& Real Customer Testimonials</h1>
+                <h1 class="heading-1 reveal reveal-1" >Reviews</h1><br>
+
+                <h1 class="heading-2 reveal reveal-2">& Real Customer Testimonials</h1>
                 <p class="para-1">Read what our customers have to say about us!</p>
                 <div class="row justify-content-center text-center">
                     <div class="col-md-4">
@@ -401,10 +402,24 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
         <hr>
         <p class="copyright">AdiPriShi © 2024 - All Rights Reserved</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript">
+        const reveal = gsap.utils.toArray('.reveal');
+        reveal.forEach((text,i)=>{
+            ScrollTrigger.create({
+                trigger: text,
+                toggleClass: 'active',
+                start: "top 90%",
+                end: "top 20%",
+                // markers: true
+            })
+        })
+    </script>
     <script>
         window.addEventListener('DOMContentLoaded', () => {
             const sr = ScrollReveal({
@@ -416,12 +431,10 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
             sr.reveal('.Ride', {
                 origin: 'bottom',
                 distance: '50px',
-                delay: 200,
             });
             sr.reveal('.Drive', {
                 origin: 'bottom',
                 distance: '50px',
-                delay: 200,
             });
 
             sr.reveal('footer', {
@@ -429,29 +442,13 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                 distance: '20px',
                 delay: 200,
             });
-            
-            sr.reveal('.site-content .d-flex',{
-                delay: 200,
-            });
-            sr.reveal('.section-2 .d-flex',{
-                delay: 200,
-            });
-            sr.reveal('.section-3 .col-md-4',{
-                delay: 200,
-            });
-            sr.reveal('.section-4 .content',{
-                delay: 200,
-            });
-            sr.reveal('.section-1 .card',{
-                delay: 200,
-            });
         });
-        // window.sr = ScrollReveal({ duration: 1000 });
-        // sr.reveal('.site-content .d-flex');
-        // sr.reveal('.section-2 .d-flex');
-        // sr.reveal('.section-3 .col-md-4');
-        // sr.reveal('.section-4 .content');
-        // sr.reveal('.section-1 .card');
+        window.sr = ScrollReveal({ duration: 1000 });
+        sr.reveal('.site-content .d-flex');
+        sr.reveal('.section-2 .d-flex');
+        sr.reveal('.section-3 .col-md-4');
+        sr.reveal('.section-4 .content');
+        sr.reveal('.section-1 .card');
         const openPopupBtn = document.getElementById("popupsignup");
         const closePopupBtn = document.getElementById("closePopup");
         const popup = document.getElementById("popup");
