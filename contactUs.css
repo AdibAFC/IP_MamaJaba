@@ -224,3 +224,37 @@ background-color: #467d99;
 color: white;
 }
 
+.support-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 400px;
+    background: linear-gradient(180deg, #280835, #48145d, #5a1a82, #682493, #835c9f);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: none;
+}
+.support-popup .popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.support-popup .popup-header h5 {
+    margin: 0;
+}
+.support-popup .popup-header .close-popup {
+    cursor: pointer;
+}
+.support-popup .popup-content-support {
+    margin-top: 10px;
+}
+.support-popup .popup-content-support .btn-donate {
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

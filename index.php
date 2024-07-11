@@ -348,7 +348,18 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                 </div>
             </div>
         </div>
-
+        <!-- Support Pop-up -->
+    <div class="support-popup" id="supportPopup">
+        <div class="popup-header">
+            <img src="images/flower.png" alt="">
+            <span class="close-popup" id="closeSupportPopup">&times;</span>
+        </div>
+        <div class="popup-content-support">
+            <p style="color: rgb(225, 229, 232);">If you find MamaJaba useful, please consider supporting.</p>
+            <p style="color: rgb(167, 169, 169);">Your contribution helps support continued development of MamaJaba. MamaJaba is free, thanks to your support.</p>
+            <button class="btn-donate">❤ Donate</button>
+        </div>
+    </div>
 
 
     </main>
@@ -457,7 +468,14 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
             popup.style.display = "none";
         });
 
+        document.getElementById('closeSupportPopup').addEventListener('click', function () {
+            document.getElementById('supportPopup').style.display = 'none';
+        });
 
+        // Show the support popup after a delay
+        setTimeout(function () {
+            document.getElementById('supportPopup').style.display = 'block';
+        }, 8000); // 8 seconds delay
     </script>
 </body>
 
