@@ -443,12 +443,6 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                 delay: 200,
             });
         });
-        window.sr = ScrollReveal({ duration: 1000 });
-        sr.reveal('.site-content .d-flex');
-        sr.reveal('.section-2 .d-flex');
-        sr.reveal('.section-3 .col-md-4');
-        sr.reveal('.section-4 .content');
-        sr.reveal('.section-1 .card');
         const openPopupBtn = document.getElementById("popupsignup");
         const closePopupBtn = document.getElementById("closePopup");
         const popup = document.getElementById("popup");
