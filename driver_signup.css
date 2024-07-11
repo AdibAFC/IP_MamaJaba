@@ -2,7 +2,7 @@ body {
     width: 100%;
     height: 100vh;
     margin: 0;
-    background: url('../IP_MamaJaba/images/home_bg1.png') no-repeat center center;
+    background: url('https://c7.alamy.com/comp/ECYF1P/cycle-rickshaw-in-front-of-wall-arta-in-thamel-kathmandu-nepal-ECYF1P.jpg') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -14,11 +14,13 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 .form-container {
-    margin-left: 280px;
-    background: rgba(0, 0, 0, 0.5);
+    margin-right: 1200px;
+    background: rgba(0, 0, 0, 0.7);
     padding: 5rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
