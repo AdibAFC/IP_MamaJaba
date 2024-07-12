@@ -1,23 +1,33 @@
 * {
+    box-sizing: border-box;
+}
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-}
-
-html {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    /* scroll-behavior: smooth; */
-}
-
-body {
-    background: #fcfdfe;
-    max-width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: url('../IP_MamaJaba/images/cuet1.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
+
+.glass {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    max-width: 470px;
+    width: 100%;
+    height: 700px;
+    justify-self: center;
+}
+
 
 .container {
     min-height: calc(100vh - 40px * 2);
@@ -26,20 +36,6 @@ body {
     border-radius: 10px;
     overflow: hidden;
 }
-
-.login-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: content;
-    padding-left: 135px;
-    background-color: rgb(255, 255, 255);
-}
-
-.login-right {
-    display: flex;
-    justify-content: center;
-}
-
 .form-item {
     position: relative;
     margin-bottom: 5px;
@@ -69,12 +65,13 @@ body {
     /* Adjust font size as needed */
     position: absolute;
     transform: translate(30px, -10px);
-    margin-left: 280px;
+    margin-left: 250px;
 }
-
+.remember-forgot a{
+    text-decoration: none;
+}
 .remember-forgot a:hover {
-    color: rgb(255, 72, 0);
-    text-decoration: underline;
+    color: rgb(223, 10, 10);
 }
 
 .bg-grey {
@@ -82,7 +79,6 @@ body {
     border-top: 25px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    padding: 0.4em;
     text-align: center;
     color: #18032da9;
 }
@@ -98,13 +94,8 @@ body {
     transition: ease 0.3s;
 }
 
-.login-right img {
-    width: 100%;
-    height: 100%;
-}
-
 .login-header {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .login-header h1 {
@@ -114,7 +105,7 @@ body {
 }
 
 .login-header p {
-    margin-top: 28px;
+    margin-top: -18px;
     opacity: 1;
     font-size: 15px;
     /* gap: 20px; */
@@ -206,7 +197,7 @@ button {
     text-transform: uppercase;
     cursor: pointer;
     margin-bottom: 35px;
-    margin-top: 12px;
+    margin-top: 0px;
     transition: .5s;
     /* color: rgb(153, 203, 195); */
     background-color: rgb(55, 133, 222);
@@ -225,7 +216,9 @@ button:hover {
     font-size: 1rem;
 }
 
-
+.sign-up{
+    color: rgb(213, 218, 222);
+}
 @media(max-width:768px) {
     .login-header h1 {
         font-size: 30px;
@@ -238,10 +231,4 @@ button:hover {
     .container {
         grid-template-columns: auto;
     }
-
-    .login-right {
-        display: none;
-    }
-
-
 }

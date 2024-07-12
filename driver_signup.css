@@ -2,7 +2,7 @@ body {
     width: 100%;
     height: 100vh;
     margin: 0;
-    background: url('https://c7.alamy.com/comp/ECYF1P/cycle-rickshaw-in-front-of-wall-arta-in-thamel-kathmandu-nepal-ECYF1P.jpg') no-repeat center center;
+    background: url('../IP_MamaJaba/images/driver_reg.png') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -19,7 +19,7 @@ body {
 }
 
 .form-container {
-    margin-right: 1200px;
+    /* margin-right: 1200px; */
     background: rgba(0, 0, 0, 0.7);
     padding: 5rem;
     border-radius: 10px;
