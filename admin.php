@@ -82,6 +82,28 @@ if ($result_reviews) {
     }
 }
 
+
+
+// Query to get the number of accounts created each month
+$query_create = "
+    SELECT MONTH(created_at) AS month, COUNT(*) AS count
+    FROM user
+    WHERE created_at IS NOT NULL
+    GROUP BY MONTH(created_at)
+    ORDER BY month
+";
+$result_create = $conn->query($query_create);
+
+$months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+$data = array_fill(0, 12, 0);
+
+if ($result_create) {
+    while ($row = $result_create->fetch_assoc()) {
+        $data[$row['month'] - 1] = (int)$row['count'];
+    }
+}
+
+
 $conn->close();
 ?>
 <!DOCTYPE html>
@@ -557,6 +579,19 @@ $conn->close();
             previewImage.src = '<?php echo htmlspecialchars($default); ?>';
             fileInput.value = '';
         });
+
+        const chartData = {
+            labels: <?php echo json_encode($months); ?>,
+            datasets: [
+                {
+                    label: "Accounts Created",
+                    backgroundColor: "rgba(12, 137, 194, 0.2)",
+                    borderColor: "rgba(12, 137, 194, 1)",
+                    borderWidth: 1,
+                    data: <?php echo json_encode(array_values($data)); ?>
+                }
+            ]
+        };
     </script>
 
 </body>
