@@ -33,6 +33,15 @@ if (!file_exists($profile_image)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- For Browsers -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <!-- For High-Resolution Displays -->
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon_io/android-chrome-192x192.png">
+    <!-- For Apple Devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <!-- Standard Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
     <title>Rider's Profile</title>
     <link rel="stylesheet" href="riderProfile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
