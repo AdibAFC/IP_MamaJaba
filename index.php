@@ -28,7 +28,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="ind.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -55,13 +55,10 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                         <a href="#Drive" class="nav-link">Drive</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#About" class="nav-link">About Us</a>
-                    </li>
-                    <li class="nav-item">
                         <a href="#Review" class="nav-link">Review</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Blog</a>
+                        <a href="#About" class="nav-link">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a href="#Help" class="nav-link">Help</a>
@@ -155,52 +152,66 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 
 
 
-    
+        <div class="section-2" id="About">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="heading-1">About Us</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="d-flex flex-column m-4">
+                                <div class="content">
+                                    <h1 class="text-white">Sustainability</h1>
+                                    <p class="para">
+                                        At MamaJaba, sustainability is at the core of everything we do. We're committed
+                                        to reducing our carbon footprint by implementing eco-friendly practices
+                                        throughout our operations. From investing in fuel-efficient vehicles to
+                                        exploring renewable energy sources, we're dedicated to preserving the
+                                        environment for future generations.
+                                    </p>
+                                </div>
+                                <div class="content">
+                                    <h1 class="text-white">Your Safety Drives Us</h1>
+                                    <p class="para">Your safety is our top priority. That's why we've implemented
+                                        rigorous safety measures to ensure you feel secure every time you ride with
+                                        MamaJaba. From thorough driver background checks to regular vehicle inspections,
+                                        we leave no stone unturned when it comes to keeping you safe on the road.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex flex-column m-4">
+                                <div class="content">
+                                    <h1 class="text-white">Rides and Beyond</h1>
+                                    <p class="para">
+                                        Our commitment to excellence extends beyond providing rides. We're constantly
+                                        innovating to enhance your overall experience with MamaJaba. Whether it's
+                                        introducing new features to our app or expanding our service offerings, we're
+                                        always striving to exceed your expectations and make your journey with us
+                                        unforgettable.
+                                    </p>
+                                </div>
+                                <div class="content">
+                                    <h1 class="text-white">Company Info</h1>
+                                    <p class="para">
+                                        MamaJaba is more than just a transportation company; we're a community. Founded
+                                        in 2024, we've quickly grown to become a trusted name in the industry, thanks to
+                                        our unwavering commitment to customer satisfaction and social responsibility.
+                                        Learn more about our mission, vision, and values.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <div class="wrapper" id="About">
-            <div class="cont">
-                <input type="radio" name="slide" id="c1" checked>
-                <label for="c1" class="card">
-                    <div class="row">
-                        <div class="icon"><i class="fa-solid fa-arrow-right"></i></div>
-                        <div class="desc">
-                           
-                        </div>
-                    </div>
-                </label>
-                <input type="radio" name="slide" id="c2" >
-                <label for="c2" class="card">
-                    <div class="row">
-                        <div class="icon">1</div>
-                        <div class="desc">
-                            
-                        </div>
-                    </div>
-                </label>
-                <input type="radio" name="slide" id="c3" >
-                <label for="c3" class="card">
-                    <div class="row">
-                        <div class="icon">2</div>
-                        <div class="desc">
-                            
-                        </div>
-                    </div>
-                </label>
-                <input type="radio" name="slide" id="c4" >
-                <label for="c4" class="card">
-                    <div class="row">
-                        <div class="icon">3</div>
-                        <div class="desc">
-                            
-                        </div>
-                        
-                    </div>
-                    <div class="btnn">
-                        <button class="btn btn-primary">Read More</button>
-                    </div>
-                </label>
-            </div>
-            </div>
+
         <div class="section-3">
             <div class="container">
                 <div class="row">
@@ -283,7 +294,6 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                             out to us anytime.
                         </p>
                         <a href="contactUs.html" class="btn btn-primary btn-lg">Contact Us</a>
-                        
                     </div>
                 </div>
             </div>
@@ -301,7 +311,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                 <div class="row justify-content-center text-center">
                     <div class="col-md-4">
                         <img src="images/quote.png" alt="" class="quote">
-                        <div class="cardd">
+                        <div class="card">
                             <img src="images/stu1.jpg" alt="Customer 1" class="card-img-top equal-img">
                             <div class="card-body">
                                 <h4 class="card-title">Maisha Chowdhury, EEE Department</h4>
@@ -313,7 +323,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                     </div>
                     <div class="col-md-4">
                         <img src="images/quote.png" alt="" class="quote">
-                        <div class="cardd">
+                        <div class="card">
                             <img src="images/stu2.jpg" alt="Customer 2" class="card-img-top equal-img">
                             <div class="card-body">
                                 <h4 class="card-title">Yamin Iqbal, CSE Department</h4>
@@ -325,7 +335,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                     </div>
                     <div class="col-md-4">
                         <img src="images/quote.png" alt="" class="quote">
-                        <div class="cardd">
+                        <div class="card">
                             <img src="images/stu3.jpg" alt="Customer 3" class="card-img-top equal-img">
                             <div class="card-body">
                                 <h4 class="card-title">Tahsina, ME Department</h4>
@@ -466,13 +476,6 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
         setTimeout(function () {
             document.getElementById('supportPopup').style.display = 'block';
         }, 8000); // 8 seconds delay
-        ScrollReveal({ 
-            reset: true,
-            distance: '60px',
-            duration: 2500,
-            delay:400
-         });
-         ScrollReveal().reveal('.card', { delay: 500, origin: 'bottom', interval: 200 });
     </script>
 </body>
 
