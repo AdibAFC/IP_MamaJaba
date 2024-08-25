@@ -187,6 +187,23 @@
         setTimeout(function () {
             document.getElementById('supportPopup').style.display = 'block';
         }, 5000); // 5 seconds delay
+
+
+
+
+        const openPopupBtn = document.getElementById("popupsignup");
+        const closePopupBtn = document.getElementById("closePopup");
+        const popup = document.getElementById("popup");
+        const riderBtn = document.getElementById("riderBtnpop");
+        const driverBtn = document.getElementById("driverBtnpop");
+
+        openPopupBtn.addEventListener("click", () => {
+            popup.style.display = "block";
+        });
+
+        closePopupBtn.addEventListener("click", () => {
+            popup.style.display = "none";
+        });
     </script>
 </body>
 
