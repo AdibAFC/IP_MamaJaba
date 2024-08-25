@@ -66,6 +66,22 @@ if ($result_riders) {
 // Licensed rickshaws are equal to the number of drivers
 $num_rickshaws = $num_drivers;
 
+// Query to get reviews along with rider's name and picture
+$query_reviews = "
+    SELECT r.review_id, r.rating, r.review_text, r.review_date, rd.name, rd.picture
+    FROM reviews r
+    JOIN rider rd ON r.rider_id = rd.RiderID
+    ORDER BY r.review_date DESC
+";
+$result_reviews = $conn->query($query_reviews);
+
+$reviews = [];
+if ($result_reviews) {
+    while ($row = $result_reviews->fetch_assoc()) {
+        $reviews[] = $row;
+    }
+}
+
 $conn->close();
 ?>
 <!DOCTYPE html>
@@ -219,60 +235,49 @@ $conn->close();
         </div>
     </div>
     <div id="rev">
-    <div class="review" >
-        <div class="title">
-            <h2>Customer Reviews</h2>
-        </div>
-        <div class="slide-container active">
-            <div class="slide">
-                <div class="icon">
-                    <i class="fa-solid fa-quote-right"></i>
-                </div>
-                <div class="user">
-                    <img src="images/peep1.jpg">
-                    <div class="user-info">
-                        <h3>Joe Biden</h3>
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+        <div class="review">
+            <div class="title">
+                <h2>Customer Reviews</h2>
+            </div>
+            <?php if (count($reviews) > 0): ?>
+            <?php foreach ($reviews as $index => $row): ?>
+            <div class="slide-container <?php echo ($index === 0) ? 'active' : ''; ?>">
+                <div class="slide">
+                    <div class="icon">
+                        <i class="fa-solid fa-quote-right"></i>
+                    </div>
+                    <div class="user">
+                        <img src="<?php echo (!empty($row['picture']) && file_exists($row['picture'])) ? $row['picture'] : $default; ?>"
+                            alt="User Picture">
+                        <div class="user-info">
+                            <h3>
+                                <?php echo $row['name']; ?>
+                            </h3>
+                            <div class="stars">
+                                <?php for($i = 0; $i < 5; $i++): ?>
+                                <i class="fa-solid fa-star<?php echo ($i < $row['rating']) ? '' : '-o'; ?>"></i>
+                                <?php endfor; ?>
+                            </div>
                         </div>
                     </div>
+                    <p class="text">
+                        <?php echo $row['review_text']; ?>
+                    </p>
+                    <p class="date">
+                        <?php echo date('F j, Y', strtotime($row['review_date'])); ?>
+                    </p>
                 </div>
-                <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur veritatis
-                    explicabo ab, excepturi sed illum alias perspiciatis similique consequuntur deserunt. Quaerat
-                    sapiente fugit veritatis ad! Laudantium illo aliquam molestias voluptatibus!</p>
             </div>
+            <?php endforeach; ?>
+            <?php else: ?>
+            <p>No reviews available.</p>
+            <?php endif; ?>
+            <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
+            <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
         </div>
-        <div class="slide-container">
-            <div class="slide">
-                <div class="icon">
-                    <i class="fa-solid fa-quote-right"></i>
-                </div>
-                <div class="user">
-                    <img src="images/peep2.jpg">
-                    <div class="user-info">
-                        <h3>Ella Bella</h3>
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi amet facere
-                    repudiandae quidem ratione accusamus!</p>
-            </div>
-        </div>
-        <div id="next" class="fas fa-chevron-right" onclick="next()"></div>
-        <div id="prev" class="fas fa-chevron-left" onclick="prev()"></div>
     </div>
-    </div>
-    
+
+
     <div id="chartContainer" id="dat">
         <canvas id="myChart"></canvas>
         <div class="chart">
@@ -282,11 +287,13 @@ $conn->close();
         </div>
     </div>
     <div id="rate">
-    <div class="revstat-box" >
-        <div class="avg-rating" >
-            <h2><?php echo number_format($avg_rating, 1); ?> / 5.0</h2>
-            <div class="stars">
-                <?php
+        <div class="revstat-box">
+            <div class="avg-rating">
+                <h2>
+                    <?php echo number_format($avg_rating, 1); ?> / 5.0
+                </h2>
+                <div class="stars">
+                    <?php
                 $full_stars = floor($avg_rating);
                 $half_star = $avg_rating - $full_stars >= 0.5 ? 1 : 0;
                 for ($i = 0; $i < $full_stars; $i++) {
@@ -299,14 +306,16 @@ $conn->close();
                     echo '<i class="far fa-star"></i>';
                 }
                 ?>
+                </div>
+                <p>
+                    <?php echo $total_reviews; ?> Reviews
+                </p>
             </div>
-            <p><?php echo $total_reviews; ?> Reviews</p>
-        </div>
 
-        
-        <div class="ratings-breakdown">
-            <ul>
-                <?php
+
+            <div class="ratings-breakdown">
+                <ul>
+                    <?php
                 for ($rating = 5; $rating >= 1; $rating--) {
                     $count_reviews = isset($reviews_count[$rating]) ? $reviews_count[$rating] : 0;
                     $percentage = $total_reviews > 0 ? ($count_reviews / $total_reviews) * 100 : 0;
@@ -319,12 +328,12 @@ $conn->close();
                           </li>";
                 }
                 ?>
-            </ul>
+                </ul>
+            </div>
         </div>
     </div>
-    </div>
 
-    
+
     <div class="main-content">
         <section id="sec1">
             <div class="filterEntries">
@@ -449,8 +458,8 @@ $conn->close();
         </footer>
     </div>
 
-   
- <div class="main-content">
+
+    <div class="main-content">
         <div class="card-cont" id="sec3">
             <h1>Our Admins</h1>
             <div class="card-container">
@@ -488,22 +497,31 @@ $conn->close();
                     <h1 class="heading1">Edit Your Info</h1>
                     <form action="updateAprofile.php" method="POST" enctype="multipart/form-data">
                         <div class="card-body media align-items-center">
-                            <img src="<?php echo htmlspecialchars($profile_image); ?>" class="d-block ui-w-80" id="preview-image" alt="Preview">
+                            <img src="<?php echo htmlspecialchars($profile_image); ?>" class="d-block ui-w-80"
+                                id="preview-image" alt="Preview">
                             <div class="media-body ml-4">
                                 <label class="btn btn-outline-primary">
                                     Upload
-                                    <input id="profile-picture" name="profile-picture" type="file" class="account-settings-fileinput" accept="image/*">
+                                    <input id="profile-picture" name="profile-picture" type="file"
+                                        class="account-settings-fileinput" accept="image/*">
                                 </label> &nbsp;
-                                <button type="button" class="btn btn-default md-btn-flat" id="reset-button">Reset</button>
+                                <button type="button" class="btn btn-default md-btn-flat"
+                                    id="reset-button">Reset</button>
                                 <div class="text-light small mt-1">Allowed JPG, GIF or PNG. Max size of 800K</div>
                             </div>
                         </div>
-                        <input type="text" value="<?php echo htmlspecialchars($email); ?>" autocomplete="off" class="email" readonly required>
-                        <input type="text" name="name" value="<?php echo htmlspecialchars($name); ?>" autocomplete="off" class="name" required>
-                        <input type="text" name="phone" value="<?php echo htmlspecialchars($phone); ?>" autocomplete="off" class="contact" required>
-                        <input type="password" name="current-password" placeholder="current-password" autocomplete="off" class="current-password" required>
-                        <input type="password" name="new-password" placeholder="new-password" autocomplete="off" class="new-password" required>
-                        <input type="password" name="repeat-password" placeholder="repeat-password" autocomplete="off" class="repeat-password" required>
+                        <input type="text" value="<?php echo htmlspecialchars($email); ?>" autocomplete="off"
+                            class="email" readonly required>
+                        <input type="text" name="name" value="<?php echo htmlspecialchars($name); ?>" autocomplete="off"
+                            class="name" required>
+                        <input type="text" name="phone" value="<?php echo htmlspecialchars($phone); ?>"
+                            autocomplete="off" class="contact" required>
+                        <input type="password" name="current-password" placeholder="current-password" autocomplete="off"
+                            class="current-password" required>
+                        <input type="password" name="new-password" placeholder="new-password" autocomplete="off"
+                            class="new-password" required>
+                        <input type="password" name="repeat-password" placeholder="repeat-password" autocomplete="off"
+                            class="repeat-password" required>
                         <button type="submit" class="submit-btn">submit</button>
                     </form>
                 </div>
@@ -513,7 +531,7 @@ $conn->close();
     <script src="admin.js"></script>
 
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         const fileInput = document.getElementById('profile-picture');
@@ -540,7 +558,7 @@ $conn->close();
             fileInput.value = '';
         });
     </script>
-    
+
 </body>
 
 </html>

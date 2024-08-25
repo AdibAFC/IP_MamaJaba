@@ -1274,3 +1274,10 @@ canvas {
   color: #ffffff !important;
   background-color: #787171;
 }
+
+.date {
+  text-align: right;
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 10px;
+}

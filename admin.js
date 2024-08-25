@@ -36,16 +36,21 @@ $(".menu-btn").click(function () {
 let slides = document.querySelectorAll('.slide-container');
 let index = 0;
 
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active')); // Hide all slides
+    slides[index].classList.add('active'); // Show the selected slide
+}
+
 function next() {
-    slides[index].classList.remove('active');
     index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
+    showSlide(index);
 }
+
 function prev() {
-    slides[index].classList.remove('active');
     index = (index - 1 + slides.length) % slides.length;
-    slides[index].classList.add('active');
+    showSlide(index);
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // Driver modal functionality
