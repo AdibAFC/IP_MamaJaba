@@ -43,9 +43,9 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <!-- <a href="#" class="navbar-brand ml-3">MamaJaba?</a> -->
-            <img src="images/MamaJaba_logo1.gif" class="" style="height: 50px; margin: 10px;">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
+            <a href="login.html">
+                <img src="images/MamaJaba_logo1.gif" style="height: 50px; margin: 10px; cursor: pointer;">
+            </a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
                 aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle Navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

@@ -37,8 +37,9 @@ if(!file_exists($profile_image))$profile_image=$default;
 
     <nav>
         <div class="logo">
-            <img src="images/MamaJaba_logo1.gif" class="" style="height: 50px; margin: 10px;">
-            <!-- <h3 class="highlight-text"><span class="comic-sans">MamaJaba?</span></h3> -->
+            <a href="login.html">
+                <img src="images/MamaJaba_logo1.gif" style="height: 50px; margin: 10px; cursor: pointer;">
+            </a>
         </div>
 
         <ul>
