@@ -31,7 +31,7 @@ nav{
 .home{
     width: 100%;
     min-height: 440px;
-    background: url(images/rickshawbg.jpg);
+    background: url(../IP_MamaJaba/images/rickshawbg.jpg);
     display: grid;
     justify-content: center;
     align-items: center;

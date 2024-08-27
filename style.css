@@ -118,10 +118,12 @@ body {
     background-size: cover;
     overflow-x: hidden;
     padding-bottom: 50px;
+    height: 850px;
 }
 
 .site-title,
 .site-desc {
+    margin-top: 200px;
     color: rgb(255, 255, 255);
     font-family: 'Righteous';
 }
@@ -391,6 +393,8 @@ body {
 .section-2 .para {
     font-family: 'Ubuntu';
     color: rgb(128, 121, 121);
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .section-2 .content {
@@ -764,7 +768,7 @@ button:hover {
     bottom: 20px;
     right: 20px;
     width: 400px;
-    background: linear-gradient(180deg, #280835, #48145d, #5a1a82, #682493, #835c9f);
+    background: linear-gradient(180deg, #000000, #2c0c39, #390c54, #471367, #793ba4);
     color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

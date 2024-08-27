@@ -24,38 +24,30 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <a href="login.html">
                 <img src="images/MamaJaba_logo1.gif" style="height: 50px; margin: 10px; cursor: pointer;">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
+            </a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
                 aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle Navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+
+            <div class="collapse navbar-collapse"></div>
             <div class="collapse navbar-collapse" id="navbarMenu">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a href="#" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#Ride" class="nav-link">Ride</a>
+                        <a href="terms.html" class="nav-link">Terms & Conditions</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#Drive" class="nav-link">Drive</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#Review" class="nav-link">Review</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#About" class="nav-link">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#Help" class="nav-link">Help</a>
+                        <a href="contactUs.html" class="nav-link">Contact Us</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <a href="login.html" class="btn menu-right-btn border-btn1" type="submit">
+                    <a href="login.html" class="btn menu-right-btn border-btn1" type="submit" style="margin-right: 10px;">
                         Login
                     </a>
                     <a class="btn menu-right-btn border-btn2" type="submit" id="popupsignup">
@@ -79,7 +71,7 @@
         </nav>
     </header>
 
-    <section class="sec-01">
+    <section class="sec-01" style="margin-top: 100px;">
         <div class="container">
             <h2 class="main-title">About Us</h2>
             <p class="seco-title">Welcome to <strong>MamaJaba? </strong>your number one source for safe, reliable, and convenient rickshaw
@@ -127,7 +119,7 @@
                     <div class="icon"><i class="fa-solid fa-arrow-right"></i></div>
                     <div class="desc">
                         <h4>Meet Our Admins</h4>
-                        <p>Without them, everything's impossible!</p>
+                        <p>Without them, everything's impossible!😔</p>
                     </div>
                 </div>
             </label>
@@ -136,8 +128,8 @@
                 <div class="row">
                     <div class="icon">1</div>
                     <div class="desc">
-                        <h4>Admin 1 : Pritha Saha</h4>
-                        <p>ID:2004013, CSE Dept</p>
+                        <h4 style="color: black;">Admin 1 : Pritha Saha</h4>
+                        <p style="color: black;">ID:2004013, CSE Dept</p>
                     </div>
                 </div>
             </label>
@@ -146,8 +138,8 @@
                 <div class="row">
                     <div class="icon">2</div>
                     <div class="desc">
-                        <h4>Admin 2 : Adiba Fairooz Chowdhury</h4>
-                        <p>ID:2004014, CSE Dept</p>
+                        <h4 style="color: black;">Admin 2 : Adiba Fairooz Chowdhury</h4>
+                        <p style="color: black;">ID:2004014, CSE Dept</p>
                     </div>
                 </div>
             </label>
@@ -156,8 +148,8 @@
                 <div class="row">
                     <div class="icon">3</div>
                     <div class="desc">
-                        <h4>Admin 3 : Shiti Chowdhury</h4>
-                        <p>ID:2004027, CSE Dept</p>
+                        <h4 style="color: black;">Admin 3 : Shiti Chowdhury</h4>
+                        <p style="color: black;">ID:2004027, CSE Dept</p>
                     </div>
                 </div>
             </label>
@@ -181,13 +173,18 @@
         </div>
     </section>
     <footer>
-        <div class="row">
+        <div class="row" id="Help">
             <div class="col">
-                <div class="logo"><h3 class="highlight-text"><span class="comic-sans">MamaJaba?</span></h3></div>
-                <p>"MamaJaba" is a website designed for CUET students and faculty to conveniently request rickshaw rides within the campus. With easy booking, real-time tracking, and reliable service, MamaJaba simplifies transportation for CUET residents.</p>
+                <div class="logo">
+                    <h3 class="h_text"><span class="comic-sans">MamaJaba?</span></h3>
+                </div>
+                <p>"MamaJaba" is a website designed for CUET students and faculty to conveniently request rickshaw rides
+                    within the campus. With easy booking, real-time tracking, and reliable service, MamaJaba simplifies
+                    transportation for CUET residents.</p>
             </div>
             <div class="col">
-                <h3>Links <div class="underline"><span></span></div></h3>
+                <h3 style="margin-left: 30px; font-size: 15px;">Links <div class="underline"><span></span></div>
+                </h3>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About Us</a></li>
@@ -196,7 +193,8 @@
                 </ul>
             </div>
             <div class="col">
-                <h3>Products  <div class="underline"><span></span></div></h3>
+                <h3 style="margin-left: 30px;   font-size: 15px; ">Products <div class="underline" ><span></span></div>
+                </h3>
                 <ul>
                     <li><a href="#">Ride</a></li>
                     <li><a href="#">Drive</a></li>
@@ -205,7 +203,8 @@
                 </ul>
             </div>
             <div class="col">
-                <h3>Newsletter  <div class="underline"><span></span></div></h3>
+                <h3   style=" font-size: 15px;">Newsletter <div class="underline"><span></span></div>
+                </h3>
                 <form>
                     <i class="fa-regular fa-envelope"></i>
                     <input type="email" placeholder="Enter Your Email Id">

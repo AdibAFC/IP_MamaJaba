@@ -43,9 +43,9 @@ if(!file_exists($profile_image))$profile_image=$default;
         </div>
 
         <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACTS</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="about1.html">About Us</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
         </ul>
         <img src="<?php echo htmlspecialchars($profile_image); ?>" class="user-pic" onclick="toggleMenu()">
 
@@ -64,12 +64,12 @@ if(!file_exists($profile_image))$profile_image=$default;
                     <p>Edit Profile</p>
                     <span>></span>
                 </a>
-                <a href="#" class="sub-menu-link">
+                <a href="terms.html" class="sub-menu-link">
                     <i class="fa-solid fa-gear"></i>
                     <p>Settings & Privacy</p>
                     <span>></span>
                 </a>
-                <a href="#" class="sub-menu-link">
+                <a href="contactUs.html" class="sub-menu-link">
                     <i class="fa-solid fa-circle-question"></i>
                     <p>Help & Support</p>
                     <span>></span>
@@ -97,7 +97,7 @@ if(!file_exists($profile_image))$profile_image=$default;
 
     <section class="ridereq" id="ridereq">
     </section>
-  <footer>
+  <footer style="margin-top:100px;">
         <div class="row">
             <div class="col">
                 <div class="logo">

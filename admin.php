@@ -215,12 +215,6 @@ $conn->close();
                     <p class="title">Account</p>
                     <ul>
                         <li>
-                            <a href="#">
-                                <i class="fa-solid fa-circle-info"></i>
-                                <span class="text">Help</span>
-                            </a>
-                        </li>
-                        <li>
                             <a href="index.php">
                                 <i class="fa-solid fa-right-from-bracket"></i>
                                 <span class="text">Logout</span>
@@ -300,7 +294,7 @@ $conn->close();
     </div>
 
 
-    <div id="chartContainer" id="dat">
+    <div id="dat">
         <canvas id="myChart"></canvas>
         <div class="chart">
             <button onclick="changeChartType('bar')">Bar</button>

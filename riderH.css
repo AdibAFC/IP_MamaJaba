@@ -35,7 +35,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-    background: #fff;
+    background: #817f7f;
     border-radius: 5rem;
 }
 
@@ -87,7 +87,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #d3ad7f;
+    color: aqua;
 }
 
 .sub-menu-wrap {
@@ -388,7 +388,7 @@ footer .underline span {
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
-    margin-top: 300px;
+    margin-top: 400px;
     z-index: 1;
 }
 
@@ -611,7 +611,7 @@ footer .underline span {
     z-index: 1000;
     visibility: hidden;
     transition: transform 0.6s, top 0.4s;
-    margin-top: 200px;
+    margin-top: 350px;
 }
 
 .open-popup {
@@ -848,16 +848,16 @@ form .btn button:hover {
     justify-content: center;
 }
 .message .success{
-    font-size: 15px;
-    font-weight: 500;
-    color: rgb(9, 237, 9);
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(44, 234, 44);
     position: absolute;
     animation: buttons .3s linear;
     display: none;
 }
 .message .danger{
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: bold;
     color: rgb(255, 34, 34);
     position: absolute;
     transition: .3s;
@@ -878,51 +878,3 @@ form .btn button:hover {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-.message 
-{
-    width: 100%;
-    position: relative;
-    padding-top: 35px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-}
-.message .success{
-    font-size: 15px;
-    font-weight: 500;
-    color: green;
-    position: absolute;
-    animation: buttons .3s linear;
-    display: none;
-}
-.message .danger{
-    font-size: 15px;
-    font-weight: 500;
-    color: red;
-    position: absolute;
-    transition: .3s;
-    animation: buttons .3s linear;
-    display: none;
-}
-
-@keyframes buttons{
-    0%{
-        transform: scale(0.1);
-    }
-    50%{
-        transform: scale(0.1);
-    }
-    100%{
-        transform: scale(1);
-    }
-}

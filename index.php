@@ -70,6 +70,9 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                         <a href="#About" class="nav-link">About Us</a>
                     </li>
                     <li class="nav-item">
+                        <a href="blog.html" class="nav-link">Blogs</a>
+                    </li>
+                    <li class="nav-item">
                         <a href="#Help" class="nav-link">Help</a>
                     </li>
                 </ul>
@@ -177,17 +180,14 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                                     <p class="para">
                                         At MamaJaba, sustainability is at the core of everything we do. We're committed
                                         to reducing our carbon footprint by implementing eco-friendly practices
-                                        throughout our operations. From investing in fuel-efficient vehicles to
-                                        exploring renewable energy sources, we're dedicated to preserving the
-                                        environment for future generations.
+                                        throughout our operations.
                                     </p>
                                 </div>
                                 <div class="content">
                                     <h1 class="text-white">Your Safety Drives Us</h1>
                                     <p class="para">Your safety is our top priority. That's why we've implemented
                                         rigorous safety measures to ensure you feel secure every time you ride with
-                                        MamaJaba. From thorough driver background checks to regular vehicle inspections,
-                                        we leave no stone unturned when it comes to keeping you safe on the road.
+                                        MamaJaba.
                                     </p>
                                 </div>
                             </div>
@@ -198,20 +198,17 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                                     <h1 class="text-white">Rides and Beyond</h1>
                                     <p class="para">
                                         Our commitment to excellence extends beyond providing rides. We're constantly
-                                        innovating to enhance your overall experience with MamaJaba. Whether it's
-                                        introducing new features to our app or expanding our service offerings, we're
-                                        always striving to exceed your expectations and make your journey with us
-                                        unforgettable.
+                                        innovating to enhance your overall experience with MamaJaba.
                                     </p>
                                 </div>
                                 <div class="content">
                                     <h1 class="text-white">Company Info</h1>
                                     <p class="para">
-                                        MamaJaba is more than just a transportation company; we're a community. Founded
-                                        in 2024, we've quickly grown to become a trusted name in the industry, thanks to
-                                        our unwavering commitment to customer satisfaction and social responsibility.
-                                        Learn more about our mission, vision, and values.
+                                        MamaJaba is more than just a transportation company; we're a community.
                                     </p>
+                                    <a href="about1.html">
+                                        <button style="background-color:aqua; color:black; margin-top:10px; font-size:20px; margin-left:400px">See more</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -484,7 +481,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
         // Show the support popup after a delay
         setTimeout(function () {
             document.getElementById('supportPopup').style.display = 'block';
-        }, 8000); // 8 seconds delay
+        }, 15000); // 8 seconds delay
     </script>
 </body>
 

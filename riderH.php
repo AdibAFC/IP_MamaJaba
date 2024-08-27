@@ -51,11 +51,11 @@ if(!file_exists($profile_image))$profile_image=$default;
                 <div id="notifications" class="notifications hidden"></div>
                 <p id="rid" value="<?php echo json_encode($rider_id); ?>" style="display:none;"></p>
             </li>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACTS</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="about1.html">About</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
             <li>
-                    <a href="#" class="review-btn" onclick="openPopup()">RATE US
+                    <a href="#" class="review-btn" onclick="openPopup()">Rate Us
 
                 </a>
                 <!-- <button class="review-btn" onclick="openPopup()">Rate Us</button> -->
@@ -109,12 +109,12 @@ if(!file_exists($profile_image))$profile_image=$default;
                     <p>Edit Profile</p>
                     <span>></span>
                 </a>
-                <a href="#" class="sub-menu-link">
+                <a href="terms.html" class="sub-menu-link">
                     <i class="fa-solid fa-gear"></i>
                     <p>Settings & Privacy</p>
                     <span>></span>
                 </a>
-                <a href="#" class="sub-menu-link">
+                <a href="contactUs.html" class="sub-menu-link">
                     <i class="fa-solid fa-circle-question"></i>
                     <p>Help & Support</p>
                     <span>></span>

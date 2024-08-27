@@ -48,7 +48,7 @@ if (!file_exists($profile_image)) {
 </head>
 <body>
     <div class="container light-style flex-grow-1 container-p-y">
-        <h4 class="font-weight-bold py-3 mb-4">
+        <h4 class="font-weight-bold py-3 mb-4" style="margin-top: 100px; font-weight:bold">
             Account settings
         </h4>
         <form action="updateProfile.php" method="POST" enctype="multipart/form-data">
@@ -188,7 +188,9 @@ if (!file_exists($profile_image)) {
                 <!-- <button class="ac" onclick="showToast(acceptMsg)">Accept</button>
                 <button class="dc" onclick="showToast(declineMsg)">Decline</button> -->
                 <button type="submit" class="btn btn-primary">Save changes</button>&nbsp;
+                <a href="riderH.php">
                 <button type="button" class="btn btn-default">Cancel</button>
+                </a>
             </div>
             
         </form>

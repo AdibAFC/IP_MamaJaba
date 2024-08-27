@@ -507,11 +507,11 @@ span.text {
   box-shadow: 0 5px 10px #a26a7f;
 }
 
-.review #next {
+.review #prev {
   left: 450px;
 }
 
-.review #prev {
+.review #next {
   right: 450px;
 }
 
@@ -1051,7 +1051,11 @@ section {
     transition: .5s;
     text-transform: capitalize;
 }
-
+.submit-btn{
+  background-color: #26B4FF;
+  font-weight: 500;
+  font-size: large;
+}
 .form input::placeholder{
     color: #fff;
 }
@@ -1208,9 +1212,7 @@ label.btn {
 }
 
 
-
-
-#chartContainer {
+#dat {
   margin-top: 250px;
   text-align: center;
   padding-left: 210px;
@@ -1243,37 +1245,6 @@ canvas {
 }
 
 
-
-#chartContainer {
-  text-align: center;
-  padding-left: 210px;
-}
-canvas {
-  max-width: 80%;
-  max-height: 350px;
-}
-.chart{
-  justify-content: center;
-  margin-right: 200px;
-}
-.chart button {
-  align-items: first baseline;
-  gap: 10px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #fff;
-  background-color: transparent;
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 5px;
-  transition: all 0.3s;
-  cursor: pointer;
-  margin: 15px;
-}
-.chart button:hover{
-  color: #ffffff !important;
-  background-color: #787171;
-}
 
 .date {
   text-align: right;

@@ -1,26 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&family=Righteous&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
 body {
-    padding: 0%;
-    margin: 0%;
-    font-family: 'Lato';
-    overflow-x: hidden;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background: #0d1b2a;
+    line-height: 1.6;
+    color: #333;
 }
 
-.navbar{
+.navbar {
     color: #fff;
     background-color: #242224;
     padding-left: 40px;
     width: 100%;
 }
+
 .navbar.fixed-top {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1030; /* Ensure it appears above other content */
+    z-index: 1030;
+    /* Ensure it appears above other content */
 }
+
 .navbar-brand {
     font-family: 'Comic Sans MS', cursive;
     font-size: 35px;
@@ -32,11 +34,13 @@ body {
     font-size: 16px;
     margin: 15px;
     color: rgb(255, 255, 255) !important;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
 }
 
 .nav-link:hover {
     color: aqua !important;
+    text-decoration: none;
 }
 
 .active .nav-link {
@@ -73,7 +77,7 @@ body {
     border: 2px solid aqua;
 }
 
-.border-btn1:after{
+.border-btn1:after {
     content: "";
     position: absolute;
     top: 0;
@@ -85,14 +89,17 @@ body {
     color: #0f0e0e;
     background-color: rgb(255, 255, 255);
 }
+
 .border-btn1:hover {
     color: rgb(46, 48, 48);
-    
+
 }
-.border-btn1:hover::after{
+
+.border-btn1:hover::after {
     width: 100%;
 }
-.border-btn2:after{
+
+.border-btn2:after {
     content: "";
     position: absolute;
     top: 0;
@@ -104,11 +111,13 @@ body {
     color: #0f0e0e;
     background-color: rgb(255, 255, 255);
 }
+
 .border-btn2:hover {
     color: rgb(46, 48, 48);
-     
+
 }
-.border-btn2:hover::after{
+
+.border-btn2:hover::after {
     width: 100%;
 }
 
@@ -164,6 +173,7 @@ button {
     cursor: pointer;
     background: #000;
     color: #fff;
+    text-decoration: none;
 }
 
 #closePopup {
@@ -174,6 +184,7 @@ button {
 
 button:hover {
     background-color: #555353;
+    text-decoration: none;
 }
 
 .riderBtnpop {
@@ -190,121 +201,50 @@ button:hover {
     }
 }
 
-
 .container {
-    background: #0d1b2a;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 50px auto;
     padding: 60px;
-    margin-bottom: 50px;
-    margin-top: 160px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
 }
 
-.left-section {
-    background: #0d1b2a;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.left-section h3 {
-    padding-top: 35px;
-    margin-bottom: 38px;
-    font-size: 33px;
-}
-
-.left-section ul {
-    padding-left: 0px;
-}
-
-.left-section ul li {
-    margin-bottom: 24px;
-    display: flex;
-    font-size: 18px;
-    align-items: center;
-}
-
-.left-section ul li i {
-    margin-right: 16px;
-}
-
-.left-section .social-icons {
-    display: flex;
-    justify-content: flex-start;
-    gap: 45px;
-    margin-bottom: 21px;
-}
-
-.left-section .social-icons a {
-    color: white;
-    font-size: 22px;
-}
-
-.right-section {
-    background-color: #006494;
-    padding: 45px;
-    border-radius: 10px;
-    color: rgb(240, 239, 239);
-}
-
-.right-section h3 {
+h1 {
+    text-align: center;
+    color: #444;
     margin-bottom: 20px;
+    font-size: 2.2em;
 }
 
-.right-section .form-group {
+h2 {
+    color: #555;
+    margin-top: 30px;
     margin-bottom: 15px;
+    font-size: 1.5em;
 }
 
-.right-section .btn {
-    margin-left: 150px;
-    margin-right: 20px;
-    /* transition: 0.3s, color 0.3s; */
-    background-color: #071820;
-    color: white;
-
+p {
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: #666;
 }
 
-.right-section .btn {
-    background-color: #467d99;
-    color: white;
+ul {
+    margin-bottom: 15px;
+    padding-left: 20px;
 }
 
-.support-popup {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 400px;
-    background: linear-gradient(180deg, #280835, #48145d, #5a1a82, #682493, #835c9f);
-    color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    display: none;
+li {
+    margin-bottom: 10px;
 }
 
-.support-popup .popup-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+a {
+    color: #007bff;
+    text-decoration: none;
 }
 
-.support-popup .popup-header h5 {
-    margin: 0;
-}
-
-.support-popup .popup-header .close-popup {
-    cursor: pointer;
-}
-
-.support-popup .popup-content-support {
-    margin-top: 10px;
-}
-
-.support-popup .popup-content-support .btn-donate {
-    background-color: #ff66b2;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+a:hover {
+    text-decoration: underline;
 }
