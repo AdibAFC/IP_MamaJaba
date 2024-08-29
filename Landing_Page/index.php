@@ -164,7 +164,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 
 
 
-        <div class="section-2" id="About">
+<!--         <div class="section-2" id="About">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 text-center">
@@ -212,6 +212,103 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+<!--         new about -->
+        
+        <div id="page" class="site">
+            <div class="contain">
+                <div class="testi">
+                    <div class="head">
+                        <h1>About Us</h1>
+                        <p>See what we bring to the table..</p>
+                    </div>
+                    <div class="body swiper">
+
+                        <div class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbnail">
+                                        <img src="con8.jpg" alt="">
+                                    </div>
+                                    <div class="aside">
+                                        <div class="name">
+                                            <h1>Sustainability</h1>
+
+                                        </div>
+                                        <p>At MamaJaba, sustainability is at the core of everything we do. We're
+                                            committed
+                                            to reducing our carbon footprint by implementing eco-friendly practices
+                                            throughout our operations.</p>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbnail">
+                                        <img src="con5.jpg" alt="">
+                                    </div>
+                                    <div class="aside">
+                                        <div class="name">
+                                            <h1>Your Safety Drives Us</h1>
+
+                                        </div>
+                                        <p>Your safety is our top priority. That's why we've implemented
+                                            rigorous safety measures to ensure you feel secure every time you ride with
+                                            MamaJaba.</p>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbnail">
+                                        <img src="con6.jpg" alt="">
+                                    </div>
+                                    <div class="aside">
+                                        <div class="name">
+                                            <h1>Rides and Beyond</h1>
+
+                                        </div>
+                                        <p>Our commitment to excellence extends beyond providing rides. We're constantly
+                                            innovating to enhance your overall experience with MamaJaba.</p>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide">
+                                <div class="wrapper">
+                                    <div class="thumbnail">
+                                        <img src="con4.jpg" alt="">
+                                    </div>
+                                    <div class="aside">
+                                        <div class="name">
+                                            <h1>Company Info</h1>
+
+                                        </div>
+                                        <p> MamaJaba is more than just a transportation company; we're a community.
+                                        <div class="aboutus">
+                                            <a href="../About_Us/about1.html">
+                                                
+                                                <button type="button">Read More</button>
+                                            </a>
+                                        </div>
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Add more slides as needed -->
+                        </div>
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                 </div>
             </div>
