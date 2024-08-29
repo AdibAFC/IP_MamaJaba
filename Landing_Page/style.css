@@ -290,60 +290,69 @@ body {
 
 /* new about */
 /* about section  */
-.site{
-    height:100vh;
+.site {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: -100px;
 }
-.contain{
-    max-width: 1100px;
+
+.contain {
+    max-width: 1300px;
     width: 100%;
-    padding: 0 30px;
+    padding: 0 50px;
     margin: 0 auto;
 }
-.testi{
+.testi {
     max-width: 900px;
     margin: 0 auto;
 }
-.testi .head{
+
+.testi .head {
     text-align: center;
     margin-bottom: 40px;
 }
-.testi .head h1{
+
+.testi .head h1 {
     font-size: 34px;
     font-weight: 800;
 }
-.testi .head p{
+
+.testi .head p {
     font-size: 20px;
-    
 }
-.testi .wrapper{
+
+/* Wrapper adjusted for side-by-side alignment */
+.testi .wrapper {
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 60px;
     padding: 30px 0;
+    flex-direction: row; /* Ensure items are side by side */
 }
-.testi .thumbnail{
-    width: 350px; /* Increase the width */
+
+.testi .thumbnail {
+    width: 350px; /* Adjust width as needed */
     height: 400px;
     position: relative;
     flex-shrink: 0;
 }
-.testi .thumbnail img{
+
+.testi .thumbnail img {
     object-fit: cover;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    transform: scale(2.5);
+    transform: scale(2.5); /* Reduced scale */
     transition: transform .5s;
 }
-.testi .swiper-slide-active .thumbnail img{
-    transform: scale(1.2);
+
+.testi .swiper-slide-active .thumbnail img {
+    transform: scale(1); /* Original scale on active slide */
 }
-.testi .thumbnail::before{
+
+.testi .thumbnail::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -356,21 +365,21 @@ body {
     box-shadow: var(--box-shadow);
     transition: border-radius .5s .3s;
 }
-.testi .swiper-slide-active .thumbnail::before{
+
+.testi .swiper-slide-active .thumbnail::before {
     border-radius: 33% 67% 50% 50% / 50% 14% 86% 50%;
 }
-.testi .aside{
-    /* margin-top: -500px; */
-    position: relative;
-    padding-top: -150px;
-    margin-left: 20px;
+
+/* Aside class for text alignment */
+.testi .aside {
     display: flex;
     flex-direction: column;
-    align-self: flex-end;
+    justify-content: center;
+    text-align: left; /* Align text to the left */
+    flex-grow: 1; /* Allow text to take up remaining space */
 }
-.testi .aside > p{
-    
-    position: relative;
+
+.testi .aside > p {
     font-size: 20px;
     line-height: normal;
     margin-bottom: 30px;
@@ -379,41 +388,32 @@ body {
     transform: translateX(10%);
     transition: transform 1s, opacity 1s;
 }
-.testi .swiper-slide-active .aside > p{
+
+.testi .swiper-slide-active .aside > p {
     transform: translateX(0);
     opacity: 1;
 }
-.testi .aside > p::before,
-.testi .aside > p::after{
-    font-family: serif;
-    font-size: 90px;
-    font-weight: 800;
-    line-height: 1;
-    position: absolute;
-    color: var(--light-color);
-    height: 40px;
-    z-index: 1;
-}
-.testi .aside .name{
-    position: relative;
-    width: fit-content;
+
+.testi .aside .name {
     line-height: 1;
     opacity: 0;
-    margin-left: 50px;
-    transform: translateX(30px);
+    margin-left: 0;
+    transform: translateX(0);
     transition: transform 1s .2s, opacity 1s .3s;
 }
-.testi .swiper-slide-active .name{
+
+.testi .swiper-slide-active .name {
     opacity: 1;
-    transform: translateX(0);
 }
-.testi .aside .name h1{
+
+.testi .aside .name h1 {
     font-size: 24px;
     font-weight: 800;
     color: var(--primary-color);
     opacity: .8;
 }
-.testi .aside .aboutus button{
+
+.testi .aside .aboutus button {
     background-color: rgb(255, 238, 1);
     color: #000;
     font-size: 16px;
@@ -424,7 +424,8 @@ body {
     text-decoration: none;
     transition: all 300ms ease-in;
 }
-.testi :is(.swiper-button-next, .swiper-button-prev){
+
+.testi :is(.swiper-button-next, .swiper-button-prev) {
     background-color: var(--light-color);
     top: 35%;
     width: 38px;
@@ -433,43 +434,56 @@ body {
     transition: background-color .3s;
     box-shadow: var(--box-shadow);
 }
-.testi :is(.swiper-button-next, .swiper-button-prev)::after{
+
+.testi :is(.swiper-button-next, .swiper-button-prev)::after {
     font-size: 16px;
     font-weight: 800;
     color: var(--white-color);
 }
-.testi :is(.swiper-button-next, .swiper-button-prev):hover{
-    background-color: var(--primary-color) ;
+
+.testi .swiper-button-prev {
+    left: -10px; /* Move the previous button further to the left */
 }
-.testi .swiper-pagination{
+
+.testi .swiper-button-next {
+    right: -10px; /* Move the next button further to the right */
+}
+
+.testi :is(.swiper-button-next, .swiper-button-prev):hover {
+    background-color: var(--primary-color);
+}
+.testi .swiper-pagination {
     position: relative;
 }
-.testi .swiper-pagination span{
+
+.testi .swiper-pagination span {
     background-color: var(--light-color);
     transition: width .3s;
     opacity: 1;
 }
-.testi .swiper-pagination .swiper-pagination-bullet-active{
+
+.testi .swiper-pagination .swiper-pagination-bullet-active {
     width: 26px;
     border-radius: 4px;
     background-color: var(--primary-color);
 }
-@media screen and (max-width:768px){
-    .testi .wrapper{
-        flex-direction: row;
-        padding: 30px 100px;
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .testi .wrapper {
+        flex-direction: column; /* Stack items vertically on smaller screens */
     }
-    .testi .thumbnail{
+
+    .testi .thumbnail {
         width: 200px;
         height: 200px;
     }
-    .testi :is(.swiper-button-next, .swiper-button-prev){
-        top: 50%;
-    }
-    .testi .swiper-slide-active .name{
-        transform: translateX(-50px);
+
+    .testi .aside {
+        text-align: center; /* Center text on smaller screens */
     }
 }
+
 
 .section-1 .heading-1 {
     margin-top: 8%;
