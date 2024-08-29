@@ -235,7 +235,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                             <li class="swiper-slide">
                                 <div class="wrapper">
                                     <div class="thumbnail">
-                                        <img src="con8.jpg" alt="">
+                                        <img src="../images/con8.jpg" alt="">
                                     </div>
                                     <div class="aside">
                                         <div class="name">
@@ -253,7 +253,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                             <li class="swiper-slide">
                                 <div class="wrapper">
                                     <div class="thumbnail">
-                                        <img src="con5.jpg" alt="">
+                                        <img src="../images/con5.jpg" alt="">
                                     </div>
                                     <div class="aside">
                                         <div class="name">
@@ -270,7 +270,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                             <li class="swiper-slide">
                                 <div class="wrapper">
                                     <div class="thumbnail">
-                                        <img src="con6.jpg" alt="">
+                                        <img src="../images/con6.jpg" alt="">
                                     </div>
                                     <div class="aside">
                                         <div class="name">
@@ -286,7 +286,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                             <li class="swiper-slide">
                                 <div class="wrapper">
                                     <div class="thumbnail">
-                                        <img src="con4.jpg" alt="">
+                                        <img src="../images/con4.jpg" alt="">
                                     </div>
                                     <div class="aside">
                                         <div class="name">
