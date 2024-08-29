@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="rider_signup.css">
+  <!-- For Browsers -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <!-- For High-Resolution Displays -->
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon_io/android-chrome-192x192.png">
+  <!-- For Apple Devices -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+  <!-- Standard Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+  <title>Sign up Form</title>
+</head>
+
+<body>
+  <div class="container" id="home">
+    <div class="login-left">
+      <div class="login-header">
+        <h1>Welcome</h1>
+        <p>Don't have an account? Sign Up Free...</p>
+      </div>
+      <form action="../Sign_up/rider_signup.php" class="login-form" autocomplete="off" method="POST">
+        <div class="login-content">
+          <div class="form-item">
+            <label for="text"> Name: </label>
+            <br>
+            <input type="text" placeholder="Shiti Chowdhury" name="fname">
+          </div>
+          <div class="form-item">
+            <label for="email">CUET Email: </label>
+            <br>
+            <input type="email" name="email" id="" placeholder="example@email.com">
+          </div>
+          <div class="form-item">
+            <label for="tel"> Contact no: </label>
+            <br>
+            <input type="tel" name="phone" id="" placeholder="0123456789">
+          </div>
+          <div class="form-item">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="12345" required class="pass-key">
+            <img src="../Sign_up/images/eye-close.png" class="password-toggle" data-target="password">
+          </div>
+          <div class="form-item">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" name="confirm_password" id="confirm-password" placeholder="12345" required
+              class="pass-key">
+            <img src="../Sign_up/images/eye-close.png" class="password-toggle" data-target="confirm-password">
+          </div>
+          <div class="bg-grey">
+            <div class="sign-up">Already have an account? <a href="../Login/login.html" class="text-link" id="sign-up"><u>Login</u></a>
+            </div>
+          </div>
+          <button type="submit">SIGN UP</button>
+        </div>
+      </form>
+    </div>
+    <div class="login-right">
+      <img src="../Sign_up/images/registration.gif" width="400px" height="500px">
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script>
+    // Toggle password visibility
+    document.querySelectorAll('.password-toggle').forEach(function (icon) {
+      icon.addEventListener('click', function () {
+        var targetId = this.getAttribute('data-target');
+        var passwordField = document.getElementById(targetId);
+
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+          this.src = "images/eye-open.png";
+        } else {
+          passwordField.type = "password";
+          this.src = "images/eye-close.png";
+        }
+      });
+    });
+
+    // GSAP animations
+    gsap.from(".login-header h1", { duration: 1, x: -100, opacity: 0, ease: "power2.out" });
+    gsap.from(".login-header p", { duration: 1, delay: 0.5, x: -100, opacity: 0, ease: "power2.out" });
+    gsap.from(".login-form .form-item", { duration: 1, delay: 1, y: 50, opacity: 0, stagger: 0.2, ease: "power2.out" });
+    gsap.from(".bg-grey", { duration: 1, delay: 1.5, y: 50, opacity: 0, ease: "power2.out" });
+    gsap.from("button", { duration: 1, delay: 2, y: 50, opacity: 0, ease: "power2.out" });
+    gsap.from(".login-right img", { duration: 1, delay: 1, scale: 0.8, opacity: 0, ease: "power2.out" });
+  </script>
+</body>
+
+</html>

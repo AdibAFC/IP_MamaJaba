@@ -1,0 +1,250 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0d1b2a;
+    line-height: 1.6;
+    color: #333;
+}
+
+.navbar {
+    color: #fff;
+    background-color: #242224;
+    padding-left: 40px;
+    width: 100%;
+}
+
+.navbar.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    /* Ensure it appears above other content */
+}
+
+.navbar-brand {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 35px;
+    color: aqua !important;
+    margin-left: 40px;
+}
+
+.nav-link {
+    font-size: 16px;
+    margin: 15px;
+    color: rgb(255, 255, 255) !important;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: aqua !important;
+    text-decoration: none;
+}
+
+.active .nav-link {
+    color: aqua !important;
+}
+
+.navbar-nav {
+    padding-right: 110px;
+    padding-left: 90px;
+}
+
+.form-inline {
+    margin-left: 120px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 3rem;
+    transition: background-color 300ms ease-in;
+}
+
+.menu-right-btn {
+    padding: 10px 20px;
+    background-color: #0f0e0e;
+    color: #fff;
+    transition: all 300ms ease-in;
+    font-weight: bold;
+    border-radius: 3rem;
+    width: 100px;
+    position: relative;
+    background: none;
+    /* outline: none; */
+    overflow: hidden;
+    transition: all 0.3s;
+    z-index: 100;
+    border: 2px solid aqua;
+}
+
+.border-btn1:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.3s;
+    color: #0f0e0e;
+    background-color: rgb(255, 255, 255);
+}
+
+.border-btn1:hover {
+    color: rgb(46, 48, 48);
+
+}
+
+.border-btn1:hover::after {
+    width: 100%;
+}
+
+.border-btn2:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.3s;
+    color: #0f0e0e;
+    background-color: rgb(255, 255, 255);
+}
+
+.border-btn2:hover {
+    color: rgb(46, 48, 48);
+
+}
+
+.border-btn2:hover::after {
+    width: 100%;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    background-color: rgba(33, 31, 46, 0.5);
+}
+
+.popup-content {
+    background-color: #ffffff;
+    width: 300px;
+    margin: 20% auto;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.options {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.options a {
+    color: #fff;
+    text-decoration: none;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+#closePopup {
+    margin-top: 20px;
+    background-color: #ea2020;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #555353;
+    text-decoration: none;
+}
+
+.riderBtnpop {
+    margin-bottom: 500px;
+}
+
+@keyframes moving {
+    0% {
+        left: -20px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 60px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+}
+
+h2 {
+    color: #555;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: #666;
+}
+
+ul {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

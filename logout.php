@@ -2,6 +2,6 @@
 session_start();
 session_unset();
 session_destroy();
-header('Location: index.php');
+header('Location: ../IP_MamaJaba/Landing_Page/index.php');
 exit;
 ?>

@@ -1,0 +1,64 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background: url('../Sign_up/images/home_bg1.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    margin-left: 500px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    margin-bottom: 80px;
+}
+
+.text-center {
+    color: #fff;
+}
+
+.form-label {
+    color: #fff;
+}
+
+.form-control {
+    background-color: transparent;
+    color: #fff;
+    border-radius: 0.25rem;
+    border: 1px solid #fff;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+}
+
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    color: #fff;
+    border: 1px solid #0056b3;
+}
+
+.form-check-label {
+    color: #fff;
+}
