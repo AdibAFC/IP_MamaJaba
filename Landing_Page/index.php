@@ -38,6 +38,9 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+<!--     swiper link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 
 <body>
@@ -579,6 +582,34 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
         setTimeout(function () {
             document.getElementById('supportPopup').style.display = 'block';
         }, 15000); // 8 seconds delay
+    </script>
+<!--     swiper js -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+       
+        document.addEventListener('DOMContentLoaded', () => {
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: true,
+                speed: 400,
+                // autoplay: true,
+                autoplay: {
+                    delay: 3000, // 3 seconds
+                },
+                parallax: true,
+
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                }
+            });
+        });
+
     </script>
 </body>
 
