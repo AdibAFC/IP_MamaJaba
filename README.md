@@ -48,7 +48,7 @@ After setting up the project as described in the [Installation and Running Instr
 
 ### For Drivers
 1. **Register/Log In:**
-   - Navigate to the login page at `http://localhost/IP_MamaJaba/login.php`.
+   - Navigate to the login page.
    - If you are a new driver, click on "Sign Up" to create an account. Provide necessary driver details and submit the form.
    - Existing drivers can log in using their credentials.
 
@@ -63,8 +63,8 @@ Here are some screenshots to guide you through the application:
 - ![Landing Page 2](screenshots/landing2.jpg)
 - ![Landing Page 3](screenshots/landing3.jpg)
 - ![Landing Page 4](screenshots/landing4.jpg)
-- **Login Page** ![login page](screenshots/login.jpg)
--  **Signin Page** ![Signin page](screenshots/signin.jpg)
+ **Login Page** ![Login Page](screenshots/login.jpg)
+- **SignIn Page** ![SignIn Page](screenshots/signin.jpg)
 - **Rider’s Request Page:** ![Rider’s Request Page](screenshots/rider.jpg)
 - **Driver’s Dashboard:** ![Driver’s Dashboard](screenshots/driver.jpg)
 
