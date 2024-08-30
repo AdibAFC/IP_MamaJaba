@@ -9,28 +9,26 @@ MamaJaba is designed to address transportation challenges at CUET by offering an
 
 ## Tech Stack
 - **Frontend**: 
-  ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat)
-  ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat)
-  ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat)
-  ![Bootstrap](https://img.shields.io/badge/-Bootstrap-563D7C?logo=bootstrap&logoColor=white&style=flat)
-  ![Swiper](https://img.shields.io/badge/Swiper-%236332F6?style=for-the-badge&logo=Swiper
-)
-  ![Jquery](https://img.shields.io/badge/Jquery-%230769AD?style=for-the-badge&logo=Jquery
-)
-  ![GSAP](https://img.shields.io/badge/GSAP-%2310EA45?style=for-the-badge&logo=GSAP
-) 
- ![Canva](https://img.shields.io/badge/Canva-%2300C4CC?style=for-the-badge&logo=Canva&labelColor=black
-)
+  ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=for-the-badge)
+  ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=for-the-badge)
+  ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=for-the-badge)
+  ![Bootstrap](https://img.shields.io/badge/-Bootstrap-563D7C?logo=bootstrap&logoColor=white&style=for-the-badge)
+  ![Swiper](https://img.shields.io/badge/Swiper-%236332F6?style=for-the-badge&logo=Swiper)
+  ![Jquery](https://img.shields.io/badge/Jquery-%230769AD?style=for-the-badge&logo=Jquery)
+  ![GSAP](https://img.shields.io/badge/GSAP-%2310EA45?style=for-the-badge&logo=GSAP)
+  ![Canva](https://img.shields.io/badge/Canva-%2300C4CC?style=for-the-badge&logo=Canva&labelColor=black)
+  
 - **Backend**: 
-  ![PHP](https://img.shields.io/badge/-PHP-777BB4?logo=php&logoColor=white&style=flat)
-  ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?logo=mysql&logoColor=white&style=flat)
+  ![PHP](https://img.shields.io/badge/-PHP-777BB4?logo=php&logoColor=white&style=for-the-badge)
+  ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?logo=mysql&logoColor=white&style=for-the-badge)
 
 - **Environment**: 
-  ![XAMPP](https://img.shields.io/badge/-XAMPP-FB7A24?logo=xampp&logoColor=white&style=flat)
+  ![XAMPP](https://img.shields.io/badge/-XAMPP-FB7A24?logo=xampp&logoColor=white&style=for-the-badge)
 
 - **Data Handling**: 
-  ![JSON](https://img.shields.io/badge/-JSON-000000?logo=json&logoColor=white&style=flat)
-  ![AJAX](https://img.shields.io/badge/-AJAX-4B8BBE?logo=ajax&logoColor=white&style=flat)
+  ![JSON](https://img.shields.io/badge/-JSON-000000?logo=json&logoColor=white&style=for-the-badge)
+  ![AJAX](https://img.shields.io/badge/-AJAX-4B8BBE?logo=ajax&logoColor=white&style=for-the-badge)
+
 
 ## Features
 
