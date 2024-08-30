@@ -60,8 +60,13 @@ After setting up the project as described in the [Installation and Running Instr
 Here are some screenshots to guide you through the application:
 
 - **Landing Page:** ![Landing Page](screenshots/landing1.jpg)
-- **Driver’s Dashboard:** ![Driver’s Dashboard](docs/screenshots/drivers_dashboard.png)
-- **Rider’s Request Page:** ![Rider’s Request Page](docs/screenshots/riders_request_page.png)
+- ![Landing Page 2](screenshots/landing2.jpg)
+- ![Landing Page 3](screenshots/landing3.jpg)
+- ![Landing Page 4](screenshots/landing4.jpg)
+- **Login Page** ![login page](screenshots/login.jpg)
+-  **Signin Page** ![Signin page](screenshots/signin.jpg)
+- **Rider’s Request Page:** ![Rider’s Request Page](screenshots/rider.jpg)
+- **Driver’s Dashboard:** ![Driver’s Dashboard](screenshots/driver.jpg)
 
 ## Contact
 For any inquiries or contributions, feel free to reach out:
