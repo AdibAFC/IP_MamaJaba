@@ -1,5 +1,5 @@
 [# IP_MamaJaba](https://adibafc.github.io/IP_MamaJaba/)
-*** * * * ***
+
 ### Project's Title
 
 MamaJaba Rickshaw Ride-Calling Website
