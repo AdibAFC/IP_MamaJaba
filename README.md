@@ -93,7 +93,7 @@ Here are some screenshots to guide you through the application:
 # Contact
 For any inquiries or contributions, feel free to reach out:
 - **GitHub**:
--  https://github.com/AdibAFC
+- https://github.com/AdibAFC
 - https://github.com/PrithS24
 - https://github.com/SHITICHY21
 
