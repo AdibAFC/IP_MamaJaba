@@ -66,7 +66,7 @@ After setting up the project, you can start using the MamaJaba Rickshaw Ride-Cal
 
 2. **Manage Users:**
    - Go to the "Admin Dashboard" section to view and manage both riders and drivers.
-   - You can add, edit, or remove users as needed.
+   - You can view or remove users as needed.
 
 # Screenshots
 
