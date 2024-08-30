@@ -1,15 +1,15 @@
 [# IP_MamaJaba](https://adibafc.github.io/IP_MamaJaba/)
 
 
-# Project's Title
+## Project's Title
 
 MamaJaba Rickshaw Ride-Calling Website
 
-# Project Description
+## Project Description
 
 MamaJaba is designed to address transportation challenges at CUET by offering an efficient platform for rickshaw rides.
 
-# Tech Stack
+## Tech Stack
 - **Frontend**: 
   ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat)
   ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat)
