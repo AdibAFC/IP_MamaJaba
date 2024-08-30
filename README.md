@@ -58,7 +58,7 @@ After setting up the project, you can start using the MamaJaba Rickshaw Ride-Cal
 2. **View Ride Requests:**
    - After logging in, go to the "Available Rides" page.
    - View the list of ride requests from riders. You can accept or decline requests based on your availability.
-   - 
+   
 ### For Admins
 1. **Log In:**
    - Navigate to the admin login page.
@@ -76,12 +76,16 @@ Here are some screenshots to guide you through the application:
 - ![Landing Page 2](screenshots/landing2.jpg)
 - ![Landing Page 3](screenshots/landing3.jpg)
 - ![Landing Page 4](screenshots/landing4.jpg)
+  &nbsp;
  **Login Page** ![Login Page](screenshots/login.jpg)
+&nbsp;
 - **SignIn Page** ![SignIn Page](screenshots/signin.jpg)
+  &nbsp;
 - **Rider’s Request Page:** ![Rider’s Request Page](screenshots/rider.jpg)
+- &nbsp;
 - **Driver’s Dashboard:** ![Driver’s Dashboard](screenshots/driver.jpg)
-- - **Admin’s Dashboard:** ![Admin’s Dashboard 1](screenshots/admin1.jpg)
-  - ![Admin’s Dashboard 2](screenshots/admin2.jpg)
+- **Admin’s Dashboard:** ![Admin’s Dashboard 1](screenshots/admin1.jpg)
+- ![Admin’s Dashboard 2](screenshots/admin2.jpg)
 
 # Contact
 For any inquiries or contributions, feel free to reach out:
