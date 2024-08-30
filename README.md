@@ -29,9 +29,7 @@ MamaJaba is designed to address transportation challenges at CUET by offering an
   ![JSON](https://img.shields.io/badge/-JSON-000000?logo=json&logoColor=white&style=for-the-badge)
   ![AJAX](https://img.shields.io/badge/-AJAX-4B8BBE?logo=ajax&logoColor=white&style=for-the-badge)
 
-
 # Features
-
 - **Real-time Ride Requests**
 - **User Roles**
 - **Secure Login**
@@ -60,7 +58,6 @@ After setting up the project, you can start using the MamaJaba Rickshaw Ride-Cal
 2. **View Ride Requests:**
    - After logging in, go to the "Available Rides" page.
    - View the list of ride requests from riders. You can accept or decline requests based on your availability.
-  
    - 
 ### For Admins
 1. **Log In:**
@@ -87,14 +84,13 @@ Here are some screenshots to guide you through the application:
   - ![Admin’s Dashboard 2](screenshots/admin2.jpg)
 
 # Contact
-
 For any inquiries or contributions, feel free to reach out:
-- **GitHub**: https://github.com/AdibAFC
+- **GitHub**:
+-  https://github.com/AdibAFC
 - https://github.com/PrithS24
 - https://github.com/SHITICHY21
 
 # Contributing
-
 Contributions are welcome! To contribute:
 
 - Fork the repository.
