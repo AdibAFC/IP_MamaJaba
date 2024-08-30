@@ -1,5 +1,6 @@
 [# IP_MamaJaba](https://adibafc.github.io/IP_MamaJaba/)
 
+
 ### Project's Title
 
 MamaJaba Rickshaw Ride-Calling Website
@@ -36,7 +37,7 @@ MamaJaba is designed to address transportation challenges at CUET by offering an
 ### Usage
 After setting up the project, you can start using the MamaJaba Rickshaw Ride-Calling Website. Below are instructions for each user role:
 
-### For Riders
+# For Riders
 1. **Register/Log In:**
    - Navigate to the login page.
    - If you are a new user, click on "Sign Up" to create an account. Fill in the required details and submit the form.
@@ -47,7 +48,7 @@ After setting up the project, you can start using the MamaJaba Rickshaw Ride-Cal
    - Enter your current location and destination.
    - Click on "Request Ride" to submit your request.
 
-### For Drivers
+#  For Drivers
 1. **Register/Log In:**
    - Navigate to the login page.
    - If you are a new driver, click on "Sign Up" to create an account. Provide necessary driver details and submit the form.
