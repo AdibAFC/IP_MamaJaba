@@ -2,11 +2,9 @@
 
 
 ## Project's Title
-
 MamaJaba Rickshaw Ride-Calling Website
 
 ## Project Description
-
 MamaJaba is designed to address transportation challenges at CUET by offering an efficient platform for rickshaw rides.
 
 ## Tech Stack
