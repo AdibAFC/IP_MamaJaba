@@ -1,15 +1,15 @@
 [# IP_MamaJaba](https://adibafc.github.io/IP_MamaJaba/)
 
 
-### Project's Title
+# Project's Title
 
 MamaJaba Rickshaw Ride-Calling Website
 
-### Project Description
+# Project Description
 
 MamaJaba is designed to address transportation challenges at CUET by offering an efficient platform for rickshaw rides.
 
-### Tech Stack
+# Tech Stack
 - **Frontend**: 
   ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat)
   ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat)
@@ -27,17 +27,17 @@ MamaJaba is designed to address transportation challenges at CUET by offering an
   ![JSON](https://img.shields.io/badge/-JSON-000000?logo=json&logoColor=white&style=flat)
   ![AJAX](https://img.shields.io/badge/-AJAX-4B8BBE?logo=ajax&logoColor=white&style=flat)
 
-### Features
+## Features
 
 - **Real-time Ride Requests**
 - **User Roles**
 - **Secure Login**
 - **Responsive Design** 
 
-### Usage
+## Usage
 After setting up the project, you can start using the MamaJaba Rickshaw Ride-Calling Website. Below are instructions for each user role:
 
-# For Riders
+### For Riders
 1. **Register/Log In:**
    - Navigate to the login page.
    - If you are a new user, click on "Sign Up" to create an account. Fill in the required details and submit the form.
@@ -48,7 +48,7 @@ After setting up the project, you can start using the MamaJaba Rickshaw Ride-Cal
    - Enter your current location and destination.
    - Click on "Request Ride" to submit your request.
 
-#  For Drivers
+### For Drivers
 1. **Register/Log In:**
    - Navigate to the login page.
    - If you are a new driver, click on "Sign Up" to create an account. Provide necessary driver details and submit the form.
@@ -58,7 +58,7 @@ After setting up the project, you can start using the MamaJaba Rickshaw Ride-Cal
    - After logging in, go to the "Available Rides" page.
    - View the list of ride requests from riders. You can accept or decline requests based on your availability.
 
-### Screenshots
+## Screenshots
 
 Here are some screenshots to guide you through the application:
 
