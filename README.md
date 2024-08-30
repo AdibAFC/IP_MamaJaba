@@ -1,31 +1,36 @@
 [# IP_MamaJaba](https://adibafc.github.io/IP_MamaJaba/)
 
-
-
 ### Project's Title
 MamaJaba Rickshaw Ride-Calling Website
 
 ### Project Description
-MamaJaba is designed to address transportation challenges at CUET by offering a streamlined and efficient platform for rickshaw rides. 
+MamaJaba is designed to address transportation challenges at CUET by offering an efficient platform for rickshaw rides.
 
 ## Tech Stack
-- Frontend: HTML, CSS, JavaScript, Bootstrap
-- Backend: PHP, MySQL
-- Environment: XAMPP
-- Data Handling: JSON, AJAX
+
+- **Frontend**: 
+  ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat)
+  ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat)
+  ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat)
+  ![Bootstrap](https://img.shields.io/badge/-Bootstrap-563D7C?logo=bootstrap&logoColor=white&style=flat)
+
+- **Backend**: 
+  ![PHP](https://img.shields.io/badge/-PHP-777BB4?logo=php&logoColor=white&style=flat)
+  ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?logo=mysql&logoColor=white&style=flat)
+
+- **Environment**: 
+  ![XAMPP](https://img.shields.io/badge/-XAMPP-FB7A24?logo=xampp&logoColor=white&style=flat)
+
+- **Data Handling**: 
+  ![JSON](https://img.shields.io/badge/-JSON-000000?logo=json&logoColor=white&style=flat)
+  ![AJAX](https://img.shields.io/badge/-AJAX-4B8BBE?logo=ajax&logoColor=white&style=flat)
 
 ## Features
-- Real-time Ride Requests: Users can request rides, and drivers can accept or decline them instantly.
-- User Roles: Supports different user roles such as Riders, Drivers, and Admins with specific functionalities.
-- Secure Login: User authentication to ensure secure access to the platform.
-- Responsive Design: Optimized for various devices, providing a seamless experience across desktop and mobile platforms.
-
-
+- **Real-time Ride Requests**: Request and manage rides instantly.
+- **User Roles**: Different functionalities for Riders, Drivers, and Admins.
+- **Secure Login**: Ensures safe and secure access for users.
+- **Responsive Design**: Seamless experience on both desktop and mobile devices.
 
 ## Contact
 For any inquiries or contributions, feel free to reach out:
-- GitHub: https://github.com/AdibAFC/IP_MamaJaba
-
-### How to Install and Run the Project
-1. Clone the Repository: 
-   ................
+- **GitHub**: [AdibAFC/IP_MamaJaba](https://github.com/AdibAFC/IP_MamaJaba)
