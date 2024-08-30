@@ -26,10 +26,10 @@ MamaJaba is designed to address transportation challenges at CUET by offering an
   ![AJAX](https://img.shields.io/badge/-AJAX-4B8BBE?logo=ajax&logoColor=white&style=flat)
 
 ## Features
-- **Real-time Ride Requests**: Request and manage rides instantly.
-- **User Roles**: Different functionalities for Riders, Drivers, and Admins.
-- **Secure Login**: Ensures safe and secure access for users.
-- **Responsive Design**: Seamless experience on both desktop and mobile devices.
+- **Real-time Ride Requests**
+- **User Roles**
+- **Secure Login**
+- **Responsive Design** 
 
 ## Contact
 For any inquiries or contributions, feel free to reach out:
