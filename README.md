@@ -33,4 +33,6 @@ MamaJaba is designed to address transportation challenges at CUET by offering an
 
 ## Contact
 For any inquiries or contributions, feel free to reach out:
-- **GitHub**: [AdibAFC/IP_MamaJaba](https://github.com/AdibAFC/IP_MamaJaba)
+- **GitHub**: https://github.com/AdibAFC
+- https://github.com/PrithS24
+- https://github.com/SHITICHY21
