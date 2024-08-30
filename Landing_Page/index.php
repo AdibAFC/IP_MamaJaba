@@ -583,7 +583,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
             document.getElementById('supportPopup').style.display = 'block';
         }, 15000); // 8 seconds delay
     </script>
-<!--     swiper js -->
+    <!-- swiper js -->
      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
        
