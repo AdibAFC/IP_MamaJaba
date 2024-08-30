@@ -17,6 +17,10 @@ MamaJaba is designed to address transportation challenges at CUET by offering an
 )
   ![Jquery](https://img.shields.io/badge/Jquery-%230769AD?style=for-the-badge&logo=Jquery
 )
+  ![GSAP](https://img.shields.io/badge/GSAP-%2310EA45?style=for-the-badge&logo=GSAP
+) 
+ ![Canva](https://img.shields.io/badge/Canva-%2300C4CC?style=for-the-badge&logo=Canva&labelColor=black
+)
 - **Backend**: 
   ![PHP](https://img.shields.io/badge/-PHP-777BB4?logo=php&logoColor=white&style=flat)
   ![MySQL](https://img.shields.io/badge/-MySQL-4479A1?logo=mysql&logoColor=white&style=flat)
