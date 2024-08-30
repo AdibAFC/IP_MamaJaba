@@ -81,11 +81,8 @@ Here are some screenshots to guide you through the application:
   &nbsp;
 - ## **Login Page:**
 - ![Login Page](screenshots/login.jpg)
-&nbsp;
 - ## **SignIn Page** ![SignIn Page](screenshots/signin.jpg)
-  &nbsp;
--##  **Rider’s Request Page:** ![Rider’s Request Page](screenshots/rider.jpg)
- &nbsp;
+- ## **Rider’s Request Page:** ![Rider’s Request Page](screenshots/rider.jpg)
 - ## **Driver’s Dashboard:** ![Driver’s Dashboard](screenshots/driver.jpg)
 - ## **Admin’s Dashboard:** ![Admin’s Dashboard 1](screenshots/admin1.jpg)
 - ![Admin’s Dashboard 2](screenshots/admin2.jpg)
