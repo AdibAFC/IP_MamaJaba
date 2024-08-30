@@ -1,13 +1,13 @@
 [# IP_MamaJaba](https://adibafc.github.io/IP_MamaJaba/)
 
 
-## Project's Title
+# Project's Title
 MamaJaba Rickshaw Ride-Calling Website
 
-## Project Description
+# Project Description
 MamaJaba is designed to address transportation challenges at CUET by offering an efficient platform for rickshaw rides.
 
-## Tech Stack
+# Tech Stack
 - **Frontend**: 
   ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=for-the-badge)
   ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=for-the-badge)
@@ -30,14 +30,14 @@ MamaJaba is designed to address transportation challenges at CUET by offering an
   ![AJAX](https://img.shields.io/badge/-AJAX-4B8BBE?logo=ajax&logoColor=white&style=for-the-badge)
 
 
-## Features
+# Features
 
 - **Real-time Ride Requests**
 - **User Roles**
 - **Secure Login**
 - **Responsive Design** 
 
-## Usage
+# Usage
 After setting up the project, you can start using the MamaJaba Rickshaw Ride-Calling Website. Below are instructions for each user role:
 
 ### For Riders
@@ -61,7 +61,7 @@ After setting up the project, you can start using the MamaJaba Rickshaw Ride-Cal
    - After logging in, go to the "Available Rides" page.
    - View the list of ride requests from riders. You can accept or decline requests based on your availability.
 
-## Screenshots
+# Screenshots
 
 Here are some screenshots to guide you through the application:
 
@@ -74,14 +74,14 @@ Here are some screenshots to guide you through the application:
 - **Rider’s Request Page:** ![Rider’s Request Page](screenshots/rider.jpg)
 - **Driver’s Dashboard:** ![Driver’s Dashboard](screenshots/driver.jpg)
 
-## Contact
+# Contact
 
 For any inquiries or contributions, feel free to reach out:
 - **GitHub**: https://github.com/AdibAFC
 - https://github.com/PrithS24
 - https://github.com/SHITICHY21
 
-## Contributing
+# Contributing
 
 Contributions are welcome! To contribute:
 
