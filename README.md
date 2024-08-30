@@ -79,16 +79,12 @@ Here are some screenshots to guide you through the application:
 - ![Landing Page 3](screenshots/landing3.jpg)
 - ![Landing Page 4](screenshots/landing4.jpg)
   &nbsp;
-  &nbsp;
 - ## **Login Page:**
 - ![Login Page](screenshots/login.jpg)
 &nbsp;
-&nbsp;
 - ## **SignIn Page** ![SignIn Page](screenshots/signin.jpg)
   &nbsp;
-  &nbsp;
 -##  **Rider’s Request Page:** ![Rider’s Request Page](screenshots/rider.jpg)
- &nbsp;
  &nbsp;
 - ## **Driver’s Dashboard:** ![Driver’s Dashboard](screenshots/driver.jpg)
 - ## **Admin’s Dashboard:** ![Admin’s Dashboard 1](screenshots/admin1.jpg)
