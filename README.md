@@ -72,7 +72,7 @@ After setting up the project, you can start using the MamaJaba Rickshaw Ride-Cal
 
 Here are some screenshots to guide you through the application:
 
-- **Landing Page:**
+- ## **Landing Page:**
 &nbsp;
 - ![Landing Page](screenshots/landing1.jpg)
 - ![Landing Page 2](screenshots/landing2.jpg)
@@ -80,18 +80,18 @@ Here are some screenshots to guide you through the application:
 - ![Landing Page 4](screenshots/landing4.jpg)
   &nbsp;
   &nbsp;
-- **Login Page:**
+- ## **Login Page:**
 - ![Login Page](screenshots/login.jpg)
 &nbsp;
 &nbsp;
-- **SignIn Page** ![SignIn Page](screenshots/signin.jpg)
+- ## **SignIn Page** ![SignIn Page](screenshots/signin.jpg)
   &nbsp;
   &nbsp;
-- **Rider’s Request Page:** ![Rider’s Request Page](screenshots/rider.jpg)
+-##  **Rider’s Request Page:** ![Rider’s Request Page](screenshots/rider.jpg)
  &nbsp;
  &nbsp;
-- **Driver’s Dashboard:** ![Driver’s Dashboard](screenshots/driver.jpg)
-- **Admin’s Dashboard:** ![Admin’s Dashboard 1](screenshots/admin1.jpg)
+- ## **Driver’s Dashboard:** ![Driver’s Dashboard](screenshots/driver.jpg)
+- ## **Admin’s Dashboard:** ![Admin’s Dashboard 1](screenshots/admin1.jpg)
 - ![Admin’s Dashboard 2](screenshots/admin2.jpg)
 
 # Contact
