@@ -1,13 +1,15 @@
 [# IP_MamaJaba](https://adibafc.github.io/IP_MamaJaba/)
 
 ### Project's Title
+***
 MamaJaba Rickshaw Ride-Calling Website
 
 ### Project Description
+***
 MamaJaba is designed to address transportation challenges at CUET by offering an efficient platform for rickshaw rides.
 
 ### Tech Stack
-
+***
 - **Frontend**: 
   ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=flat)
   ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat)
@@ -26,14 +28,16 @@ MamaJaba is designed to address transportation challenges at CUET by offering an
   ![AJAX](https://img.shields.io/badge/-AJAX-4B8BBE?logo=ajax&logoColor=white&style=flat)
 
 ### Features
+***
 - **Real-time Ride Requests**
 - **User Roles**
 - **Secure Login**
 - **Responsive Design** 
 
 ### Usage
+***
 
-After setting up the project as described in the [Installation and Running Instructions](#how-to-install-and-run-the-project), you can start using the MamaJaba Rickshaw Ride-Calling Website. Below are instructions for each user role:
+After setting up the project, you can start using the MamaJaba Rickshaw Ride-Calling Website. Below are instructions for each user role:
 
 ### For Riders
 1. **Register/Log In:**
@@ -57,6 +61,7 @@ After setting up the project as described in the [Installation and Running Instr
    - View the list of ride requests from riders. You can accept or decline requests based on your availability.
 
 ### Screenshots
+***
 Here are some screenshots to guide you through the application:
 
 - **Landing Page:** ![Landing Page](screenshots/landing1.jpg)
@@ -69,12 +74,14 @@ Here are some screenshots to guide you through the application:
 - **Driver’s Dashboard:** ![Driver’s Dashboard](screenshots/driver.jpg)
 
 ## Contact
+***
 For any inquiries or contributions, feel free to reach out:
 - **GitHub**: https://github.com/AdibAFC
 - https://github.com/PrithS24
 - https://github.com/SHITICHY21
 
 ## Contributing
+***
 Contributions are welcome! To contribute:
 
 - Fork the repository.
