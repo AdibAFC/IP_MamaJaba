@@ -167,58 +167,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 
 
 
-<!--         <div class="section-2" id="About">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <div class="heading-1">About Us</div>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="d-flex flex-column m-4">
-                                <div class="content">
-                                    <h1 class="text-white">Sustainability</h1>
-                                    <p class="para">
-                                        At MamaJaba, sustainability is at the core of everything we do. We're committed
-                                        to reducing our carbon footprint by implementing eco-friendly practices
-                                        throughout our operations.
-                                    </p>
-                                </div>
-                                <div class="content">
-                                    <h1 class="text-white">Your Safety Drives Us</h1>
-                                    <p class="para">Your safety is our top priority. That's why we've implemented
-                                        rigorous safety measures to ensure you feel secure every time you ride with
-                                        MamaJaba.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="d-flex flex-column m-4">
-                                <div class="content">
-                                    <h1 class="text-white">Rides and Beyond</h1>
-                                    <p class="para">
-                                        Our commitment to excellence extends beyond providing rides. We're constantly
-                                        innovating to enhance your overall experience with MamaJaba.
-                                    </p>
-                                </div>
-                                <div class="content">
-                                    <h1 class="text-white">Company Info</h1>
-                                    <p class="para">
-                                        MamaJaba is more than just a transportation company; we're a community.
-                                    </p>
-                                    <a href="../About_Us/about1.html">
-                                        <button style="background-color:aqua; color:black; margin-top:10px; font-size:20px; margin-left:400px">See more</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
+
 
 <!--         new about -->
         
@@ -389,7 +338,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
             </div>
         </div>
 
-
+<!-- contact section -->
         <div class="section-4" id="Contact">
             <div class="container-fluid d-flex justify-content-center align-items-center">
                 <div class="col-md-6">
@@ -470,6 +419,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 
     </main>
 
+<!--     footer -->
     <footer>
         <div class="row" id="Help">
             <div class="col">
