@@ -46,6 +46,7 @@ if(!file_exists($profile_image))$profile_image=$default;
             <li><a href="../Landing_Page/index.php">Home</a></li>
             <li><a href="../About_Us/about1.html">About Us</a></li>
             <li><a href="../Contact_Us/contactUs.html">Contact Us</a></li>
+            <li><a href="../Blog_Pages/blog.html">Blog</a></li>
         </ul>
         <img src="<?php echo htmlspecialchars($profile_image); ?>" class="user-pic" onclick="toggleMenu()">
 

@@ -76,6 +76,7 @@ if (!file_exists($profile_image)) $profile_image = $default;
             <li><a href="../Landing_Page/index.php">Home</a></li>
             <li><a href="../About_Us/about1.html">About</a></li>
             <li><a href="../Contact_Us/contactUs.html">Contact Us</a></li>
+            <li><a href="../Blog_Pages/blog.html">Blog</a></li>
         </ul>
         <img src="<?php echo htmlspecialchars($profile_image); ?>" class="user-pic" onclick="toggleMenu()">
         <div class="sub-menu-wrap" id="subMenu">
@@ -118,31 +119,36 @@ if (!file_exists($profile_image)) $profile_image = $default;
         <div class="ride-request" data-id="<?php echo htmlspecialchars($ride_request_id); ?>">
             <div class="container">
                 <div class="detail">
-                    <div class="det">
-                        <div class="topic">LOCATION</div>
-                        <div class="txt">
-                            <?php echo htmlspecialchars($pick_up_location); ?>
+                    <div class="div1">
+                        <div class="det">
+                            <div class="topic">LOCATION</div>
+                            <div class="txt">
+                                <?php echo htmlspecialchars($pick_up_location); ?>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="det">
-                        <div class="topic">CONTACT</div>
-                        <div class="txt">
-                            <?php echo htmlspecialchars($rider_contact); ?>
+                        <div class="det">
+                            <div class="topic">CONTACT</div>
+                            <div class="txt">
+                                <?php echo htmlspecialchars($rider_contact); ?>
+                            </div>
                         </div>
                     </div>
-                    <div class="det">
-                        <div class="topic">DESTINATION</div>
-                        <div class="txt">
-                            <?php echo htmlspecialchars($drop_off_location); ?>
+                    <div class="div2">
+                        <div class="det">
+                            <div class="topic">DESTINATION</div>
+                            <div class="txt">
+                                <?php echo htmlspecialchars($drop_off_location); ?>
+                            </div>
+                        </div>
+                        <div class="dett">
+                            <div class="topic">TIME</div>
+                            <div class="txtt">
+                                <?php echo htmlspecialchars($request_time); ?>
+                            </div>
                         </div>
                     </div>
-                    <div class="dett">
-                        <div class="topic"><i class="fa-solid fa-clock"></i></div>
-                        <div class="txtt">
-                            <?php echo htmlspecialchars($request_time); ?>
-                        </div>
-                    </div>
+                    
                 </div>
                 <div class="btn">
                     <button class="ac" data-id="<?php echo htmlspecialchars($ride_request_id); ?>"

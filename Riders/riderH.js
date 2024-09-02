@@ -186,6 +186,7 @@ function fetchNotifications(rider_id) {
                 const notificationDiv = document.createElement('div');
                 notificationDiv.classList.add('notification');
                 notificationDiv.innerHTML = `
+                    <i class="fa-solid fa-bell" style="color: #00bfff;"></i>
                     <span>Mr.${notification.msg} at ${notification.time}</span>
                     <button class="close-btn" onclick="closeNotification(this, ${notification.id})">x</button>
                 `;

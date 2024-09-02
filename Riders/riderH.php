@@ -54,6 +54,7 @@ if(!file_exists($profile_image))$profile_image=$default;
             <li><a href="../Landing_Page/index.php">Home</a></li>
             <li><a href="../About_Us/about1.html">About</a></li>
             <li><a href="../Contact_Us/contactUs.html">Contact Us</a></li>
+            <li><a href="../Blog_Pages/blog.html">Blog</a></li>
             <li>
                     <a href="#" class="review-btn" onclick="openPopup()">Rate Us
 

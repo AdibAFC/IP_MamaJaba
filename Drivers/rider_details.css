@@ -154,7 +154,6 @@ nav ul li a{
     font-size: 20px;
     color: #a26a7f;
     margin-bottom: 5px;
-    margin-left: -65px;
 }
 
 .detail .det .topic{
@@ -164,13 +163,14 @@ nav ul li a{
     color: #a26a7f;
     margin-bottom: 5px;
 }
-.detail .det .txt{
+.detail .det .txt,.txtt{
     height: 45px;
     width: 100%;
     outline: none;
     margin-top: 10px;
-    font-weight: 549;
+    font-weight: 600;
     font-size: 18px;
+    color: #302d2d;
     /* border-radius: 5px; */
     /* border: 1px solid #ccc; */
     /* padding: 15px; */
@@ -202,6 +202,10 @@ nav ul li a{
 }
 .btn button:hover{
     box-shadow: 0 0 5px #425665;
+}
+.div1,.div2{
+    display: flex;
+    flex-direction: column;
 }
 .history{
     /* display: flex; */

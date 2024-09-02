@@ -779,7 +779,7 @@ form .btn button:hover {
     position: absolute;
     top: 75px; /* Adjust based on the height of your header */
     right: 250; /* Align with the right side of the notification button */
-    width: 380px; /* Increased width */
+    width: 500px; /* Increased width */
     max-height: 400px;
     overflow-y: auto;
     background-color: transparent;
@@ -810,10 +810,13 @@ form .btn button:hover {
 .notification span {
     flex-grow: 1;
     margin-right: 10px;
-    font-size: 14px;
+    font-size: 18px;
     color: #333;
 }
-
+.notification i{
+    font-size: 20px;
+    margin: 5px;
+}
 .close-btn {
     position: absolute; /* Positioned absolutely within the notification */
     top: 10px;
