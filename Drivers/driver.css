@@ -427,7 +427,7 @@ main {
     }
 }
 
-.beating-button {
+/* .beating-button {
     padding: 10px;
     background-color: #ffffff;
     color: #fff;
@@ -443,6 +443,74 @@ main {
 }
 
 .beating-button:hover {
+    background-color: #b4ffcd;
+} */
+
+.mapbtn{
+    
+   display: inline-flex;
+   margin: 70px ;
+}
+
+.mapbtn .icon{
+    margin: 20px 20px;
+    /* display: flex; */
+    position: relative;
+    z-index: 2;
+}
+
+.mapbtn .icon span{
+    position: relative;
+    height: 60px;
+    width: 60px;
+    display: block;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    animation: beat 1s infinite;
+    transition: background-color 0.3s;
+    text-align: center;
+    
+}
+.mapbtn .icon span i{
+    font-size: 25px;
+    line-height: 60px;
+}
+
+.mapbtn .icon .tooltip{
+    position: absolute;
+    top: 0px;
+    width: 200px;
+    height: 50px;
+    background: #081529;
+    color: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    padding: 16px ;
+    border-radius: 25px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+.mapbtn .icon:hover .tooltip{
+    opacity: 1;
+    pointer-events: auto;
+    top: -60px;
+}
+.mapbtn .icon .tooltip:before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: #081529;
+    bottom: -5px;
+    left: 20%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.mapbtn .beating-button:hover {
     background-color: #b4ffcd;
 }
 .map-container {
