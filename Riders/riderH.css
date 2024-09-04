@@ -926,3 +926,10 @@ form .btn button:hover {
     color: #007bff;
 }
 
+.no_history{
+    font-size: 18px;
+    display: flex;
+    color: #524f4f;
+    justify-content: center;
+    font-weight: 400;
+}

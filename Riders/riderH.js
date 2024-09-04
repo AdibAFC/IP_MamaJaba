@@ -235,7 +235,7 @@ function fetchHistory() {
                 historyDiv.innerHTML = ''; // Clear any existing content
                 
                 if (data.length === 0) {
-                    historyDiv.innerHTML = '<p>No accepted rides found.</p>';
+                    historyDiv.innerHTML = '<p class="no_history">No history found.</p>';
                 } else {
                     data.forEach((ride, index) => {
                         let rideDetails = document.createElement('div');
