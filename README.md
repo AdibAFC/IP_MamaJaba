@@ -87,7 +87,7 @@ Here are some screenshots to guide you through the application:
 - ## **Driver’s Dashboard:**
 -  ![Driver’s Dashboard](screenshots/driver.jpg)
 -  ## **Rider’s Details:**
--  ![Riider’s Details](screenshots/riders_details.png)
+-  ![Riider’s Details](screenshots/riders_details.jpg)
 - ## **Admin’s Dashboard:**
 - ![Admin’s Dashboard 1](screenshots/admin1.jpg)
 - ![Admin’s Dashboard 2](screenshots/admin2.jpg)
