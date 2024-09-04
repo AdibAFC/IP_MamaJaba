@@ -83,9 +83,16 @@ if(!file_exists($profile_image))$profile_image=$default;
             </div>
         </div>
     </nav>
-    <div class="mapbtn">
+<!--     <div class="mapbtn">
         <button class="beating-button" onclick="openmap()"><i class="fa-solid fa-location-dot fa-2xl"
                 style="color: #07c035;"></i><button>
+    </div> -->
+    <div class="mapbtn">
+        <div class="icon map">
+            <div class="tooltip">Use Map For Direction</div>
+            <span class="beating-button" onclick="openmap()"><i class="fa-solid fa-location-dot fa-2xl" style="color: #07c035;"></i></span>
+        
+        </div>
     </div>
     <div class="overlay" onclick="closemap()"></div>
     <div class="map-container" id="popup">
