@@ -158,9 +158,6 @@ if (!file_exists($profile_image)) $profile_image = $default;
                 </div>
             </div>
         </div>
-        <div class="history">
-            <a href="#">View Rider's Past History</a>
-        </div>
         <div id="toastbox">
 
         </div>

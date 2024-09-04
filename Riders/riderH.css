@@ -881,3 +881,48 @@ form .btn button:hover {
 }
 
 
+
+.history{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    color: blue;
+    font-weight: 550;
+}
+/* Container for ride history */
+#ride-history {
+    margin-top: 20px;
+    padding: 15px;
+}
+
+/* Individual ride entry */
+.ride {
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #e1eaff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-left: 430px;
+    width: 800px;
+}
+
+/* On hover, give a slight pop effect */
+.ride:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the ride details */
+.ride p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Strong emphasis for labels */
+.ride p strong {
+    color: #007bff;
+}
+

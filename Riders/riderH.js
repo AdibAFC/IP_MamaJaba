@@ -223,3 +223,38 @@ function updateNotificationCount() {
         notificationCountSpan.style.display = 'inline';
     }
 }
+
+function fetchHistory() {
+    let historyDiv = document.getElementById('ride-history');
+    
+    if (historyDiv.style.display === 'none' || historyDiv.innerHTML === '') {
+        // Fetch and display history if it's currently hidden or empty
+        fetch('fetch_history.php')
+            .then(response => response.json())
+            .then(data => {
+                historyDiv.innerHTML = ''; // Clear any existing content
+                
+                if (data.length === 0) {
+                    historyDiv.innerHTML = '<p>No accepted rides found.</p>';
+                } else {
+                    data.forEach((ride, index) => {
+                        let rideDetails = document.createElement('div');
+                        rideDetails.classList.add('ride');
+                        rideDetails.innerHTML = `
+                            <p><strong>Pick-Up Location:</strong> ${ride.pick_up_location}</p>
+                            <p><strong>Drop-Off Location:</strong> ${ride.drop_off_location}</p>
+                            <p><strong>Request Time:</strong> ${ride.request_time}</p>
+                        `;
+                        historyDiv.appendChild(rideDetails);
+                    });
+                }
+
+                // Show the history
+                historyDiv.style.display = 'block';
+            })
+            .catch(error => console.error('Error fetching ride history:', error));
+    } else {
+        // Hide the history if it's currently visible
+        historyDiv.style.display = 'none';
+    }
+}

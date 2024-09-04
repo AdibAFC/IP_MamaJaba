@@ -207,12 +207,6 @@ nav ul li a{
     display: flex;
     flex-direction: column;
 }
-.history{
-    /* display: flex; */
-    /* margin: 50px; */
-    color: blue;
-    font-weight: 550;
-}
 #toastbox{
     position: absolute;
     bottom: 30px;
