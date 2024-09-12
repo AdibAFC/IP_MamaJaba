@@ -105,6 +105,8 @@ if(!file_exists($profile_image))$profile_image=$default;
 
     <section class="ridereq" id="ridereq">
     </section>
+
+    
   <footer style="margin-top:100px;">
         <div class="row">
             <div class="col">

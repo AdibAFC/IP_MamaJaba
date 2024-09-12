@@ -70,7 +70,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                         <a href="#Review" class="nav-link">Review</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#About" class="nav-link">About Us</a>
+                        <a href="#page" class="nav-link">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a href="../Blog_Pages/blog.html" class="nav-link">Blogs</a>

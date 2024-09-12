@@ -48,7 +48,7 @@ if (!file_exists($profile_image)) {
 </head>
 <body>
     <div class="container light-style flex-grow-1 container-p-y">
-        <h4 class="font-weight-bold py-3 mb-4" style="margin-top:100px; font-weight:bold;">
+        <h4 class="font-weight-bold py-3 mb-4" style="margin-top:50px; font-weight:bold;">
             Account settings
         </h4>
         <form action="updateDProfile.php" method="POST" enctype="multipart/form-data">
