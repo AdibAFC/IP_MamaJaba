@@ -144,7 +144,7 @@ CREATE TABLE `rider` (
   `Email` varchar(255) NOT NULL,
   `Phone` varchar(12) NOT NULL,
   `Password` varchar(255) DEFAULT NULL,
-  `Picture` longblob NOT NULL
+  `Picture` longblob DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
