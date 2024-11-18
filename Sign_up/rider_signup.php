@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $new_riderid = $max_riderid + 1;
 
         // Prepare and bind for the rider table
-        $stmt = $conn->prepare("INSERT INTO rider (riderid, Name, Email, Phone, Password) VALUES (?, ?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO rider (riderid, Name, Email, Phone, Password, Picture) VALUES (?, ?, ?, ?, ?, NULL)");
         $stmt->bind_param("issss", $new_riderid, $fname, $email, $phone, $hashed_password);
 
         // Prepare and bind for the users table

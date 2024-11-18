@@ -90,10 +90,10 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
                         <div class="popup-content">
                             <div class="options">
                                 <button>
-                                    <a href="../Sign_Up/driver_signup.html" id="driverBtnpop">SignUp to Drive</a>
+                                    <a href="../Sign_up/driver_signup.html" id="driverBtnpop">SignUp to Drive</a>
                                 </button>
                                 <button>
-                                    <a href="../Sign_Up/rider_signup.html" id="riderBtnpop">Create a Rider account</a>
+                                    <a href="../Sign_up/rider_signup.html" id="riderBtnpop">Create a Rider account</a>
                                 </button>
                             </div>
                             <button id="closePopup">Close</button>
